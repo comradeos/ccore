@@ -4,6 +4,6 @@
 
 int main(int argc, char *argv[])
 {
-    printf("recursion\n");
+    printf("Recursion\n");
     return 0;
 }
