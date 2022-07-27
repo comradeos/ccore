@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * @brief Ханойская башня (задача). Рекурентное решение.
+ * 
+ * @param n количество дисков для перекладывания
+ * @param i переложить откуда
+ * @param k переложить куда
+ */
 void hanoi(int n, int i, int k)
 {
     if (n == 1) {
