@@ -1,19 +1,23 @@
-    // int number1;
-    // printf("Factorial: input int number: ");
-    // scanf("%d", &number1);
-    // printf("factorial(%d): %d\n", number1, factorial(number1));
+// gcc -o application.exe -Wall addr_void.c && application.exe
+#include <stdio.h>
 
-    // printf("Euclid algorithm: input 1st int number: ");
-    // scanf("%d", &number1);
-    // int number2;
-    // printf("Euclid algorithm: input 2nd int number: ");
-    // scanf("%d", &number2);
-    // printf("euclid_algorithm(%d, %d): %d\n", number1, number2, euclid_algorithm(number1, number2));
+int main(int argc, char *argv[])
+{
+    char c;   
+    int i;   
+    double d;
 
-    // double a;
-    // printf("Power: input double number a: ");
-    // scanf("%lf", &a);
-    // int b;
-    // printf("Power: input int number b: ");
-    // scanf("%d", &b);
-    // printf("power(%lf, %d): %lf\n", a, b, power(a, b));
+    void * p;
+    printf("%d\n", p);
+
+    char my_string[] = "Hello world";
+
+    printf("%s\n", my_string);
+
+
+    p = &c;
+    p = &i;
+    p = &d;
+
+    return 0;
+}
