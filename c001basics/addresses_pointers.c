@@ -28,8 +28,10 @@ void pointers_demo()
 void addresses_demo()
 {
     int A[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    int x = *A+9;
+    int x = *A + 9;
+    int *p = A + 9;
     printf("%d\n", x);
+    printf("%d\n", p[0]);
 }
 
 int main(int argc, char *argv[])
