@@ -2,17 +2,43 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void change(int * num, int new)
+/**
+ * @brief Меняет значение по адресу переменной.
+ *
+ * @param num число
+ * @param new новое значение
+ */
+void change(int *num, int new)
 {
-    * num = new;
+    *num = new;
+}
+
+
+/**
+ * @brief Не сработает, адрес локальной переменной вернуть нельзя
+ * 
+ * @param num число
+ * @return int* адрес
+ */
+int * get_pointer(int num)
+{
+    return &num;
 }
 
 int main(int argc, char *argv[])
 {
     int number = 10;
-    printf("%d\n", number);
-    change(&number, 20);
-    printf("%d\n", number);
+    printf("%d\n", number); // 10
+    change(&number, 20);    // передать адрес переменной number
+    printf("%d\n", number); // 20
+    
+    printf("\n");
+
+    int result = get_pointer(number);
+    printf("%d\n", result);
+
+
+
 
     return 0;
 }
