@@ -1,6 +1,7 @@
 // gcc -o application.exe -Wall c02_vars.c && application.exe
 
 #include <stdio.h>
+#include <stdbool.h>
 
 int main()
 {
@@ -30,6 +31,15 @@ int main()
 
     double num8 = 87312.7;
     printf("double: %.2f \n", num8);
+
+
+    
+    bool variable = true;
+    printf("double: %.2f \n", num8);
+
+
+
+
 
     // char * my_string = "arr of chars";
     // printf("%s\n", my_string);
