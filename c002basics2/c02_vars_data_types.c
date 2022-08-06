@@ -35,7 +35,7 @@ int main()
 
     
     bool variable = true;
-    printf("double: %.2f \n", num8);
+    printf(variable ? "true" : "false");
 
 
 
