@@ -35,10 +35,21 @@ int main()
 
     
     bool variable = true;
-    printf(variable ? "true" : "false");
+    printf(variable ? "true \n" : "false \n");
+
+    char char1 = 'A';
+    printf("char: %c \n", char1);
+
+    char * string1 = "STRING";
+    printf("string: %s \n", string1);
 
 
-
+    char * A = "ABC";
+    for (int i = 0; i < 3; i++)
+    {
+        printf("%c", A[i]);
+    }
+    
 
 
     // char * my_string = "arr of chars";
