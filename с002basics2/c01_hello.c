@@ -1,7 +1,11 @@
+// gcc -o application.exe -Wall c01_hello.c && application.exe
+
 #include <stdio.h>
+// #include <stdlib.h>
 
 int main()
 {
-    printf("asd\n");
+    printf("Hello, World!\n");
+    // system("pause");
     return 0;
 }
