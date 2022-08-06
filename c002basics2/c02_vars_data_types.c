@@ -49,11 +49,14 @@ int main()
     {
         printf("%c", A[i]);
     }
-    
+    printf("\n");
 
+    char * my_string = "arr of chars - string";
+    printf("%s\n", my_string);
 
-    // char * my_string = "arr of chars";
-    // printf("%s\n", my_string);
+    const int CONST_INT = 231;
+    printf("%d\n", CONST_INT);
+
 
     return 0;
 }
