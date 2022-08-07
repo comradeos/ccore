@@ -4,5 +4,13 @@
 
 int main()
 {
+    int x = 7;
+
+    if (x == 5) {
+        printf("yes \n");
+    } else {
+        printf("no \n");
+    }
+
     return 0;
 }
