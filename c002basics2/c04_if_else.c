@@ -1,6 +1,7 @@
 // gcc -o app.exe -Wall c04_if_else.c && app.exe
 
 #include <stdio.h>
+#include <stdbool.h>
 
 int main(int argc, char *argv[])
 {
