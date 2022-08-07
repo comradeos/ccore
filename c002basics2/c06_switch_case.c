@@ -1,6 +1,7 @@
 // gcc -o app.exe -Wall c06_switch_case.c && app.exe
 
 #include <stdio.h>
+#include <assert.h>
 
 int main(int argc, char * argv[])
 {
@@ -20,6 +21,9 @@ int main(int argc, char * argv[])
         printf("out of variants \n");
         break;
     }
+
+    assert(x == 6);
+    printf("1\n");
     
     return 0;
 }
