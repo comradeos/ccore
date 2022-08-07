@@ -11,6 +11,21 @@ int main()
     char word[] = "hello";
     printf("%s\n", word);
     printf("%c\n", word[0]);
+
+    int array2dim[2][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+    };
+
+    for (size_t i = 0; i <= 2; i++)
+    {
+        for (size_t j = 0; j <= 3; j++)
+        {
+            printf("%d, ", array2dim[i][j]);
+        }
+            printf("\n");
+    }
     
+
     return 0;
 }
