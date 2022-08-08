@@ -33,6 +33,7 @@ int main()
     }
     
 
+
     int j = 0;
     do {
         j++;
