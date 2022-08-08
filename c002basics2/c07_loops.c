@@ -4,7 +4,6 @@
 
 int main()
 {
-
     for(size_t i = 0; i < 10; i++) {
         printf("%I64d ", i);
     }
@@ -17,15 +16,17 @@ int main()
     printf("\n\n");
 
     
+
     #include <stdbool.h>
 
     bool hasCar = true;
     int val; 
+
     while (true == hasCar)
     {
         printf("Still has a car? 0/1 >>> ");
-        scanf("%d ", &val);
-        
+        scanf("%d", &val);
+
         if(val == 0) {
             hasCar = false;
         }
