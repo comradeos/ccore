@@ -10,6 +10,7 @@ int main()
     printf("\n\n");
 
 
+
     for(float i = 100; i > 10; i /=2 ) {
         printf("%.2f \n", i);
     }
@@ -24,9 +25,8 @@ int main()
 
     while (true == hasCar)
     {
-        printf("Still has a car? 0/1 >>> ");
+        printf("0/1? ");
         scanf("%d", &val);
-
         if(val == 0) {
             hasCar = false;
         }
@@ -39,6 +39,8 @@ int main()
         printf("%d \n", j);
 
     } while (j < 10);
+
+
 
     return 0;
 }
