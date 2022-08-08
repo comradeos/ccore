@@ -33,7 +33,12 @@ int main()
     }
     
 
+    int j = 0;
+    do {
+        j++;
+        printf("%d \n", j);
 
+    } while (j < 10);
 
     return 0;
 }
