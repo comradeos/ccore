@@ -18,7 +18,7 @@ int main(int argc, char * argv[])
         printf("three \n");
         break;
     default:
-        printf("out of variants3 \n");
+        printf("out of variants \n");
         break;
     }
 
