@@ -15,7 +15,7 @@ int main(int argc, char const *argv[])
     myHeaderFunction();
     
     string("Hello World!");
-    string((char []){'a', 'b', 'c','a'});
+    string((char []){'s', 'o', 'm', 'e', '\0'}); // строка это последовательность символов оканчивающаяся null-символом '\0' 
 
     return 0;
 }
