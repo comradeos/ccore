@@ -6,6 +6,8 @@ void printNum();
 int square(int num);
 void string(char array[]);
 
+int * myIntArray();
+
 int main(int argc, char const *argv[])
 {
     info();
@@ -38,4 +40,10 @@ int square(int num)
 void string(char array[])
 {
     printf("String: %s\n", array);
+}
+
+int * myIntArray()
+{
+    int array[3] = {1,2,3};
+    return array;
 }
