@@ -2,5 +2,5 @@
 
 void myHeaderFunction()
 {
-    printf("from myHeaderFunction()");
+    printf("from myHeaderFunction()\n");
 }

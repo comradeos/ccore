@@ -3,14 +3,19 @@
 
 void info(); // объявление функций (для возможности писать их ниже main())
 void printNum();
-int square();
+int square(int num);
+int string(char array[]);
 
 int main(int argc, char const *argv[])
 {
     info();
     printNum(7);
+
     printf("square: %d", square(7));
     myHeaderFunction();
+    
+    string("Hello World!");
+
     return 0;
 }
 
@@ -27,4 +32,9 @@ void printNum(int num)
 int square(int num)
 {
     return num*num;
+}
+
+int string(char array[])
+{
+    printf("String: %s\n", array);
 }
