@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "c10_my_functions.h" // двойные кавычки вместо угловых скобок
 
 void info(); // объявление функций
 void printNum();
@@ -9,6 +10,7 @@ int main(int argc, char const *argv[])
     info();
     printNum(7);
     printf("square: %d", square(7));
+    myHeaderFunction();
     return 0;
 }
 
