@@ -8,5 +8,9 @@ void info()
 int main(int argc, char const *argv[])
 {
     info();
+    info();
+    info();
+    info();
+    info();
     return 0;
 }
