@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "c10_my_functions.h" // двойные кавычки вместо угловых скобок
 
-void info(); // объявление функций
+void info(); // объявление функций (для возможности писать их ниже main())
 void printNum();
 int square();
 
