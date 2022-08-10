@@ -1,16 +1,28 @@
 #include <stdio.h>
 
+void info(); // объявление функций
+void printNum();
+int square();
+
+int main(int argc, char const *argv[])
+{
+    info();
+    printNum(7);
+    printf("square: %d", square(7));
+    return 0;
+}
+
 void info()
 {
     printf("from info()\n");
 }
 
-int main(int argc, char const *argv[])
+void printNum(int num)
 {
-    info();
-    info();
-    info();
-    info();
-    info();
-    return 0;
+    printf("number: %d\n", num);
+}
+
+int square(int num)
+{
+    return num*num;
 }
