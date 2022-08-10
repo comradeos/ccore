@@ -41,9 +41,3 @@ void string(char array[])
 {
     printf("String: %s\n", array);
 }
-
-int * myIntArray()
-{
-    int array[3] = {1,2,3};
-    return array;
-}
