@@ -16,7 +16,7 @@ int main()
     // bmw.name = "BMW M5"; - не сработает, только через strcpy + #include <string.h>
     strcpy(bmw.name, "BMW M5");
     printf("%s\n", bmw.name);
-    bmw.weight = 730.00f;
+    bmw.weight = 730.22f;
 
     return 0;
 }
