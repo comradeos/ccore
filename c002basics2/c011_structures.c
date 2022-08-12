@@ -11,8 +11,8 @@ int main()
 {
     struct Car bmw;
     bmw.speed = 250;
-    bmw.name = "BMW M5";
-    // strcpy(bmw.name, "BMW M5");
+    // bmw.name = "BMW M5";
+    strcpy(bmw.name, "BMW M5");
     char str[5] = "hello";
     return 0;
 }
