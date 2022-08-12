@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
+// структура как предок класса
 struct Car {
     int speed;
     char name[50];
@@ -9,10 +10,12 @@ struct Car {
 
 int main()
 {
-    struct Car bmw;
+    struct Car bmw; // новый объект структуры
+
     bmw.speed = 250;
-    // bmw.name = "BMW M5";
+    // bmw.name = "BMW M5"; - не сработает, только через strcpy + #include <string.h>
     strcpy(bmw.name, "BMW M5");
-    char str[5] = "hello";
+    char str[6] = "hello";
+    printf("%s\n", str);
     return 0;
 }
