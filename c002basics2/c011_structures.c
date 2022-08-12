@@ -15,7 +15,7 @@ int main()
     bmw.speed = 250;
     // bmw.name = "BMW M5"; - не сработает, только через strcpy + #include <string.h>
     strcpy(bmw.name, "BMW M5");
-    char str[6] = "hello";
-    printf("%s\n", str);
+    printf("%s\n", bmw.name);
+    
     return 0;
 }
