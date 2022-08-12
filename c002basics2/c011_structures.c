@@ -18,5 +18,9 @@ int main()
     printf("%s\n", bmw.name);
     bmw.weight = 730.00f;
 
+    struct Car audi = {300, "Audi A8", 2700.00f};
+
+    
+
     return 0;
 }
