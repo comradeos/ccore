@@ -17,9 +17,9 @@ int main()
     // которые будут считаны с определенного файла
     // fgets(имяМассива, количествоСимволов, указательФайла)
     
-    // char line[255];
-    // fgets(line, 255, myFile);
-    // printf("%s\n", line);
+    char line[255];
+    fgets(line, 255, myFileToRead);
+    printf("%s ------------------\n", line);
 
     readLines(myFileToRead, 8);
     return 0;
