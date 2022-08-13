@@ -4,7 +4,7 @@
 int main()
 {
     int t;
-    t = 15;
+    t = 31;
     
     if (t > 10)
     {
@@ -12,9 +12,14 @@ int main()
         if (t > 20) 
         {
             printf("123\n");
+            if (t > 20) 
+            {
+                printf("ttt %d\n");
+            }
         }
     } else {
         printf("ggg\n");
+        return 7;
     }
     
     return 2;
