@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 struct GeometricShape
 {
     int weight, height;
@@ -7,8 +8,6 @@ struct GeometricShape
 
 void square_val(struct GeometricShape object); // объявление функции, принимающей объект
 void square_addr(struct GeometricShape * object); // объявление функции, принимающей адрес объекта
-
-
 
 int main()
 {
@@ -23,13 +22,11 @@ int main()
     printf("value (using pointer): %d\n", * pNum); // вывести значение через указатель содержащий адрес
     printf("value (using address): %d\n", * &num); // вывести значение через адрес
 
-
-    struct GeometricShape rectangle;
-    rectangle.weight = 5;
-    rectangle.height = 7;
-    square_val(rectangle);
+    struct GeometricShape rectangle; // создаем объект структуры GeometricShape
+    rectangle.weight = 5; // устанавливаем значение weight
+    rectangle.height = 7; // устанавливаем значение height
+    square_val(rectangle); 
     square_addr(&rectangle);
-
 
     return 0;
 }
