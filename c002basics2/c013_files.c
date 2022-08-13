@@ -19,7 +19,7 @@ int main()
     
     char line[255];
     fgets(line, 255, myFileToRead);
-    printf("%s ------------------\n", line);
+    printf("%s------------------\n", line);
 
     readLines(myFileToRead, 8);
     return 0;
