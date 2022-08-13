@@ -16,14 +16,13 @@ int main()
     scanf("%d", &i);
 
     if(i == 1) 
-    {
         printf("%.2f * %.2f = %.2f", x, y, x * y);
-    } else if (i == 2) {
+    if (i == 2)
         printf("%.2f + %.2f = %.2f", x, y, x + y);
-    } else if (i == 3) {
+    if (i == 3)
         printf("%.2f - %.2f = %.2f", x, y, x - y);
-    } else if (i == 4) {
+    if (i == 4)
         printf("%.2f / %.2f = %.2f", x, y, x / y);
-    } 
+
     return 0;
 }
