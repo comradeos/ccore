@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-struct Abstract
+struct GeometricShape
 {
     int weight, height;
 };
 
-void square_val(struct Abstract object); // объявление функции, принимающей объект
-void square_addr(struct Abstract * object); // объявление функции, принимающей адрес объекта
+void square_val(struct GeometricShape object); // объявление функции, принимающей объект
+void square_addr(struct GeometricShape * object); // объявление функции, принимающей адрес объекта
 
 
 
@@ -24,7 +24,7 @@ int main()
     printf("value (using address): %d\n", * &num); // вывести значение через адрес
 
 
-    struct Abstract rectangle;
+    struct GeometricShape rectangle;
     rectangle.weight = 5;
     rectangle.height = 7;
     square_val(rectangle);
@@ -42,7 +42,7 @@ int main()
  * 
  * @param object прямоугольник
  */
-void square_val(struct Abstract object)
+void square_val(struct GeometricShape object)
 {
     int result = object.weight * object.height;
     printf("square_val result: %d\n", result);
@@ -56,7 +56,7 @@ void square_val(struct Abstract object)
  * 
  * @param object прямоугольник
  */
-void square_addr(struct Abstract * object)
+void square_addr(struct GeometricShape * object)
 {
     int result = object->weight * object->height;
     printf("square_addr result: %d\n", result);
