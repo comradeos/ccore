@@ -3,11 +3,27 @@
 
 int main()
 {
-    int x;
-
+    float x;
     printf("x = ");
-    scanf("%d", &x);
+    scanf("%f", &x);
 
-    printf("%d * 7 = %d", x, x * 7);
+    float y;
+    printf("y = ");
+    scanf("%f", &y);
+
+    int i;
+    printf("operations:\n  1 = *\n  2 = +\n  3 = -\n  4 = \\\noperation: ");
+    scanf("%d", &i);
+
+    if(i == 1) 
+    {
+        printf("%.2f * %.2f = %.2f", x, y, x * y);
+    } else if (i == 2) {
+        printf("%.2f + %.2f = %.2f", x, y, x + y);
+    } else if (i == 3) {
+        printf("%.2f - %.2f = %.2f", x, y, x - y);
+    } else if (i == 4) {
+        printf("%.2f / %.2f = %.2f", x, y, x / y);
+    } 
     return 0;
 }
