@@ -3,8 +3,8 @@
 
 int main()
 {
-    char text[] = "this is a text";
-
-    printf("%p", &text);
+    int t;
+    t = 15;
+    printf("%d\n", t);
     return 0;
 }
