@@ -8,6 +8,12 @@ void procedure1()
     printf("123\n");
 }
 
+void function1()
+{
+    printf("function1\n");
+    return 7;
+}
+
 int main()
 {
     printf("Hello, world!\n");
