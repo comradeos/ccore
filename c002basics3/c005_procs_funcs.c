@@ -14,7 +14,6 @@ int function1()
     return 7; 
 }
 
-
 void home1(int x)
 {
     if (x < 10) {
@@ -24,7 +23,6 @@ void home1(int x)
     }
 }
 
-
 int home2(int a, int b)
 {
     if (a > b) {
@@ -33,8 +31,6 @@ int home2(int a, int b)
         return 0;
     }
 }
-
-
 
 int main()
 {
