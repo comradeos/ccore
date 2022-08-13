@@ -5,7 +5,7 @@ int main()
 {
     int t;
     t = 15;
-    t = t + 2;
+    t = 20 -t;
 
     printf("%d\n", t);
 
