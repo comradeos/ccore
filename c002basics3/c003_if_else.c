@@ -4,7 +4,7 @@
 int main()
 {
     int t;
-    t = 15;
+    t = 5;
     if (t > 10) printf("www\n");
     return 0;
 }
