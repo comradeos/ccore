@@ -3,7 +3,7 @@
 
 int main() {
     char myString[255];
-    scanf("%s",myString);
+    gets(myString);
     printf("%s\n", myString);
     return 0;
 }
