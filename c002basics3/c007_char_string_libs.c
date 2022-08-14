@@ -10,6 +10,9 @@ int main() {
     ch = getch(); // библ conio.h, возвращает символ в качестве результата, не требует нажатия enter
     printf("ch = %c\n", ch);
 
+    char str[16] = "Hello, World!\n";
+    str[0] = '7';
+    printf("str = %s\n", str);
 
     return 0;
 }
