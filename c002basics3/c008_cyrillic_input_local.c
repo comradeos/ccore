@@ -8,10 +8,9 @@
 
 int main() {
     setlocale(LC_ALL, "Russian");
-    
     char myString[255];
-    scanf("%s", myString);
-    
+    gets(myString);
+
     OemToChar(myString, myString);
     printf("s = %s\n", myString);
 
