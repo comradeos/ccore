@@ -16,8 +16,11 @@ int main() {
 
     // что бы присвоить строку сразу всему массиву использовать sprintf
     sprintf(str, "new string!");
-    str[3] = '\0'; // символ конца строки
+    str[3] = '\0'; // символ конца строки (обрыв)
     printf("str = %s\n", str);
+    
+    char str2[5] = "aaaaaaaaaaaaaaaaaaaaaaaaasdsadasd";
+    printf("str = %s\n", str2);
 
     return 0;
 }
