@@ -11,7 +11,6 @@ int main() {
     char myString[255];
     gets(myString);
 
-    OemToChar(myString, myString);
     printf("s = %s\n", myString);
 
     return 0;
