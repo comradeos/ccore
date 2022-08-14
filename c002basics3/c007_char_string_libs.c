@@ -1,9 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h> // библ для чтения символов
+#include <locale.h>
+
+#include <windows.h>
+#include <winuser.h>
+
 
 int main() {
-    char ch = 'W';
+    setlocale(LC_ALL, "Russian");
+
+    char ch = 'А';
     printf("%c\n", ch);
 
     // scanf("%c", &ch);
@@ -21,6 +28,9 @@ int main() {
 
     printf("Input string: \n");
     scanf("%s", str);
+    
+    OemToChar(str, str);
+
     printf("s = %s\n", str);
 
     return 0;
