@@ -50,7 +50,19 @@ int main() {
         myString[i] = '#';
     }
     
-    printf("%s", myString);
+    printf("%s\n", myString);
 
+    for (size_t i = 0; i < 8; i++) {
+        printf("%c ", myString[i]);
+    }
+
+
+    i = 0;
+    while (myString[i] != '\0')
+    {
+        printf("%c\n", myString[i]);
+        i++;
+    }
+    
     return 0;
 }
