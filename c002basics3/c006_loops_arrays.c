@@ -4,10 +4,16 @@
 int main()
 {
     int i;
-    i = 1;
-    while (i <= 20)
+    int mas[10];
+    
+    mas[0] = 555;
+    mas[1] = 777;
+    mas[2] = 111;
+    
+    i = 0;
+    while (i < 3)
     {
-        printf("Hello, world!\n");
+        printf("%d\n", mas[i]);
         i = i + 1;
     }
     
