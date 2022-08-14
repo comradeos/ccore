@@ -10,8 +10,13 @@ int main() {
     ch = getch(); // библ conio.h, возвращает символ в качестве результата, не требует нажатия enter
     printf("ch = %c\n", ch);
 
-    char str[16] = "Hello, World!\n";
+    char str[16] = "Hello, World!";
     str[0] = '7';
+    printf("str = %s\n", str);
+
+    // что бы присвоить строку сразу всему массиву использовать sprintf
+    sprintf(str, "new string!");
+    str[3] = '\0'; // символ конца строки
     printf("str = %s\n", str);
 
     return 0;
