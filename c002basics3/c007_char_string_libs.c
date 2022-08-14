@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h> // ббл для чтения 
+#include <conio.h> // библ для чтения символов
 
 int main() {
     char ch = 'W';
@@ -18,9 +18,10 @@ int main() {
     sprintf(str, "new string!");
     str[3] = '\0'; // символ конца строки (обрыв)
     printf("str = %s\n", str);
-    
-    char str2[5] = "aaaaaaaaaaaaaaaaaaaaaaaaasdsadasd";
-    printf("str = %s\n", str2);
+
+    printf("Input string: \n");
+    scanf("%s", str);
+    printf("s = %s\n", str);
 
     return 0;
 }
