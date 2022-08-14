@@ -44,5 +44,13 @@ int main() {
     }
     printf("\n");    
 
+
+    char myString[8];
+    for (size_t i = 0; i < 8; i++) {
+        myString[i] = '#';
+    }
+    
+    printf("%s", myString);
+
     return 0;
 }
