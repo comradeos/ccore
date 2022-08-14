@@ -3,20 +3,46 @@
 
 
 int main() {
-    int a = 22;
-    printf("a = %d\n", a);
+    int a = 1;
+    int b = 1;
     
-    a++;
-    printf("a++ :%d\n", a);
+    a += ++b + ++b;
+    printf("a = %d, b = %d\n", a, b); // a = 7, b = 3
 
-    a--;
-    printf("a-- :%d\n", a);
+
+    // do
+    // {
+    //     scanf("%d", &a);
+    //     printf("a = %d\n", a);
+    // } while (a != 7);
     
-    a+=10;
-    printf("a+=10 :%d\n", a);
-    
-    a-=5;
-    printf("a-=5 :%d\n", a);
+
+    for (size_t i = 2; i <= 18; i++) {
+        if (i%2 == 0) {
+            printf("%I64d ", i);
+        }
+    }
+    printf("\n");    
+
+    int i = 1;
+    do {
+        i++;
+        if (i % 2 != 0) {
+            continue;
+        }
+        printf("%d ", i);
+    } while (i <= 18);
+    printf("\n");  
+
+    i = 1;
+    while (i <= 18) {
+        i++;
+        if (i % 2 != 0) {
+            continue;
+        }
+        printf("%d ", i);
+    }
+    printf("\n");    
 
     return 0;
 }
