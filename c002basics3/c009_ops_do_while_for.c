@@ -24,6 +24,7 @@ int main() {
     }
     printf("\n");    
 
+
     int i = 1;
     do {
         i++;
@@ -33,6 +34,7 @@ int main() {
         printf("%d ", i);
     } while (i <= 18);
     printf("\n");  
+
 
     i = 1;
     while (i <= 18) {
@@ -50,6 +52,7 @@ int main() {
         myString[i] = '#';
     }
     
+    
     printf("%s\n", myString);
 
     for (size_t i = 0; i < 8; i++) {
@@ -64,5 +67,6 @@ int main() {
         i++;
     }
     
+
     return 0;
 }
