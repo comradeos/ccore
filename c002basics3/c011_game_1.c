@@ -2,12 +2,15 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <conio.h>
 
 int main()
 {
     char mas[10][21];
     int i;
     int x = 10, y = 5;
+
+    char key;
 
     sprintf(mas[0], "####################");
     
@@ -17,6 +20,8 @@ int main()
     }
     
     sprintf(mas[9], "####################");
+
+    mas[y][x] = '@';
 
     for (i = 0; i < 10; i++)
     {
@@ -28,3 +33,4 @@ int main()
 
     return 0;
 }
+ 
