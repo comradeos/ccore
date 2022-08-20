@@ -27,6 +27,8 @@ int main()
     {
         printf("%s\n", mas[i]);
     }
+
+    
     
 
 
