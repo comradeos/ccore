@@ -6,21 +6,24 @@
 int main()
 {
     char mas[10][21];
+    int i;
+    int x = 10, y = 5;
 
     sprintf(mas[0], "####################");
-    for (size_t i = 1; i < 9; i++)
+    
+    for (i = 1; i < 9; i++)
     {
         sprintf(mas[i], "#                  #");
     }
     
     sprintf(mas[9], "####################");
 
-    for (size_t i = 0; i < 10; i++)
+    for (i = 0; i < 10; i++)
     {
         printf("%s\n", mas[i]);
     }
     
-    
+
 
 
     return 0;
