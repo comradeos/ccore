@@ -3,6 +3,6 @@
 
 int main()
 {
-    
+    int m[9];
     return 0;
 }
