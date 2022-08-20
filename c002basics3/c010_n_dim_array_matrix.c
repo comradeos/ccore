@@ -8,8 +8,17 @@ int main()
     {
         for(int j = 0; j < 9; j++) 
         {
-            m[i][j] = 7;
-            printf("%d ", m[i][j]);
+
+            m[i][j] = (i + 1) * (j + 1);
+            if (i + 1 == 5)
+            {
+                m[i][j] = 5;
+            }
+            if (j + 1 == 3)
+            {
+                m[i][j] = 3;
+            } 
+            printf("%4d", m[i][j]);
         }
         printf("\n");
     }
