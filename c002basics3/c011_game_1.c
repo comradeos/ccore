@@ -12,6 +12,8 @@ int main()
     int ox, oy; // координаты до перемещения собаки
     int ax = 5, ay = 3; // начальные координаты яблока 
     
+    int counter = 0;
+
     // инициализация генератора случайных чисел
     srand(56);
     srand(time(NULL));
@@ -42,7 +44,7 @@ int main()
         {
             printf("%s\n", mas[i]);
         }
-
+        printf("Scores: %d \n", counter);
         
         // чтение символов с клавиатуры
         key = getch();
