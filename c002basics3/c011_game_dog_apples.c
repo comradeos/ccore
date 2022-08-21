@@ -15,7 +15,7 @@ int main()
     int counter = 0;
 
     // инициализация генератора случайных чисел
-    srand(10);
+    srand(73);
     srand(time(NULL));
 
     char key;
