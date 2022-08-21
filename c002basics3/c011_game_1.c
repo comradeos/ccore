@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
+#include <conio.h> // содержит функцию getch для чния символов
 
 int main()
 {
@@ -12,17 +12,21 @@ int main()
 
     char key;
 
+
+    // создание локации
     sprintf(mas[0], "####################");
-    
     for (i = 1; i < 9; i++)
     {
         sprintf(mas[i], "#                  #");
     }
-    
     sprintf(mas[9], "####################");
 
+
+    // создание персонажа
     mas[y][x] = '@';
 
+
+    // отображение локации
     for (i = 0; i < 10; i++)
     {
         printf("%s\n", mas[i]);
