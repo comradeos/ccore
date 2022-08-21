@@ -63,7 +63,8 @@ int main()
 
         if ((ax == x) && (ay == y)) 
         {
-
+            ax = rand() * 1.0 / RAND_MAX * 18 + 1;
+            ay = rand() * 1.0 / RAND_MAX * 8 + 1;
         }
 
     } while (key != 'e');
