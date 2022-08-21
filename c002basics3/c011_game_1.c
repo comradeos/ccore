@@ -6,9 +6,10 @@
 
 int main()
 {
-    char mas[10][21];
-    int i;
-    int x = 10, y = 5;
+    char mas[10][21]; // размеры игрового поля
+    int i; // счетчик
+    int x = 10, y = 5; // начальные координаты собаки
+    int ox, oy; // координаты до перемещения собаки
 
     char key;
 
@@ -28,6 +29,7 @@ int main()
 
 
         // отображение локации
+        system("cls"); // очистка консоли
         for (i = 0; i < 10; i++)
         {
             printf("%s\n", mas[i]);
@@ -36,12 +38,21 @@ int main()
         
         // чтение символов с клавиатуры
         key = getch();
-
+        
+        ox = x;
+        oy = y;
+        
         if (key == 'w') y--;
         if (key == 's') y++;
         if (key == 'a') x--;
         if (key == 'd') x++;
-        
+
+        if (mas[y][x] == '#')
+        {
+            x = ox;
+            y = oy;
+        }
+
     } while (key != 'e');
 
     return 0;
