@@ -5,7 +5,7 @@
 int main()
 {
     srand(time(NULL));
-    int num = (rand() % (10 - 2 + 1)) + 2;
+    int num = (rand() % (50 - 10 + 1)) + 10;
     printf("%d", num);
  
     return 0;
