@@ -28,7 +28,7 @@ int main()
 
 
     srand(time(NULL)); // 3
-    int randomNumber = rand();  
+    int randomNumber = (rand() % (20 - 10 + 1)) + 10;  
     printf("%d ", randomNumber);
 
     
