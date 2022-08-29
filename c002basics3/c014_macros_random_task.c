@@ -36,7 +36,7 @@ int main()
     for (size_t i = 0; i < CONST; i++) {
         printf("%d ", array[i]); // 4
     }
-    printf("\n\n");
+    printf("\n");
 
     return 0;
 }
