@@ -32,6 +32,7 @@ int main()
     printf("%I64i\n", time(NULL));
 
     srand(time(NULL));
+    
     i = rand(); // 0 - 32767
     printf("%d\n", i % 18);
 
