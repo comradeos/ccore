@@ -22,7 +22,7 @@ int main()
     // random between 10 and 19
     srand(time(NULL)); // 3
     int randomNumber = (rand() % (19 - 10 + 1)) + 10; // 3
-    printf("%d ", randomNumber); // 3
+    printf("%d ", randomNumber); // 3 ----
 
     
 
