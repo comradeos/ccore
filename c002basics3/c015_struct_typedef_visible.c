@@ -13,6 +13,8 @@ typedef int myIntType;
 // Создание нового типа данных myPoint на основе типа struct sPoint
 typedef struct sPoint myPoint;
 
+void tasks(); // объявление функции с задачами
+
 int main()
 {
 
@@ -46,5 +48,15 @@ int main()
         printf("i = %d\n", i);
     }
 
+    //
+
+    tasks();
     return 0;
+}
+
+void tasks()
+{
+    struct interiorPiece
+    {
+    };
 }
