@@ -8,9 +8,6 @@ int randomBetween(int min, int max)
     return (rand() % (max - min + 1)) + min;
 }
 
-
-
-
 int main()
 {
     int intNumber = 7;                  // целое число
@@ -47,23 +44,17 @@ int main()
 
     printf("------------------------\n");
 
-
-
-
     // преобразовать строку в число (целое)
     char string[50] = "123"; // строка
-    int intNum; // переменна для хранения числа
-    intNum = atoi(string); // преобразовать строку в число 
-    printf("%d\n", intNum); // вывести число
-
+    int intNum;              // переменна для хранения числа
+    intNum = atoi(string);   // преобразовать строку в число
+    printf("%d\n", intNum);  // вывести число
 
     // преобразовать строку в число (дробное)
     char string2[50] = "23.12"; // строка
-    float floatNum; // переменна для хранения числа
-    floatNum = atof(string2); // преобразовать строку в число 
-    printf("%f\n", floatNum); // вывести число
-
-
+    float floatNum;             // переменна для хранения числа
+    floatNum = atof(string2);   // преобразовать строку в число
+    printf("%f\n", floatNum);   // вывести число
 
     printf("------------------------\n");
     char c = 105;
@@ -71,46 +62,30 @@ int main()
 
     printf("------------------------\n");
 
-    
-
-
-
-
-
-
-
-
-    
-    
     char randomString[20];
 
     srand(time(NULL));
     for (size_t i = 0; i < 20; i++)
     {
-        randomString[i] = randomBetween(0,255);
+        randomString[i] = randomBetween(0, 255);
     }
-    
+
     for (size_t i = 0; i < 20; i++)
     {
         printf("%c", randomString[i]);
     }
     printf("\n");
 
-
-
-
     for (size_t i = 0; i < 20; i++)
     {
-        randomString[i] = randomBetween(97,122);
+        randomString[i] = randomBetween(97, 122);
     }
-    
+
     for (size_t i = 0; i < 20; i++)
     {
         printf("%c", randomString[i]);
     }
     printf("\n");
 
-
-    
     return 0;
 }
