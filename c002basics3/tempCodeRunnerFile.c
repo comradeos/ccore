@@ -1,1 +1,1 @@
-printf("i = %d\n", i);
+int i = 7;
