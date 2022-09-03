@@ -1,6 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <time.h>
+
+int randomBetween(int min, int max)
+{
+    return (rand() % (max - min + 1)) + min;
+}
+
+
+
 
 int main()
 {
@@ -58,7 +67,52 @@ int main()
 
     printf("------------------------\n");
     char c = 105;
-    printf("%c", c);
+    printf("%c\n", c);
 
+    printf("------------------------\n");
+
+    
+
+
+
+
+
+
+
+
+    
+    
+    char randomString[20];
+
+    srand(time(NULL));
+    for (size_t i = 0; i < 20; i++)
+    {
+        randomString[i] = randomBetween(0,255);
+    }
+    
+    for (size_t i = 0; i < 20; i++)
+    {
+        printf("%c", randomString[i]);
+    }
+    printf("\n");
+
+
+
+
+    for (size_t i = 0; i < 20; i++)
+    {
+        randomString[i] = randomBetween(97,122);
+    }
+    
+    for (size_t i = 0; i < 20; i++)
+    {
+        printf("%c", randomString[i]);
+    }
+    printf("\n");
+
+
+    
     return 0;
 }
+
+
