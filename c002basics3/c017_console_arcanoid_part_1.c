@@ -106,7 +106,7 @@ void moveRacket(int x)
  */
 void setcur(int x, int y)
 {
-    COORD coord;
+    COORD coord; // 
     coord.X = x;
     coord.Y = y;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord); // первый параметр - это указатель на наше окно
