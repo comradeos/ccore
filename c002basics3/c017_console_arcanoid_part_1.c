@@ -120,7 +120,7 @@ int main()
 
     do
     {
-        setcur(0, 0);
+        setcur(0, 0); // вместо system("cls")
         init();
         putRacket();
         show();
