@@ -133,7 +133,7 @@ int main()
         
         Sleep(10); // замедлить на 10 миллисекунд
 
-    } while (GetKeyState(VK_ESCAPE) >= 0); // 
+    } while (GetKeyState(VK_ESCAPE) >= 0); // ESC - выход из основного цикла программы
 
     return 0;
 }
