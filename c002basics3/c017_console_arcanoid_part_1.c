@@ -121,7 +121,8 @@ int main()
     do
     {
         setcur(0, 0); // вместо system("cls")
-        init();
+
+        init(); // инициализируем игровое поле
         putRacket();
         show();
 
