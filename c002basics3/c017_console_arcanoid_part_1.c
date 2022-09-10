@@ -124,7 +124,7 @@ int main()
 
         init(); // инициализируем игровое поле
         putRacket(); // помещаем на него ракетку
-        show();
+        show(); // отображаем (рисуем) игровое поле
 
         if (GetKeyState('A') < 0) // если меньше нуля - клавиша нажата, иначе нет
             moveRacket(racket.x - 1);
@@ -133,7 +133,7 @@ int main()
         
         Sleep(10); // замедлить на 10 миллисекунд
 
-    } while (GetKeyState(VK_ESCAPE) >= 0);
+    } while (GetKeyState(VK_ESCAPE) >= 0); // 
 
     return 0;
 }
