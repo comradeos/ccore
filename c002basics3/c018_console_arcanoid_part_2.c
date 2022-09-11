@@ -166,6 +166,8 @@ int main()
         if (GetKeyState('D') < 0)
             moveRacket(racket.x + 1);
         
+        moveBall(racket.x + racket.w / 2, racket.y - 1); // 
+        
         Sleep(10); // замедлить на 10 миллисекунд
 
     } while (GetKeyState(VK_ESCAPE) >= 0); // ESC - выход из основного цикла программы
