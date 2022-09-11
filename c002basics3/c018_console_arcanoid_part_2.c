@@ -216,6 +216,11 @@ int main()
         if (ball.iy > height)
         {
             run = FALSE;
+            if (hitCnt > maxHitCnt) 
+            {
+                maxHitCnt = hitCnt;
+            }
+            hitCnt = 0;
         }
 
         init(); // инициализируем игровое поле
