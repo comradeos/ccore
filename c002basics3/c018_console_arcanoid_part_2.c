@@ -120,6 +120,8 @@ struct Ball
 {
     float x, y;
     int ix, iy;
+    float alfa; // угол
+    float speed; // скорость
 };
 
 // создание типа на основе структуры struct Ball
@@ -131,6 +133,8 @@ TBall ball;
 void initBall()
 {
    moveBall(2, 2);
+   ball.alfa = -1;
+   ball.speed = 0.5;
 }
 
 void putBall() 
@@ -146,6 +150,13 @@ void moveBall(int x, int y)
     ball.ix = (int)round(ball.x);
     ball.iy = (int)round(ball.y);
 
+}
+
+
+void autoMoveBall()
+{
+    moveBall(ball.x + cos(ball.alfa) * ball.speed
+            ,ball.x + sin(ball.alfa) * ball.speed);
 }
 
 
