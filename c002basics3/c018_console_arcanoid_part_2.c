@@ -155,8 +155,26 @@ void moveBall(float x, float y)
 
 void autoMoveBall()
 {
+    if (ball.alfa < 0) ball.alfa += M_PI*2; 
+    if (ball.alfa > M_PI*2) ball.alfa -= M_PI*2;
+    
+    TBall bl = ball;
+    
     moveBall(ball.x + cos(ball.alfa) * ball.speed
             ,ball.x + sin(ball.alfa) * ball.speed);
+
+    if ((mas[ball.iy][ball.ix] == '#') || (mas[ball.iy][ball.ix] == '@'))
+    {
+        if ((ball.ix != bl.ix) && (ball.iy != bl.iy))
+        {
+
+        }
+        else if (ball.iy == bl.iy)
+            bl.alfa = (2*M_PI - bl.alfa) + M_PI; // отразить по вертикали
+        else
+            bl.alfa = (2*M_PI - bl.alfa); // отразить по горизонтали
+    }
+    
 }
 
 
@@ -182,7 +200,10 @@ int main()
         if (GetKeyState('A') < 0) // если меньше нуля - клавиша нажата, иначе нет
             moveRacket(racket.x - 1);
         if (GetKeyState('D') < 0)
-            moveRacket(racket.x + 1);
+            moveRacket(racket.x + 1);  
+
+        if (GetKeyState('W') < 0)
+            run = TRUE;
         
         moveBall(racket.x + racket.w / 2, racket.y - 1); // поместить шарик в центр ракетки
         
