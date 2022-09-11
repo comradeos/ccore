@@ -148,7 +148,7 @@ void moveBall(int x, int y)
 
 int main()
 {
-    char c;
+    // char c;
     initRacket(); // создаем ракетку 
     initBall(); // создаем шарик 
 
@@ -166,7 +166,7 @@ int main()
         if (GetKeyState('D') < 0)
             moveRacket(racket.x + 1);
         
-        moveBall(racket.x + racket.w / 2, racket.y - 1); // 
+        moveBall(racket.x + racket.w / 2, racket.y - 1); // поместить шарик в центр ракетки
         
         Sleep(10); // замедлить на 10 миллисекунд
 
