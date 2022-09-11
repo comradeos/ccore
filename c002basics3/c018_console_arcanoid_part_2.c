@@ -132,6 +132,9 @@ typedef struct Ball TBall;
 // создаем переменную шарика
 TBall ball;
 
+int hitCnt = 0;
+int maxHitCnt = 0;
+
 void initBall()
 {
    moveBall(2, 2);
@@ -163,6 +166,11 @@ void autoMoveBall()
     TBall bl = ball;
     moveBall(ball.x + cos(ball.alfa) * ball.speed
             ,ball.y + sin(ball.alfa) * ball.speed);
+
+    if (mas[ball.iy][ball.ix] == '@')
+    {
+        hitCnt++;
+    }
 
     if ((mas[ball.iy][ball.ix] == '#') || (mas[ball.iy][ball.ix] == '@'))
     {
