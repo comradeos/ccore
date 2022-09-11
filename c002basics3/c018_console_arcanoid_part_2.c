@@ -180,7 +180,7 @@ void autoMoveBall()
         hitCnt++;
         if (hitCnt/level/10 == 1)
         {
-            bl.speed += 0.5;
+            bl.speed += 0.2;
             level++; 
         }
         
