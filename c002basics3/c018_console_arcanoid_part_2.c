@@ -118,7 +118,7 @@ void setcur(int x, int y)
 // создание структуры шарика
 struct Ball
 {
-    int x, y;
+    float x, y;
 };
 
 // создание типа на основе структуры struct Ball
@@ -135,7 +135,8 @@ void initBall()
 
 void putBall() 
 {
-    mas[ball.y][ball.x] = '*';
+    // округлить и привести к целому типу
+    mas[(int)round(ball.y)][(int)round(ball.x)] = '*'; 
 }
 
 void moveBall(int x, int y) 
