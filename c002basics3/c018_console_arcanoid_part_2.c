@@ -3,6 +3,8 @@
 #include <string.h>
 #include <conio.h> // для считывания символов
 #include <windows.h> // для использования функуии GetKeyState 
+
+#define _USE_MATH_DEFINES
 #include <math.h> // для использования функуий sin cos 
 
 // константы: длина, ширина игрового поля
@@ -159,20 +161,32 @@ void autoMoveBall()
     if (ball.alfa > M_PI*2) ball.alfa -= M_PI*2;
     
     TBall bl = ball;
-    
     moveBall(ball.x + cos(ball.alfa) * ball.speed
-            ,ball.x + sin(ball.alfa) * ball.speed);
+            ,ball.y + sin(ball.alfa) * ball.speed);
 
     if ((mas[ball.iy][ball.ix] == '#') || (mas[ball.iy][ball.ix] == '@'))
     {
         if ((ball.ix != bl.ix) && (ball.iy != bl.iy))
         {
+            if (mas[bl.iy][ball.ix] == mas[ball.iy][bl.ix]) 
+            {
+                bl.alfa = bl.alfa + M_PI;
+            } else {
+                if (mas[bl.iy][ball.ix] == '#')
+                {
+                    bl.alfa = (2*M_PI - bl.alfa) + M_PI; // отразить по вертикали
+                } else {
+                    bl.alfa = (2*M_PI - bl.alfa); // отразить по горизонтали
+                }
+            }
 
-        }
-        else if (ball.iy == bl.iy)
+        } else if (ball.iy == bl.iy) {
             bl.alfa = (2*M_PI - bl.alfa) + M_PI; // отразить по вертикали
-        else
+        } else {
             bl.alfa = (2*M_PI - bl.alfa); // отразить по горизонтали
+        }
+        ball = bl;
+        autoMoveBall();
     }
     
 }
@@ -202,10 +216,11 @@ int main()
         if (GetKeyState('D') < 0)
             moveRacket(racket.x + 1);  
 
-        if (GetKeyState('W') < 0)
+        if (GetKeyState('W') < 0) 
             run = TRUE;
-        
-        moveBall(racket.x + racket.w / 2, racket.y - 1); // поместить шарик в центр ракетки
+
+        if (!run) 
+            moveBall(racket.x + racket.w / 2, racket.y - 1); // поместить шарик в центр ракетки
         
         Sleep(10); // замедлить на 10 миллисекунд
 
