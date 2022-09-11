@@ -205,6 +205,10 @@ int main()
         setcur(0, 0); // вместо system("cls")
 
         if (run == TRUE) autoMoveBall();
+        if (ball.iy > height)
+        {
+            run = FALSE;
+        }
 
         init(); // инициализируем игровое поле
         putRacket(); // помещаем на него ракетку
