@@ -13,6 +13,7 @@
 
 int hitCnt = 0;
 int maxHitCnt = 0;
+int level = 1;
 
 // создание игрового поля
 char mas[height][width + 1]; // +1 для записи символа конца строки
@@ -53,6 +54,7 @@ void show()
     for (size_t i = 0; i < height; i++)
     {
         printf("%s", mas[i]);
+        if (i == 2) printf("    level %i  ", level);
         if (i == 3) printf("    hit %i  ", hitCnt);
         if (i == 4) printf("    max %i  ", maxHitCnt);
         if (i < height - 1)
@@ -176,6 +178,12 @@ void autoMoveBall()
     if (mas[ball.iy][ball.ix] == '@')
     {
         hitCnt++;
+        if (hitCnt/level/10 == 1)
+        {
+            bl.speed += 0.5;
+            level++; 
+        }
+        
     }
 
     if ((mas[ball.iy][ball.ix] == '#') || (mas[ball.iy][ball.ix] == '@'))
@@ -245,7 +253,7 @@ int main()
         if (!run) 
             moveBall(racket.x + racket.w / 2, racket.y - 1); // поместить шарик в центр ракетки
         
-        Sleep(10); // замедлить на 10 миллисекунд
+        Sleep(2); // замедлить на 10 миллисекунд
 
     } while (GetKeyState(VK_ESCAPE) >= 0); // ESC - выход из основного цикла программы
 
