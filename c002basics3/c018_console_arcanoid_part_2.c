@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <conio.h> // для считывания символов
-
 #include <windows.h> // для использования функуии GetKeyState 
+#include <math.h> // для использования функуий sin cos 
 
 // константы: длина, ширина игрового поля
 #define width 65
@@ -143,7 +143,7 @@ void putBall()
     mas[ball.iy][ball.ix] = '*'; 
 }
 
-void moveBall(int x, int y) 
+void moveBall(float x, float y) 
 {
     ball.x = x;
     ball.y = y;
@@ -164,12 +164,15 @@ void autoMoveBall()
 int main()
 {
     // char c;
+    BOOL run = FALSE;
     initRacket(); // создаем ракетку 
     initBall(); // создаем шарик 
 
     do
     {
         setcur(0, 0); // вместо system("cls")
+
+        if (run == TRUE) autoMoveBall();
 
         init(); // инициализируем игровое поле
         putRacket(); // помещаем на него ракетку
