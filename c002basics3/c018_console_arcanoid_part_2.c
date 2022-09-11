@@ -113,6 +113,39 @@ void setcur(int x, int y)
 } 
 
 
+
+
+// создание структуры шарика
+struct Ball
+{
+    int x, y;
+};
+
+// создание типа на основе структуры struct Ball
+typedef struct Ball TBall;
+
+// создаем переменную шарика
+TBall ball;
+
+void initBall()
+{
+    ball.x = 2;
+    ball.y = 2;
+}
+
+void putBall() 
+{
+    mas[ball.y][ball.x] = '*';
+}
+
+void moveBall(int x, int y) 
+{
+    ball.x = x;
+    ball.y = y;
+}
+
+
+
 int main()
 {
     char c;
@@ -124,6 +157,7 @@ int main()
 
         init(); // инициализируем игровое поле
         putRacket(); // помещаем на него ракетку
+        initBall();
         show(); // отображаем (рисуем) игровое поле
 
         if (GetKeyState('A') < 0) // если меньше нуля - клавиша нажата, иначе нет
