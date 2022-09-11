@@ -149,7 +149,8 @@ void moveBall(int x, int y)
 int main()
 {
     char c;
-    initRacket();
+    initRacket(); // создаем ракетку 
+    initBall(); // создаем шарик 
 
     do
     {
@@ -157,7 +158,7 @@ int main()
 
         init(); // инициализируем игровое поле
         putRacket(); // помещаем на него ракетку
-        initBall();
+        putBall();
         show(); // отображаем (рисуем) игровое поле
 
         if (GetKeyState('A') < 0) // если меньше нуля - клавиша нажата, иначе нет
