@@ -11,6 +11,9 @@
 #define width 65
 #define height 25
 
+int hitCnt = 0;
+int maxHitCnt = 0;
+
 // создание игрового поля
 char mas[height][width + 1]; // +1 для записи символа конца строки
 
@@ -36,6 +39,9 @@ void init()
     // и скопируем полученную строку (первую) во все остальные строки
     for (size_t i = 2; i < height; i++)
         strncpy(mas[i], mas[1], width + 1);
+    
+    for (size_t i = 25; i < 40; i++)
+        mas[10][i] = '#';
 }
 
 /**
@@ -47,6 +53,8 @@ void show()
     for (size_t i = 0; i < height; i++)
     {
         printf("%s", mas[i]);
+        if (i == 3) printf("    hit %i  ", hitCnt);
+        if (i == 4) printf("    max %i  ", maxHitCnt);
         if (i < height - 1)
             printf("\n");
     }
@@ -132,8 +140,6 @@ typedef struct Ball TBall;
 // создаем переменную шарика
 TBall ball;
 
-int hitCnt = 0;
-int maxHitCnt = 0;
 
 void initBall()
 {
