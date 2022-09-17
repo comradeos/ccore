@@ -21,12 +21,26 @@ void init()
 void show()
 {
     array[HEIGHT-1][WIDTH-1] = '\0';
-    for (int i=0; i<WIDTH; i++)
+    for (int i=0; i<WIDTH-1; i++)
         printf(array[i]);
 }
 
 int main()
 {
+
+    char a[10][10];
     
+    for (size_t i = 0; i < 10; i++)
+        a[0][i] = 'a';
+    a[0][10] = '\0';
+    
+    for (size_t i = 1; i < 10; i++)
+        sprintf(a[i], a[0]);
+    
+    for (size_t i = 0; i < 10; i++)
+        printf(a[i]);
+
+    // init();
+    // show();
     return 0;
 }
