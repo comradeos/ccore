@@ -43,12 +43,12 @@ int main()
 
 
     srand(time(NULL)); // 14.3
-    int random = (rand() % (19 - 10 + 1)) + 10; // 14.3
+    int random = rand() % (19 - 10 + 1) + 10; // 14.3
     printf("%d\n", random); // 14.3
 
 
     for (size_t i = 0; i < k; i++) // 14.4
-        arr[i] = (rand() % (39 - 20 + 1)) + 20; // 14.4
+        arr[i] = rand() % (39 - 20 + 1) + 20; // 14.4
     for (size_t i = 0; i < k; i++) // 14.4
         printf("%d ", arr[i]); // 14.4
     printf("\n"); // 14.4
@@ -94,5 +94,29 @@ int main()
             boxes[i].x, boxes[i].y, boxes[i].z, boxes[i].name, boxes[i].color); // 15.2
 
 
+
+    char string[21]; // 16.1
+    string[20] = '\0'; // 16.1
+    for(size_t i=0; i < 20; i++) // 16.1
+        string[i] = rand() % (255 - 0 + 1) + 0; // 16.1
+    printf("%s\n", string); // 16.1
+
+
+    
+    for(size_t i=0; i < 20; i++) // 16.1
+        string[i] = rand() % (122 - 97 + 1) + 97; // 16.1
+    printf("%s\n", string); // 16.1
+
+    
+    for(size_t i=0; i < 20; i++) // 16.1
+        string[i] = rand() % ('z' - 'a' + 1) + 'a'; // 16.1
+    printf("%s\n", string); // 16.1
+    
     return 0;
+
+
+
+
+    
+
 }
