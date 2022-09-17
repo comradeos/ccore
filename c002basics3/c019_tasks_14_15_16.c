@@ -59,6 +59,13 @@ int main()
         char name[50];
         char color[20];
     };
+    struct SBox box;
+    box.x = 4;
+    box.y = 5;
+    box.z = 6;
+    box.name = "chair";
+    box.color = "green";
+
 
 
 
