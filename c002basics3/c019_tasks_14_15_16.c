@@ -103,14 +103,15 @@ int main()
 
 
     
-    for(size_t i=0; i < 20; i++) // 16.1
-        string[i] = rand() % (122 - 97 + 1) + 97; // 16.1
-    printf("%s\n", string); // 16.1
-
+    for(size_t i=0; i < 20; i++) // 16.2
+        string[i] = rand() % (122 - 97 + 1) + 97; // 16.2
+    printf("%s\n", string); // 16.2
     
-    for(size_t i=0; i < 20; i++) // 16.1
-        string[i] = rand() % ('z' - 'a' + 1) + 'a'; // 16.1
-    printf("%s\n", string); // 16.1
+    for(size_t i=0; i < 20; i++) // 16.2
+        string[i] = rand() % ('z' - 'a' + 1) + 'a'; // 16.2
+    printf("%s\n", string);// 16.2
+    
+
     
     return 0;
 
