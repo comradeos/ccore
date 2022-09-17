@@ -145,7 +145,7 @@ TBall ball;
 
 void initBall()
 {
-   moveBall(2, 2);
+   moveBall(2.0, 2.0);
    ball.alfa = -1;
    ball.speed = 0.5;
 }
