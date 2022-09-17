@@ -12,10 +12,17 @@ char array[HEIGHT][WIDTH+1];
 void init()
 {
     for (int i=0; i<WIDTH; i++)
-        array[0][i] = ' ';
-    array[0][WIDTH] = '\0';
+        array[0][i] = ' '; // инициализация первой строки
+    array[0][WIDTH] = '\0'; // символ завершения строки
     for (int i=0; i<HEIGHT; i++)
-        sprintf(array[i], array[0]);
+        sprintf(array[i], array[0]); // копирование первой строки во все остальные
+}
+
+void show()
+{
+    array[HEIGHT-1][WIDTH-1] = '\0';
+    for (int i=0; i<WIDTH; i++)
+        printf(array[i]);
 }
 
 int main()
