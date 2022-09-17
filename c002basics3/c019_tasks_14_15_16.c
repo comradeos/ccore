@@ -44,5 +44,12 @@ int main()
     int random = (rand() % (19 - 10 + 1)) + 10; // 14.3
     printf("%d\n", random); // 14.3
 
+    for (size_t i = 0; i < k; i++) // 14.4
+        arr[i] = (rand() % (39 - 20 + 1)) + 20; // 14.4
+    for (size_t i = 0; i < k; i++) // 14.4
+        printf("%d ", arr[i]); // 14.4
+    printf("\n"); // 14.4
+
+
     return 0;
 }
