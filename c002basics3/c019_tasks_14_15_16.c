@@ -54,19 +54,19 @@ int main()
     printf("\n"); // 14.4
 
 
-    struct SBox {
+    struct SBox { 
         int x, y, z;
         char name[50];
         char color[20];
-    };
-    struct SBox box;
-    box.x = 4;
-    box.y = 5;
-    box.z = 6;
-    box.name = "chair";
-    box.color = "green";
-
-
+    }; // 15.1
+    struct SBox box; // 15.1
+    box.x = 4; // 15.1
+    box.y = 5; // 15.1
+    box.z = 6; // 15.1
+    sprintf(box.name, "chair"); // 15.1
+    sprintf(box.color, "green"); // 15.1
+    printf("x=%d, y=%d, z=%d, name=%s, color=%s\n", 
+            box.x, box.y, box.z, box.name, box.color); // 15.1
 
 
     return 0;
