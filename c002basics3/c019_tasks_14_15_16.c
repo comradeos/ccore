@@ -69,5 +69,30 @@ int main()
             box.x, box.y, box.z, box.name, box.color); // 15.1
 
 
+
+    struct SBox boxes[3]; // 15.2
+    boxes[0].x = 11; // 15.2
+    boxes[0].y = 11; // 15.2
+    boxes[0].z = 11; // 15.2
+    sprintf(boxes[0].name, "chair"); // 15.2
+    sprintf(boxes[0].color, "green"); // 15.2
+
+    boxes[1].x = 21; // 15.2
+    boxes[1].y = 21; // 15.2
+    boxes[1].z = 21; // 15.2
+    sprintf(boxes[1].name, "table"); // 15.2
+    sprintf(boxes[1].color, "red"); // 15.2
+
+    boxes[2].x = 31;
+    boxes[2].y = 31;
+    boxes[2].z = 31;
+    sprintf(boxes[2].name, "sofa"); // 15.2
+    sprintf(boxes[2].color, "blue"); // 15.2
+    
+    for (size_t i = 0; i < 3; i++)
+        printf("x=%d, y=%d, z=%d, name=%s, color=%s\n", 
+            boxes[i].x, boxes[i].y, boxes[i].z, boxes[i].name, boxes[i].color); // 15.2
+
+
     return 0;
 }
