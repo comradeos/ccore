@@ -33,6 +33,7 @@ int main()
 {
     printf("%d\n", k); // 14.1
 
+
     int arr[k]; // 14.2
     for (size_t i = 0; i < k; i++) // 14.2
         arr[i] = i + 1; // 14.2
@@ -40,15 +41,25 @@ int main()
         printf("%d", arr[i]); // 14.2
     printf("\n"); // 14.2
 
+
     srand(time(NULL)); // 14.3
     int random = (rand() % (19 - 10 + 1)) + 10; // 14.3
     printf("%d\n", random); // 14.3
+
 
     for (size_t i = 0; i < k; i++) // 14.4
         arr[i] = (rand() % (39 - 20 + 1)) + 20; // 14.4
     for (size_t i = 0; i < k; i++) // 14.4
         printf("%d ", arr[i]); // 14.4
     printf("\n"); // 14.4
+
+
+    struct SBox {
+        int x, y, z;
+        char name[50];
+        char color[20];
+    };
+
 
 
     return 0;
