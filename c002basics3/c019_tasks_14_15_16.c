@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-
+#include <time.h>
 
 /*
+
 14.1 Создайте константу, т.е. макрос = 10 и отобразите на экране при помощи printf.
 
 14.2 Создайте массив целого типа, указав в качестве длины массива нашу константу.
@@ -26,7 +26,23 @@
 
 */
 
+
+#define k 10 // 14.1
+
 int main()
 {
+    printf("%d\n", k); // 14.1
+
+    int arr[k]; // 14.2
+    for (size_t i = 0; i < k; i++) // 14.2
+        arr[i] = i + 1; // 14.2
+    for (size_t i = 0; i < k; i++) // 14.2
+        printf("%d", arr[i]); // 14.2
+    printf("\n"); // 14.2
+
+    srand(time(NULL)); // 14.3
+    int random = (rand() % (19 - 10 + 1)) + 10; // 14.3
+    printf("%d\n", random); // 14.3
+
     return 0;
 }
