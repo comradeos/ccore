@@ -5,8 +5,7 @@ int main()
 {
     int num = 5;
     int *numPtr = &num;
-    int numPtr2 = &num;
 
-    printf("%d %d %d\n", &num, numPtr, numPtr2);
+    printf("%d\n", num);
     return 0;
 }
