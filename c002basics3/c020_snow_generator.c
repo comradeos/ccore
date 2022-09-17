@@ -66,10 +66,11 @@ int main()
     {
         newSnow();
         moveSnow();
+        show();
         Sleep(100);
     }
     while(GetKeyState(VK_ESCAPE) >= 0);
 
-    show();
+    
     return 0;
 }
