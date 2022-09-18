@@ -40,6 +40,18 @@ int main()
 
 
 
+void increment2Params(int *param1, int *param2)
+{
+    *param1 = *param1 + 1;
+    *param2 = *param1 * 2;
+}
+
+void increment2ParamsMod(int *param1, int *param2)
+{
+    int temp = *param1;
+    *param1 = *param2;
+    *param2 = temp;
+}
 
 void tasks()
 {
@@ -66,17 +78,4 @@ void tasks()
 
     increment2ParamsMod(&a, &b);
     printf("a=%d, b=%d\n", a, b);
-}
-
-void increment2Params(int *param1, int *param2)
-{
-    *param1 = *param1 + 1;
-    *param2 = *param1 * 2;
-}
-
-void increment2ParamsMod(int *param1, int *param2)
-{
-    int temp = *param1;
-    *param1 = *param2;
-    *param2 = temp;
 }
