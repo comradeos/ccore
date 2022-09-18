@@ -91,8 +91,5 @@ void tasks(int a)
         free(charVarPtr);
         charVarPtr = NULL;
     } 
-    
-
-
 
 }
