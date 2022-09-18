@@ -25,6 +25,8 @@ int main()
     incByPointer(NULL);
     
     printf("%d\n", i);
+
+    tasks();
     return 0;
 }
 
@@ -38,5 +40,9 @@ void tasks()
     С помощью этой процедуры измените значения двух ваших переменных.
     */
     
-    int a;
+    int a = 1;
+    int b = 2;
+
+    printf("a=%d, b=%d\n", a, b);
+
 }
