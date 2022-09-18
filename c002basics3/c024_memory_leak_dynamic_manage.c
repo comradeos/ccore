@@ -19,5 +19,8 @@ int main()
     x = sizeof(char);
     printf("%d\n", x); // 1 байт, 8 бит
 
+    char *somePointer = NULL;
+    printf("%d\n", sizeof(somePointer)); // 8 байт, 64 бита
+
     return 0;
 }
