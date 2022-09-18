@@ -11,7 +11,16 @@ typedef struct SPoint TPoint; // тип данных на основе созд�
 
 void showPoint(TPoint p)
 {
-    printf("p.x=%d, p.y=%d\n", p.x, p.y);
+    printf("x=%d, y=%d\n", p.x, p.y);
+}
+
+void setPoint(TPoint *pointPtr, int xPos, int yPos)
+{
+    if (pointPtr != NULL) 
+    {
+        (*pointPtr).x = xPos;
+        (*pointPtr).y = yPos;
+    }
 }
 
 int main()
@@ -19,7 +28,7 @@ int main()
     TPoint point; // переменная типа TPoint 
     point.x = 3;
     point.y = 7;
-    printf("point.x=%d, point.y=%d\n", point.x, point.y);
+    printf("x=%d, y=%d\n", point.x, point.y);
 
     TPoint *pointPtr = NULL; // создаем указатель с нулевым адресом
     pointPtr = &point; // присваивает указателю адрес переменной point
@@ -30,8 +39,8 @@ int main()
         (*pointPtr).y = 23; // обращение к полю y через адрес (разыменование указателя)
     }
 
-    printf("point.x=%d, point.y=%d\n", point.x, point.y);
-
+    showPoint(point);
+    setPoint(&point, 7, 9);
     showPoint(point);
 
     return 0;
