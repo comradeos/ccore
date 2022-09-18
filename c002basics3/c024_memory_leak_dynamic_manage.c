@@ -28,5 +28,11 @@ int main()
     int b = sizeof(a);
     printf("%d\n", b); // 4
 
+    int *varPtr = NULL;
+    varPtr = malloc(sizeof(int));
+    *varPtr = 1;
+    printf("%d\n", *varPtr);
+
+
     return 0;
 }
