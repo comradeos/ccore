@@ -1,18 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct SPoint TPoint;
 
-struct SPoint {
-    int a, b;
+struct SPoint { // новая структура данных: точка
+    int x; // поле, координата x
+    int y; // поле, координата y
 };
+
+typedef struct SPoint TPoint; // тип данных на основе созданной структуры
 
 
 
 int main()
 {
-    TPoint point;
-    point.a = 123;
-    printf("%d\n", point.a);
     return 0;
 }
