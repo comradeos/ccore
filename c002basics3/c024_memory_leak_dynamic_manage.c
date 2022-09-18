@@ -23,7 +23,10 @@ int main()
     int pointerSize = sizeof(somePtr);
     printf("%d\n", pointerSize); // 8 байт, 64 бита
 
-    // malloc -  
+    // malloc - выделяет ячейку в памяти заданного размера и возвращает адрес выделенной ячейки памяти
+    int a = malloc(4); // выделить 4 байта в памяти
+    int b = sizeof(a);
+    printf("%d\n", b); // 4
 
     return 0;
 }
