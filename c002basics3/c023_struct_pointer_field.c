@@ -9,7 +9,10 @@ struct SPoint { // новая структура данных: точка
 
 typedef struct SPoint TPoint; // тип данных на основе созданной структуры
 
-
+void showPoint(TPoint p)
+{
+    printf("p.x=%d, p.y=%d\n", p.x, p.y);
+}
 
 int main()
 {
@@ -24,9 +27,12 @@ int main()
     if (pointPtr != NULL) // проверка существования адреса в указателе
     {
         (*pointPtr).x = 12; // обращение к полю x через адрес (разыменование указателя)
-        (*pointPtr).y = 23;
+        (*pointPtr).y = 23; // обращение к полю y через адрес (разыменование указателя)
     }
 
     printf("point.x=%d, point.y=%d\n", point.x, point.y);
+
+    showPoint(point);
+
     return 0;
 }
