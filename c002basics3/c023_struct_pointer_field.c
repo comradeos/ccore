@@ -9,14 +9,28 @@ struct SPoint { // новая структура данных: точка
 
 typedef struct SPoint TPoint; // тип данных на основе созданной структуры
 
+
+/**
+ * @brief Выводит значение координат точки
+ * 
+ * @param p 
+ */
 void showPoint(TPoint p)
 {
     printf("x=%d, y=%d\n", p.x, p.y);
 }
 
+
+/**
+ * @brief Устанавливает новые значение координат точки
+ * 
+ * @param pointPtr адрес переменной типа TPoint
+ * @param xPos целое число
+ * @param yPos целое число
+ */
 void setPoint(TPoint *pointPtr, int xPos, int yPos)
 {
-    if (pointPtr != NULL) 
+    if (pointPtr != NULL) // проверка адреса на существование
     {
         (*pointPtr).x = xPos;
         (*pointPtr).y = yPos;
