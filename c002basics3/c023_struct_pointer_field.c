@@ -54,7 +54,7 @@ int main()
     }
 
     showPoint(point);
-    setPoint(&point, 7, 9);
+    setPoint(pointPtr, 7, 9);
     showPoint(point);
 
     return 0;
