@@ -11,8 +11,10 @@ int inc(int a)
 
 
 void incByPointer(int *x)
-{
-    *x = *x + 1; // * - оператор обращения по адресу
+{   
+    if (x != NULL) {
+        *x = *x + 1; // * - оператор обращения по адресу
+    }
 }
 
 int main()
@@ -20,6 +22,7 @@ int main()
     int i = 7;
     i = inc(i);
     incByPointer(&i); // & - операция взятия адреса
+    incByPointer(NULL);
     
     printf("%d\n", i);
     return 0;
