@@ -31,4 +31,5 @@ int main()
 
 void tasks()
 {
+    int a;
 }
