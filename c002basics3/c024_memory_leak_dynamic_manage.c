@@ -28,10 +28,12 @@ int main()
     int b = sizeof(a);
     printf("%d\n", b); // 4
 
-    int *varPtr = NULL;
-    varPtr = malloc(sizeof(int));
-    *varPtr = 1;
-    printf("%d\n", *varPtr);
+
+
+    int *varPtr = NULL; // создаем пустой указатель
+    varPtr = malloc(sizeof(int)); // резервируем память в количестве sizeof(int) байт
+    *varPtr = 1; // обращаемся по адресу в памяти и присваиваем туда значение 1
+    printf("%d\n", *varPtr); // // обращаемся по адресу в памяти и выводим значение
 
 
     return 0;
