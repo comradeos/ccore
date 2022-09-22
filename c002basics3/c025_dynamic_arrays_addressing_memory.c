@@ -63,27 +63,33 @@ void tasks()
     2. Увеличьте размер массива на 4 элемента и заполните все новые ячейки одним любым числом
     */
 
-   int size = 10;
-   int *arr = NULL;
-   arr = malloc(sizeof(int) * size);
+   int size = 10; // 1
+   int *arr = NULL; // 1
+   arr = malloc(sizeof(int) * size); // 1
    
-   for (size_t i = 0; i < size; i++)
+   for (size_t i = 0; i < size; i++) // 1
    {
-        if (i == 0)
-        {
-            arr[i] = i + 1;
+        if (i == 0) // 1
+        { 
+            arr[i] = i + 1; // 1
         } else {
-            arr[i] = arr[i-1] * 2;
+            arr[i] = arr[i-1] * 2; // 1
         }
    
    }
 
-   for (size_t i = 0; i < size; i++)
-   {
-        printf("%d\n", arr[i]);
-   }
-   
+    for (size_t i = 0; i < size; i++) // 1
+        printf("%d\n", arr[i]); // 1
 
+    printf("\n");
 
+    size += 4; // 2
+    arr = realloc(arr, sizeof(int) * size); // 2
+    
 
+    for (size_t i = 10; i < size; i++) // 2
+        arr[i] = 1; // 2
+
+    for (size_t i = 0; i < size; i++) // 2
+        printf("%d\n", arr[i]); // 2
 }
