@@ -46,6 +46,7 @@ int main(int argc, char const *argv[])
     darr2[1] = 234;
     darr2 = realloc( darr2, sizeof(int) * 5);
 
+    printf("\n");
     
     tasks();
 
@@ -62,6 +63,27 @@ void tasks()
     2. Увеличьте размер массива на 4 элемента и заполните все новые ячейки одним любым числом
     */
 
+   int size = 10;
+   int *arr = NULL;
+   arr = malloc(sizeof(int) * size);
    
+   for (size_t i = 0; i < size; i++)
+   {
+        if (i == 0)
+        {
+            arr[i] = i + 1;
+        } else {
+            arr[i] = arr[i-1] * 2;
+        }
+   
+   }
+
+   for (size_t i = 0; i < size; i++)
+   {
+        printf("%d\n", arr[i]);
+   }
+   
+
+
 
 }
