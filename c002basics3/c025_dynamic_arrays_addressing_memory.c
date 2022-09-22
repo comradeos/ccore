@@ -26,5 +26,12 @@ int main(int argc, char const *argv[])
     printf("%d\n", darr[0]);
     printf("%d\n", darr[1]);
 
+    // для изменения размера массива следует очистить занимаемую память
+    // после чего выделить новую память нужного размера
+    free(darr);
+    darr = malloc(sizeof(int)*2); // теперь массив имеет размерность 5
+    darr[4] = 444;
+    printf("%d\n", darr[4]);
+
     return 0;
 }
