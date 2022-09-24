@@ -5,6 +5,8 @@ void createInt(int **p) {
     *p = malloc(sizeof (int));
 }
 
+void tasks();
+
 void c026_pointer_to_pointer() {
     int k = 777; // variable
 
@@ -33,5 +35,27 @@ void c026_pointer_to_pointer() {
 
     free(valueP); // free memory
     valueP = NULL;
+
+    tasks();
+}
+
+void freePointer(int **p) {
+    free(*p);
+    *p = NULL;
+}
+
+void tasks() {
+    /* create a procedure that frees memory of pointer and set it to null */
+    int *p = NULL;
+    p = malloc(sizeof (int));
+    if (p != NULL) {
+        *p = 7;
+    }
+    printf("%d\n", *p);
+
+    freePointer(&p);
+    if (p == NULL) {
+        printf("task completed\n");
+    }
 
 }
