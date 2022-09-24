@@ -21,7 +21,7 @@ void c026_pointer_to_pointer() {
 
     printf("example:\n");
     int *valueP = NULL; // create NULL pointer
-    valueP = malloc(sizeof (int)); // allocate memory for intP
+    createInt(valueP); // allocate memory for valueP
 
     if (valueP != NULL) { // check if pointer is not null
         *valueP = 777; // set value
@@ -30,19 +30,5 @@ void c026_pointer_to_pointer() {
 
     free(valueP); // free memory
     valueP = NULL;
-
-
-    int *value2P = NULL;
-    createInt(value2P);
-
-    if (value2P != NULL) {
-        *value2P = 333;
-        printf("%d\n", *value2P);
-    }
-
-    free(value2P); // free memory
-    valueP = NULL;
-
-
 
 }
