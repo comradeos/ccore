@@ -1,7 +1,6 @@
-#include "c002basics3/c026_another_source.h"
+#include "c002basics3/c026_pointer_to_pointer.h"
 
 int main() {
-    printf("Hello, World!\n");
-//    c026_another_source();
+    c026_pointer_to_pointer();
     return 0;
 }

@@ -119,7 +119,7 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "c002basics3/c026_another_source.h",
+			"path" : "c002basics3/c026_pointer_to_pointer.h",
 			"sourceGroupIndex" : 1
 		}
 	],
