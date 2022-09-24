@@ -24,21 +24,24 @@ void t22_2_no_3rd_var(int *a, int *b) {
 struct SPoint { // новая структура данных: точка
     int x; // поле, координата x
     int y; // поле, координата y
-    int array[7]; // задание 1
+    char c[10];
 };
 
 typedef struct SPoint TPoint; // тип данных на основе созданной структуры
 
+void setPoint(TPoint *pointPtr, int xPos, int yPos, char cStr[10])
+{
+    if (pointPtr != NULL) // проверка адреса на существование
+    {
+        (*pointPtr).x = xPos;
+        (*pointPtr).y = yPos;
+        sprintf((*pointPtr).c, "%s", cStr);
+    }
+}
+
 void showPoint(TPoint p)
 {
-    printf("x=%d, y=%d\n", p.x, p.y);
-
-    printf("array: "); // задание 1
-    for (size_t i = 0; i < 7; i++) // задание 1
-    {
-        printf("%d ", p.array[i]);
-    }
-    printf("\n"); // задание 1
+    printf("x=%d, y=%d c=%s\n", p.x, p.y, p.c);
 }
 
 void c027_tasks_21_22_23() {
@@ -95,14 +98,7 @@ void c027_tasks_21_22_23() {
     и с помощью него заполните новую переменную в структуре.
     */
     TPoint point; // переменная типа TPoint
-    point.x = 3;
-    point.y = 7;
-    printf("x=%d, y=%d\n", point.x, point.y);
-
+    setPoint(&point, 7,3, "hello!");
     showPoint(point);
-
-    int arr[7] = {1,2,3,4,5,6,7};
-    setPoint(pointPtr, 7, 9, arr);
-    showPoint(*pointPtr);
 
 }
