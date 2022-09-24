@@ -22,6 +22,7 @@ void c026_pointer_to_pointer() {
 
 
     printf("example:\n");
+
     int *valueP = NULL; // create NULL pointer
     createInt(&valueP); // allocate memory for valueP
 
