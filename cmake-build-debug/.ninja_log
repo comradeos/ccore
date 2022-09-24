@@ -4,3 +4,5 @@
 1	100	6857297778399838	build.ninja	159e475acfd47505
 1	67	6857060142458505	CMakeFiles/ccore.dir/tests/jetbrains.c.obj	f1cacadb199daa67
 5	79	6857079965549674	CMakeFiles/ccore.dir/c002basics3/c026_another_source.c.obj	2ee4cf6fdce7611f
+1	82	6857301744736562	CMakeFiles/ccore.dir/main.c.obj	b2d32b64b51f867c
+82	175	6857301745636618	ccore.exe	8e67058aca950d13
