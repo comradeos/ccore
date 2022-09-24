@@ -100,7 +100,8 @@
 			"sourceIndexes" : 
 			[
 				1,
-				2
+				2,
+				3
 			]
 		}
 	],
@@ -120,6 +121,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "c002basics3/c026_pointer_to_pointer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "c002basics3/c027_tasks_21_22_23.h",
 			"sourceGroupIndex" : 1
 		}
 	],
