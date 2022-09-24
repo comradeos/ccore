@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void createInt(int *p) {
-    p = malloc(sizeof (int));
+void createInt(int **p) {
+    *p = malloc(sizeof (int));
 }
 
 void c026_pointer_to_pointer() {
@@ -19,9 +19,11 @@ void c026_pointer_to_pointer() {
 
     printf("%d\n", k);
 
+
+
     printf("example:\n");
     int *valueP = NULL; // create NULL pointer
-    createInt(valueP); // allocate memory for valueP
+    createInt(&valueP); // allocate memory for valueP
 
     if (valueP != NULL) { // check if pointer is not null
         *valueP = 777; // set value
