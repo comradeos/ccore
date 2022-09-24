@@ -3,4 +3,4 @@ project(ccore C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(ccore main.c)
+add_executable(ccore main.c mclib.h)
