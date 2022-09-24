@@ -19,6 +19,28 @@ void t22_2_no_3rd_var(int *a, int *b) {
     *a = *a - *b; // 6 - 2 = 4
 }
 
+
+
+struct SPoint { // новая структура данных: точка
+    int x; // поле, координата x
+    int y; // поле, координата y
+    int array[7]; // задание 1
+};
+
+typedef struct SPoint TPoint; // тип данных на основе созданной структуры
+
+void showPoint(TPoint p)
+{
+    printf("x=%d, y=%d\n", p.x, p.y);
+
+    printf("array: "); // задание 1
+    for (size_t i = 0; i < 7; i++) // задание 1
+    {
+        printf("%d ", p.array[i]);
+    }
+    printf("\n"); // задание 1
+}
+
 void c027_tasks_21_22_23() {
     /*
     Задание 21.1:
@@ -72,12 +94,15 @@ void c027_tasks_21_22_23() {
     Добавьте в процедуру setPoint входной параметр такого же типа
     и с помощью него заполните новую переменную в структуре.
     */
-    struct SPoint { // новая структура данных: точка
-        int x; // поле, координата x
-        int y; // поле, координата y
-        int array[7]; // задание 1
-    };
+    TPoint point; // переменная типа TPoint
+    point.x = 3;
+    point.y = 7;
+    printf("x=%d, y=%d\n", point.x, point.y);
 
+    showPoint(point);
 
+    int arr[7] = {1,2,3,4,5,6,7};
+    setPoint(pointPtr, 7, 9, arr);
+    showPoint(*pointPtr);
 
 }
