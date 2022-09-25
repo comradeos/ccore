@@ -31,8 +31,10 @@ int minAB(int a, int b) {
 int getOne(int array[], TFuncAB function) {
     int value;
     value = array[0];
-    for (int i = 0; i < 10; ++i) {
-        value = function(value, array[i]);
+    if (function != NULL) {
+        for (int i = 0; i < 10; ++i) {
+            value = function(value, array[i]);
+        }
     }
     return value;
 }
