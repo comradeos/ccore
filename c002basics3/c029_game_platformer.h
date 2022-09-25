@@ -37,13 +37,30 @@ typedef struct SObject {
 
 TObject mario; // персонаж
 
+/**
+ * Задание начальной позиции персонажа
+ */
+ void setObjectPos(TObject *obj, float xPos, float yPos) {
+    (*obj).x = xPos;
+    (*obj).y = yPos;
+ }
 
+#include <math.h> // математическая библиотека
 
-
+/**
+ * Отображение персонажа на карте
+ */
+void putObjectOnMap(TObject obj) {
+    int ix = (int)roundf(obj.x);
+    int iy = (int)roundf(obj.y);
+    map[ix][iy] = '@';
+}
 
 
 
 void c029_game_platformer() {
+    setObjectPos(&mario, 10,20);
     clearMap();
+    putObjectOnMap(mario);
     showMap();
 }
