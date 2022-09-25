@@ -3,4 +3,4 @@ project(ccore C)
 
 set(CMAKE_C_STANDARD 99)
 set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra")
-add_executable(ccore main.c mclib.h c002basics3/c026_pointer_to_pointer.h c002basics3/c027_tasks_21_22_23.h c002basics3/c028_tasks_24_25_26.h)
+add_executable(ccore main.c mclib.h c002basics3/c026_pointer_to_pointer.h c002basics3/c027_tasks_21_22_23.h c002basics3/c028_tasks_24_25_26.h c002basics3/c029_game_platformer.h c002basics3/c030_pointer_on_function.h tests/pass_array_to_function.h)
