@@ -34,6 +34,7 @@ void showMap() {
 typedef struct SObject {
     float x,y;
     float width, height;
+    float vertSpeed; // вертикальная скорость
 } TObject; // тип данных структуры персонажа
 
 TObject mario; // персонаж
@@ -76,6 +77,7 @@ void initObject(TObject *obj, float xPos, float yPos, float objWidth, float objH
     setObjectPos(obj, xPos, yPos);
     (*obj).width = objWidth;
     (*obj).height = objHeight;
+    (*obj).vertSpeed = 0;
 }
 
 #include <windows.h> // для GetKeyState
@@ -85,8 +87,11 @@ void initObject(TObject *obj, float xPos, float yPos, float objWidth, float objH
  * @param x горизонталь
  * @param y вертикаль
  */
-void setCursor(int x, int y) {
+void setCursor(short x, short y) { // можно также использовать int
     COORD coord;
+    coord.X = x;
+    coord.Y = y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
 void c029_game_platformer() {
@@ -96,6 +101,7 @@ void c029_game_platformer() {
     do {
         clearMap();
         putObjectOnMap(mario);
+        setCursor(0,0);
         showMap();
     } while (GetKeyState(VK_ESCAPE) >= 0); // для этого нужно подключить windows.h
 
