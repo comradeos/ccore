@@ -119,7 +119,8 @@ void vertMoveObject(TObject *obj) {
     (*obj).vertSpeed += (float) 0.05; // ускорение
     setObjectPos(obj, (*obj).x, (*obj).y + (*obj).vertSpeed);
     if (isCollision(*obj, brick[0])) {
-
+        (*obj).y -= (*obj).vertSpeed;
+        (*obj).vertSpeed = 0;
     }
 }
 
@@ -140,7 +141,13 @@ void c029_game_platformer() {
     initObject((TObject *) &brick, 20, 20, 40, 5);
 
     do {
+        system("color 9F");
         clearMap();
+
+        if (GetKeyState(VK_SPACE) < 0) {
+            mario.vertSpeed = (float) -0.1;
+        }
+
         vertMoveObject(&mario);
         putObjectOnMap(brick[0]);
         putObjectOnMap(mario);
