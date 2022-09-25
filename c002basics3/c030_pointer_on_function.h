@@ -15,7 +15,7 @@ int maxAB(int a, int b) {
     } else if (b > a) {
         return b;
     }
-    return 0;
+    return a;
 }
 
 int minAB(int a, int b) {
@@ -24,16 +24,18 @@ int minAB(int a, int b) {
     } else if (b < a) {
         return b;
     }
-    return 0;
+    return a;
 }
 
 // TFuncAB можно передавать в качестве аргумента
 int getOne(int array[], TFuncAB function) {
-    int value = array[0];
-    printf("value = %d array[i] = %d\n", value, array[0]);
+    int value;
+    value = array[0];
+    printf("value = %d array[0] = %d\n", value, array[0]);
     for (int i = 0; i < 10; ++i) {
-        printf("value = %d array[i] = %d\n", value, array[i]);
+        printf("value = %d array[%d] = %d |||", value, i, array[i]);
         value = function(value, array[i]);
+        printf(" === %d \n", value);
     }
     return value;
 }
@@ -62,18 +64,18 @@ void c030_pointer_on_function() {
     func4 = minAB;
     printf("%d\n", func4(74,9));
 
-    int array[10] = {92,41,23,41,345,73,21,3,1,75};
+
+    printf("\n\n\n");
+    int array[10] = {292,421,233,411,345,73,21,13,12,75};
 
 
     int result;
 
-    // result = getOne(array, func3);
-    // printf("%d\n", result); // 345
-
+    result = getOne(array, func3);
+    printf("%d\n", result); // 345
+    printf("\n\n\n");
     result = getOne(array, func4);
     printf("%d\n", result); // 1
-
-
 
 
 }
