@@ -31,6 +31,18 @@ void showMap() {
     }
 }
 
+typedef struct SObject {
+    float x,y;
+} TObject; // тип данных структуры персонажа
+
+TObject mario; // персонаж
+
+
+
+
+
+
+
 void c029_game_platformer() {
     clearMap();
     showMap();
