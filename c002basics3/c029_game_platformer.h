@@ -118,6 +118,9 @@ BOOL isCollision(TObject obj1, TObject obj2); // говорим компилят
 void vertMoveObject(TObject *obj) {
     (*obj).vertSpeed += (float) 0.05; // ускорение
     setObjectPos(obj, (*obj).x, (*obj).y + (*obj).vertSpeed);
+    if (isCollision(*obj, brick[0])) {
+
+    }
 }
 
 /**
@@ -144,7 +147,7 @@ void c029_game_platformer() {
 
         setCursor(0,0);
         showMap();
-        Sleep(10);
+//        Sleep(10);
     } while (GetKeyState(VK_ESCAPE) >= 0); // для этого нужно подключить windows.h
 
 }
