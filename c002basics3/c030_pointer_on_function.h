@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+// делаем тип переменной которая будет указазателем на функцию
+typedef int (*TMaxAB)(int, int);
+
 int get5() {
     return 5;
 }
@@ -25,7 +29,7 @@ void c030_pointer_on_function() {
     func = get5;
     printf("%d\n", func());
 
-    int (*func2)(int a, int b);
+    int (*func2)(int, int);
     func2 = maxAB;
     printf("%d\n", func2(7,9));
 }
