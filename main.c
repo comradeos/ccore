@@ -10,7 +10,7 @@ int main() {
 //    c027_tasks_21_22_23();
 //    c028_tasks_24_25_26();
 //    c029_game_platformer();
-//    c030_pointer_on_function();
-    pass_array_to_function();
+//    pass_array_to_function();
+    c030_pointer_on_function();
 return 0;
 }
