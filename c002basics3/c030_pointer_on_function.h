@@ -19,9 +19,9 @@ int maxAB(int a, int b) {
 }
 
 int mixAB(int a, int b) {
-    if (a > b) {
+    if (a < b) {
         return a;
-    } else if (b > a) {
+    } else if (b < a) {
         return b;
     }
     return 0;
@@ -45,4 +45,9 @@ void c030_pointer_on_function() {
     TFuncAB func3;
     func3 = maxAB;
     printf("%d\n", func3(74,9));
+
+    TFuncAB func4;
+    func4 = mixAB;
+    printf("%d\n", func4(74,9));
+
 }
