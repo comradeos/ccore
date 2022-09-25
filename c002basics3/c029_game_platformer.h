@@ -40,7 +40,7 @@ typedef struct SObject {
 } TObject; // тип данных структуры персонажа
 
 TObject mario; // персонаж
-TObject brik[1]; // кирпич, делаем сразу массив кирпичей что бы легче было добавлять новые
+TObject brick[1]; // кирпич, делаем сразу массив кирпичей что бы легче было добавлять новые
 
 /**
  * Задание начальной позиции персонажа
@@ -53,7 +53,6 @@ void setObjectPos(TObject *obj, float xPos, float yPos) {
     (*obj).y = yPos;
 }
 
-
 /**
  * Проверяет попадпет ли координата в пределы карты
  * @param x горизонталь
@@ -63,7 +62,6 @@ void setObjectPos(TObject *obj, float xPos, float yPos) {
 BOOL isPosInMap(int x, int y) {
     return ((x >= 0)  && (x < mapWidth) && (y >=0 ) && (y < mapHeight));
 }
-
 
 /**
  * Отображение персонажа на карте
@@ -99,7 +97,6 @@ void initObject(TObject *obj, float xPos, float yPos, float objWidth, float objH
     (*obj).vertSpeed = 0;
 }
 
-
 /**
  * Изменение положения курсора
  * @param x горизонталь
@@ -112,6 +109,7 @@ void setCursor(short x, short y) { // можно также использова
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
+BOOL isCollision();
 
 /**
  * Пересчитывает скорость и изменяет вертикально место положения объекта
@@ -122,16 +120,22 @@ void vertMoveObject(TObject *obj) {
     setObjectPos(obj, (*obj).x, (*obj).y + (*obj).vertSpeed);
 }
 
+BOOL isCollision(TObject obj1, TObject obj2) {
+    return ((obj1.x + obj1.width) > obj2.x) && (obj1.x < (obj2.x + obj2.width)) &&
+           ((obj1.y + obj1.height) > obj2.y) && (obj1.y < (obj2.y + obj2.height));
+}
+
 void c029_game_platformer() {
 
     initObject(&mario, 39,10,3,3);
-    initObject(&brik, 20,20,40,5);
+    initObject((TObject *) &brick, 20, 20, 40, 5);
 
     do {
         clearMap();
 
         vertMoveObject(&mario);
-        putObjectOnMap(brik[0]);
+
+        putObjectOnMap(brick[0]);
         putObjectOnMap(mario);
 
         setCursor(0,0);
