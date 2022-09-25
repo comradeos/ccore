@@ -38,7 +38,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
+					"fragment" : " -Wall -Wextra -g"
 				},
 				{
 					"fragment" : "-std=gnu99"
@@ -65,7 +65,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
+				"fragment" : "-Wall -Wextra -g",
 				"role" : "flags"
 			},
 			{
@@ -100,7 +100,9 @@
 			"sourceIndexes" : 
 			[
 				1,
-				2
+				2,
+				3,
+				4
 			]
 		}
 	],
@@ -119,7 +121,17 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "c002basics3/c026_another_source.h",
+			"path" : "c002basics3/c026_pointer_to_pointer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "c002basics3/c027_tasks_21_22_23.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "c002basics3/c028_tasks_24_25_26.h",
 			"sourceGroupIndex" : 1
 		}
 	],

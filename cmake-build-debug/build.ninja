@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_ccore: phony || CMakeFiles/ccore.dir
 
 build CMakeFiles/ccore.dir/main.c.obj: C_COMPILER__ccore_Debug C$:/Software/OpenServer/domains/ccore/main.c || cmake_object_order_depends_target_ccore
   DEP_FILE = CMakeFiles\ccore.dir\main.c.obj.d
-  FLAGS = -g -std=gnu99
+  FLAGS = -Wall -Wextra -g -std=gnu99
   OBJECT_DIR = CMakeFiles\ccore.dir
   OBJECT_FILE_DIR = CMakeFiles\ccore.dir
 
@@ -64,7 +64,7 @@ build CMakeFiles/ccore.dir/main.c.obj: C_COMPILER__ccore_Debug C$:/Software/Open
 # Link the executable ccore.exe
 
 build ccore.exe: C_EXECUTABLE_LINKER__ccore_Debug CMakeFiles/ccore.dir/main.c.obj
-  FLAGS = -g
+  FLAGS = -Wall -Wextra -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ccore.dir
   POST_BUILD = cd .
