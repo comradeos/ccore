@@ -64,9 +64,13 @@ void putObjectOnMap(TObject obj) {
     }
 }
 
-
 /**
  * Инициализация персонажа
+ * @param obj объект
+ * @param xPos  позиция
+ * @param yPos позиция
+ * @param objWidth толщина
+ * @param objHeight  высота
  */
 void initObject(TObject *obj, float xPos, float yPos, float objWidth, float objHeight) {
     setObjectPos(obj, xPos, yPos);
@@ -74,10 +78,25 @@ void initObject(TObject *obj, float xPos, float yPos, float objWidth, float objH
     (*obj).height = objHeight;
 }
 
+#include <windows.h> // для GetKeyState
+
+/**
+ *
+ * @param x
+ * @param y
+ */
+void setCursor(int x, int y) {
+    COORD coord;
+}
 
 void c029_game_platformer() {
-    setObjectPos(&mario, 10,20);
-    clearMap();
-    putObjectOnMap(mario);
-    showMap();
+
+    initObject(&mario, 39,10,3,3);
+
+    do {
+        clearMap();
+        putObjectOnMap(mario);
+        showMap();
+    } while (GetKeyState(VK_ESCAPE) >= 0); // для этого нужно подключить windows.h
+
 }
