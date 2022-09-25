@@ -41,6 +41,9 @@ TObject mario; // персонаж
 
 /**
  * Задание начальной позиции персонажа
+ * @param obj Указатель на объект
+ * @param xPos вертикальная позиция
+ * @param yPos горизонтальная позиция
  */
 void setObjectPos(TObject *obj, float xPos, float yPos) {
     (*obj).x = xPos;
@@ -51,6 +54,7 @@ void setObjectPos(TObject *obj, float xPos, float yPos) {
 
 /**
  * Отображение персонажа на карте
+ * @param obj объект (персонаж)
  */
 void putObjectOnMap(TObject obj) {
     int ix = (int) roundf(obj.x);
@@ -93,6 +97,9 @@ void setCursor(short x, short y) { // можно также использова
     coord.Y = y;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
+
+
+
 
 void c029_game_platformer() {
 
