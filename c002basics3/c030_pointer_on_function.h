@@ -6,7 +6,7 @@ void setB321(int *b) {
     *b = 321;
 }
 void setArray0(int * arr) {
-    arr[0] = 222;
+    arr[1] = 222;
 }
 
 void c030_pointer_on_function() {
@@ -16,5 +16,5 @@ void c030_pointer_on_function() {
 
     int arr[5] = {1,2,3,4,5};
     setArray0(arr);
-    printf("%d\n", arr[0]);
+    printf("%d\n", arr[1]);
 }
