@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void day23Tasks();
 
 // делаем тип переменной которая будет указазателем на функцию
 typedef int (*TFuncAB)(int, int);
@@ -74,5 +75,34 @@ void c030_pointer_on_function() {
     result = getOne(array, func4);
     printf("%d\n", result); // 1
 
+    TFuncAB functions[2];
+    functions[0] = maxAB;
+    functions[1] = minAB;
+    printf("%d\n", functions[0](8,1)); // 8
+    printf("%d\n", functions[1](8,1)); // 1
 
+    day23Tasks();
+}
+
+float myFuncSum(float a, float b) {
+    return a + b;
+}
+
+float myFuncMult(float a, float b) {
+    return a * b;
+}
+
+void day23Tasks() {
+    /*
+     * Создайте 2 функции, которые получают на вход 2 параметра вещественного типа,
+     * и в качестве результата возвращают float. Первая функция складывает 2 числа, вторая перемножает.
+     * Создайте указатель для этих функций и с помощью него воспользуйтесь ими.
+     * Отобразите результат работы функций на экране.
+     */
+    float (*functionP)(float, float);
+    functionP = myFuncSum;
+    printf("%f\n", functionP((float) 5.2, (float) 1.9));
+
+    functionP = myFuncMult;
+    printf("%f\n", functionP((float) 5.2, (float) 4.9));
 }
