@@ -102,7 +102,8 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5
 			]
 		}
 	],
@@ -132,6 +133,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "c002basics3/c028_tasks_24_25_26.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "c002basics3/c029_game_platformer.h",
 			"sourceGroupIndex" : 1
 		}
 	],

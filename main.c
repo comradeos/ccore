@@ -1,10 +1,12 @@
 #include "c002basics3/c026_pointer_to_pointer.h"
 #include "c002basics3/c027_tasks_21_22_23.h"
 #include "c002basics3/c028_tasks_24_25_26.h"
+#include "c002basics3/c029_game_platformer.h"
 
 int main() {
 //    c026_pointer_to_pointer();
 //    c027_tasks_21_22_23();
-    c028_tasks_24_25_26();
+//    c028_tasks_24_25_26();
+    c029_game_platformer();
     return 0;
 }
