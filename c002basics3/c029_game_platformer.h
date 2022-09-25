@@ -101,7 +101,7 @@ void setCursor(short x, short y) { // можно также использова
 
 /**
  * Пересчитывает скорость и изменяет вертикально место положения объекта (персонажа)
- * @param obj объект (персонаж)
+ * @param obj указатель или объект (персонаж)
  */
 void vertMoveObject(TObject *obj) {
     (*obj).vertSpeed += (float) 0.05; // ускорение
@@ -116,10 +116,11 @@ void c029_game_platformer() {
 
     do {
         clearMap();
-        vertMoveObject();
+        vertMoveObject(&mario);
         putObjectOnMap(mario);
         setCursor(0,0);
         showMap();
+        Sleep(10);
     } while (GetKeyState(VK_ESCAPE) >= 0); // для этого нужно подключить windows.h
 
 }
