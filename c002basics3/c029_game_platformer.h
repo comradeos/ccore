@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h> // математическая библиотека
+#include <windows.h> // для GetKeyState
 
 // параметры игрового поля (окна)
 #define mapWidth 80 // ширина
@@ -38,6 +40,7 @@ typedef struct SObject {
 } TObject; // тип данных структуры персонажа
 
 TObject mario; // персонаж
+TObject brik[1]; // кирпич, делаем сразу массив кирпичей что бы легче было добавлять новые
 
 /**
  * Задание начальной позиции персонажа
@@ -50,11 +53,21 @@ void setObjectPos(TObject *obj, float xPos, float yPos) {
     (*obj).y = yPos;
 }
 
-#include <math.h> // математическая библиотека
+
+/**
+ * Проверяет попадпет ли координата в пределы карты
+ * @param x горизонталь
+ * @param y вертикаль
+ * @return true/false
+ */
+BOOL isPosInMap(int x, int y) {
+    return ((x >= 0)  && (x < mapWidth) && (y >=0 ) && (y < mapHeight));
+}
+
 
 /**
  * Отображение персонажа на карте
- * @param obj объект (персонаж)
+ * @param obj объект
  */
 void putObjectOnMap(TObject obj) {
     int ix = (int) roundf(obj.x);
@@ -64,7 +77,9 @@ void putObjectOnMap(TObject obj) {
 
     for (int i = ix; i < (ix+iWidth); ++i) {
         for (int j = iy; j < (iy+iHeight); ++j) {
-            map[j][i] = '@';
+            if (isPosInMap(ix, iy)) {
+                map[j][i] = '@';
+            }
         }
     }
 }
@@ -84,7 +99,6 @@ void initObject(TObject *obj, float xPos, float yPos, float objWidth, float objH
     (*obj).vertSpeed = 0;
 }
 
-#include <windows.h> // для GetKeyState
 
 /**
  * Изменение положения курсора
@@ -100,24 +114,26 @@ void setCursor(short x, short y) { // можно также использова
 
 
 /**
- * Пересчитывает скорость и изменяет вертикально место положения объекта (персонажа)
- * @param obj указатель или объект (персонаж)
+ * Пересчитывает скорость и изменяет вертикально место положения объекта
+ * @param obj указатель или объект
  */
 void vertMoveObject(TObject *obj) {
     (*obj).vertSpeed += (float) 0.05; // ускорение
     setObjectPos(obj, (*obj).x, (*obj).y + (*obj).vertSpeed);
 }
 
-
-
 void c029_game_platformer() {
 
     initObject(&mario, 39,10,3,3);
+    initObject(&brik, 20,20,40,5);
 
     do {
         clearMap();
+
         vertMoveObject(&mario);
+        putObjectOnMap(brik[0]);
         putObjectOnMap(mario);
+
         setCursor(0,0);
         showMap();
         Sleep(10);
