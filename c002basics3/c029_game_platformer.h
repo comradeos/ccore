@@ -33,6 +33,7 @@ void showMap() {
 
 typedef struct SObject {
     float x,y;
+    float width, height;
 } TObject; // тип данных структуры персонажа
 
 TObject mario; // персонаж
@@ -40,10 +41,10 @@ TObject mario; // персонаж
 /**
  * Задание начальной позиции персонажа
  */
- void setObjectPos(TObject *obj, float xPos, float yPos) {
+void setObjectPos(TObject *obj, float xPos, float yPos) {
     (*obj).x = xPos;
     (*obj).y = yPos;
- }
+}
 
 #include <math.h> // математическая библиотека
 
@@ -56,6 +57,15 @@ void putObjectOnMap(TObject obj) {
     map[ix][iy] = '@';
 }
 
+
+/**
+ * Инициализация персонажа
+ */
+void initObject(TObject *obj, float xPos, float yPos, float objWidth, float objHeight) {
+    setObjectPos(obj, xPos, yPos);
+    (*obj).width = objWidth;
+    (*obj).height = objHeight;
+}
 
 
 void c029_game_platformer() {
