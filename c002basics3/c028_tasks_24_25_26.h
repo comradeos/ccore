@@ -45,11 +45,18 @@ void c028_tasks_24_25_26() {
     2. Увеличьте размер массива на 4 элемента и заполните все новые ячейки одним любым числом
     */
     int size = 10;
-    int * array = NULL;
-    array = malloc(sizeof(int)*size);
+    int *array = NULL;
+    array = malloc(sizeof(*array) * size); // указатель указывает на int а значит память будет выделена под тип int
     if (array != NULL) {
         for (int i=0; i<size; i++) {
+            if (i == 0) {
+                array[i] = 1;
+            } else {
+                array[i] = array[i-1] * 2;
+            }
+            printf("%d ", array[i]);
         }
+        printf("\n");
     }
 
     /* create a procedure that frees memory of pointer and set it to null */
