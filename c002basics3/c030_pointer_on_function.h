@@ -5,6 +5,15 @@ int get5() {
     return 5;
 }
 
+int maxAB(int a, int b) {
+    if (a > b) {
+        return a;
+    } else if (b > a) {
+        return b;
+    }
+    return 0;
+}
+
 void c030_pointer_on_function() {
     int (*func)();
     /*
@@ -13,9 +22,10 @@ void c030_pointer_on_function() {
      * int говорит о том что указатель должен указывать на функцию которая возвращает целый тип
      * () пустые скобки говорят о том что функция не принимает никаких параметров
      */
+    func = get5;
+    printf("%d\n", func());
 
-
-
-
-    printf("%d\n", get5());
+    int (*func2)(int a, int b);
+    func2 = maxAB;
+    printf("%d\n", func2(7,9));
 }
