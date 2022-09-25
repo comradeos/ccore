@@ -25,7 +25,9 @@ void c028_tasks_24_25_26() {
     // попробуем для указателя на void (нетипизированный указатель)
     void *unkType = NULL;
     unkType = malloc(8); // выделяем ему 8 байт
-    *(int*) unkType = 777; // приводим тип указателя void к типу указателя int
+    if (unkType != NULL) {
+        *(int*) unkType = 777; // приводим тип указателя void к типу указателя int
+    }
     printf("%d\n", *(int*) unkType);
 
 
