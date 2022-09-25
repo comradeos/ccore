@@ -109,7 +109,7 @@ void setCursor(short x, short y) { // можно также использова
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
-BOOL isCollision();
+BOOL isCollision(TObject obj1, TObject obj2); // говорим компилятору что такая функция существует, но будет описана ниже
 
 /**
  * Пересчитывает скорость и изменяет вертикально место положения объекта
