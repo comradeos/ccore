@@ -67,8 +67,8 @@ void putObjectOnMap(TObject obj) {
 /**
  * Инициализация персонажа
  * @param obj объект
- * @param xPos  позиция
- * @param yPos позиция
+ * @param xPos  позиция горизонталь
+ * @param yPos позиция вертикаль
  * @param objWidth толщина
  * @param objHeight  высота
  */
@@ -81,9 +81,9 @@ void initObject(TObject *obj, float xPos, float yPos, float objWidth, float objH
 #include <windows.h> // для GetKeyState
 
 /**
- *
- * @param x
- * @param y
+ * Изменение положения курсора
+ * @param x горизонталь
+ * @param y вертикаль
  */
 void setCursor(int x, int y) {
     COORD coord;
