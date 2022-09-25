@@ -1,21 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define mapWidth 80
-#define mapHeight 25
+// параметры игрового поля (окна)
+#define mapWidth 80 // ширина
+#define mapHeight 25 // высота
 
-char map[mapHeight][mapWidth+1];
+char map[mapHeight][mapWidth+1]; // игровое поле
 
+/**
+ * Очистить игровое поле
+ */
 void clearMap() {
     for (int i=0; i<mapWidth; i++) {
         map[0][i] = '.';
     }
-    map[0][mapWidth] = '\0';
+    map[0][mapWidth] = '\0'; // символ конца строки
 
     for (int i = 1; i < mapHeight; ++i) {
-        sprintf(map[i], map[0]);
+        sprintf(map[i], "%s", map[0]); // копировать строку
     }
 }
+
+/**
+ * Отобразить игровое поле
+ */
 void showMap() {
     map[mapHeight-1][mapWidth-1] = '\0';
     for (int i = 0; i < mapHeight; ++i) {
