@@ -120,6 +120,12 @@ void vertMoveObject(TObject *obj) {
     setObjectPos(obj, (*obj).x, (*obj).y + (*obj).vertSpeed);
 }
 
+/**
+ * Проверка на столкновение
+ * @param obj1 первый объект
+ * @param obj2 второй объект
+ * @return true/false
+ */
 BOOL isCollision(TObject obj1, TObject obj2) {
     return ((obj1.x + obj1.width) > obj2.x) && (obj1.x < (obj2.x + obj2.width)) &&
            ((obj1.y + obj1.height) > obj2.y) && (obj1.y < (obj2.y + obj2.height));
@@ -132,9 +138,7 @@ void c029_game_platformer() {
 
     do {
         clearMap();
-
         vertMoveObject(&mario);
-
         putObjectOnMap(brick[0]);
         putObjectOnMap(mario);
 
