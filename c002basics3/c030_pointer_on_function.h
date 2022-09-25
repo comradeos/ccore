@@ -105,4 +105,6 @@ void day23Tasks() {
 
     functionP = myFuncMult;
     printf("%f\n", functionP((float) 5.2, (float) 4.9));
+
+    printf("float %llu double %llu\n", sizeof(float), sizeof(double));
 }
