@@ -18,7 +18,7 @@ int maxAB(int a, int b) {
     return 0;
 }
 
-int mixAB(int a, int b) {
+int minAB(int a, int b) {
     if (a < b) {
         return a;
     } else if (b < a) {
@@ -28,8 +28,14 @@ int mixAB(int a, int b) {
 }
 
 // TFuncAB можно передавать в качестве аргумента
-void getOne(TFuncAB function) {
-    printf("%d\n", function(4,2));
+int getOne(int array[], TFuncAB function) {
+    int value = array[0];
+    printf("value = %d array[i] = %d\n", value, array[0]);
+    for (int i = 0; i < 10; ++i) {
+        printf("value = %d array[i] = %d\n", value, array[i]);
+        value = function(value, array[i]);
+    }
+    return value;
 }
 
 
@@ -53,11 +59,21 @@ void c030_pointer_on_function() {
     printf("%d\n", func3(74,9));
 
     TFuncAB func4;
-    func4 = mixAB;
+    func4 = minAB;
     printf("%d\n", func4(74,9));
 
+    int array[10] = {92,41,23,41,345,73,21,3,1,75};
 
-    getOne(func3); // 4
-    getOne(func4); // 2
+
+    int result;
+
+    // result = getOne(array, func3);
+    // printf("%d\n", result); // 345
+
+    result = getOne(array, func4);
+    printf("%d\n", result); // 1
+
+
+
 
 }
