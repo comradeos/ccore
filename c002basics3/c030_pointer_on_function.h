@@ -27,6 +27,12 @@ int mixAB(int a, int b) {
     return 0;
 }
 
+// TFuncAB можно передавать в качестве аргумента
+void getOne(TFuncAB function) {
+    printf("%d\n", function(4,2));
+}
+
+
 void c030_pointer_on_function() {
     int (*func)();
     /*
@@ -49,5 +55,8 @@ void c030_pointer_on_function() {
     TFuncAB func4;
     func4 = mixAB;
     printf("%d\n", func4(74,9));
+
+
+
 
 }
