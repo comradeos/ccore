@@ -12,5 +12,6 @@ int main() {
 //    c029_game_platformer();
 //    pass_array_to_function();
     c030_pointer_on_function();
-return 0;
+
+    return 0;
 }
