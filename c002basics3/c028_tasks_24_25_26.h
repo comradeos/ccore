@@ -30,6 +30,9 @@ void c028_tasks_24_25_26() {
     }
     printf("%d\n", *(int*) unkType);
 
+    *(char*) unkType = 'a'; // приводим тип указателя void к типу указателя int
+    printf("%c\n", *(char*) unkType);
+
 
 
     /* 25
