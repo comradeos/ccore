@@ -4,6 +4,14 @@ struct SMyPoint {
 
 typedef struct SMyPoint TMyPoint;
 
+void freeMemory(int **pointer);
+
+void freeMemory(int **pointer) {
+    free(*pointer);
+    *pointer = NULL;
+}
+
+
 void c028_tasks_24_25_26() {
     /* 24
     1. Создайте несколько указателей разных типов и выделите для них память.
@@ -22,7 +30,7 @@ void c028_tasks_24_25_26() {
     (*pointer).y = 3;
     printf("%d, %d\n", (*pointer).x, (*pointer).y);
 
-    // попробуем для указателя на void (нетипизированный указатель)
+    // попробуем для указателя на void (не типизированный указатель)
     void *unkType = NULL;
     unkType = malloc(8); // выделяем ему 8 байт
     if (unkType != NULL) {
@@ -70,4 +78,13 @@ void c028_tasks_24_25_26() {
 
 
     /* create a procedure that frees memory of pointer and set it to null */
+    int *p = NULL;
+    p = malloc(sizeof (int));
+    *p = 231;
+    printf("%d\n", *p);
+    freeMemory(&p); // объявлена вначале
+    if (p == NULL) {
+        printf("completed!\n");
+    }
 }
+
