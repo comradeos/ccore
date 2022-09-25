@@ -99,6 +99,15 @@ void setCursor(short x, short y) { // можно также использова
 }
 
 
+/**
+ * Пересчитывает скорость и изменяет вертикально место положения объекта (персонажа)
+ * @param obj объект (персонаж)
+ */
+void vertMoveObject(TObject *obj) {
+    (*obj).vertSpeed += (float) 0.05; // ускорение
+    setObjectPos(obj, (*obj).x, (*obj).y + (*obj).vertSpeed);
+}
+
 
 
 void c029_game_platformer() {
@@ -107,6 +116,7 @@ void c029_game_platformer() {
 
     do {
         clearMap();
+        vertMoveObject();
         putObjectOnMap(mario);
         setCursor(0,0);
         showMap();
