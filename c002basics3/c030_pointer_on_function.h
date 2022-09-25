@@ -57,6 +57,7 @@ void c030_pointer_on_function() {
     printf("%d\n", func4(74,9));
 
 
-
+    getOne(func3); // 4
+    getOne(func4); // 2
 
 }
