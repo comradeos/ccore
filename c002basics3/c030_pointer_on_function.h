@@ -31,11 +31,8 @@ int minAB(int a, int b) {
 int getOne(int array[], TFuncAB function) {
     int value;
     value = array[0];
-    printf("value = %d array[0] = %d\n", value, array[0]);
     for (int i = 0; i < 10; ++i) {
-        printf("value = %d array[%d] = %d |||", value, i, array[i]);
         value = function(value, array[i]);
-        printf(" === %d \n", value);
     }
     return value;
 }
@@ -63,17 +60,15 @@ void c030_pointer_on_function() {
     TFuncAB func4;
     func4 = minAB;
     printf("%d\n", func4(74,9));
+    printf("\n");
 
 
-    printf("\n\n\n");
     int array[10] = {292,421,233,411,345,73,21,13,12,75};
-
 
     int result;
 
     result = getOne(array, func3);
     printf("%d\n", result); // 345
-    printf("\n\n\n");
     result = getOne(array, func4);
     printf("%d\n", result); // 1
 
