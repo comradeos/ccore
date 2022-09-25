@@ -27,11 +27,14 @@ void c028_tasks_24_25_26() {
     unkType = malloc(8); // выделяем ему 8 байт
     if (unkType != NULL) {
         *(int*) unkType = 777; // приводим тип указателя void к типу указателя int
+        printf("%d\n", *(int*) unkType);
     }
-    printf("%d\n", *(int*) unkType);
 
-    *(char*) unkType = 'a'; // приводим тип указателя void к типу указателя int
-    printf("%c\n", *(char*) unkType);
+    // еще один пример
+    if (unkType != NULL) {
+        *(char *) unkType = 'a'; // приводим тип указателя void к типу указателя char
+        printf("%c\n", *(char*) unkType);
+    }
 
 
 
@@ -41,6 +44,13 @@ void c028_tasks_24_25_26() {
     Выведете все значения массива на экран.
     2. Увеличьте размер массива на 4 элемента и заполните все новые ячейки одним любым числом
     */
+    int size = 10;
+    int * array = NULL;
+    array = malloc(sizeof(int)*size);
+    if (array != NULL) {
+        for (int i=0; i<size; i++) {
+        }
+    }
 
     /* create a procedure that frees memory of pointer and set it to null */
 }
