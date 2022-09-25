@@ -52,9 +52,16 @@ void setObjectPos(TObject *obj, float xPos, float yPos) {
  * Отображение персонажа на карте
  */
 void putObjectOnMap(TObject obj) {
-    int ix = (int)roundf(obj.x);
-    int iy = (int)roundf(obj.y);
-    map[ix][iy] = '@';
+    int ix = (int) roundf(obj.x);
+    int iy = (int) roundf(obj.y);
+    int iWidth = (int) roundf(obj.width);
+    int iHeight = (int) roundf(obj.height);
+
+    for (int i = ix; i < (ix+iWidth); ++i) {
+        for (int j = iy; j < (iy+iHeight); ++j) {
+            map[j][i] = '@';
+        }
+    }
 }
 
 
