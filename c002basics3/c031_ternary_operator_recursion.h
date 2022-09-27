@@ -11,9 +11,12 @@
 #include <stdlib.h>
 
 
-void showText() {
+void showText(int counter) {
     printf("text\n");
-    showText();
+    counter--;
+    if (counter > 0) {
+        showText(counter);
+    }
 }
 
 void c031_ternary_operator_recursion() {
@@ -32,7 +35,7 @@ void c031_ternary_operator_recursion() {
     printf("result >>> %ld\n", n);
     printf("\n");
 
-    showText();
+    showText(3);
 
 
 }
