@@ -13,7 +13,7 @@
 void c031_ternary_operator_recursion() {
     // считать с клавиатуры, способ 1
     int num;
-    scanf("%d", num); // считать в строку
+    scanf("%d", &num); // считать
     printf("num = %d\n", num);
 
     // считать с клавиатуры, способ 2
