@@ -13,6 +13,7 @@
 
 void showText() {
     printf("text\n");
+    showText();
 }
 
 void c031_ternary_operator_recursion() {
