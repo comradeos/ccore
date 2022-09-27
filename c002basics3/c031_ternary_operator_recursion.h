@@ -11,6 +11,11 @@
 #include <stdlib.h>
 
 
+
+/**
+ * Вывести текст заданое количество раз (рекурсивно)
+ * @param counter количество
+ */
 void showText(int counter) {
     printf("text\n");
     counter--;
@@ -18,6 +23,7 @@ void showText(int counter) {
         showText(counter);
     }
 }
+
 
 /**
  * Вычисление факториала (Рекурсивно)
@@ -48,6 +54,7 @@ int factorial_nr(int number) {
     return result;
 }
 
+void c031Tasks();
 
 void c031_ternary_operator_recursion() {
     // считать с клавиатуры, способ 1
@@ -66,8 +73,38 @@ void c031_ternary_operator_recursion() {
     printf("\n");
 
     showText(3);
-    printf("factorial 3 >>> %d\n", factorial_r(3));
-    printf("factorial 3 >>> %d\n", factorial_nr(3));
+    printf("\n");
 
+    printf("factorial_r(3): %d\n", factorial_r(3));
+    printf("factorial_nr(3): %d\n", factorial_nr(3));
 
+    c031Tasks();
 }
+
+
+int myPow(int num, int n) {
+    int result;
+    if (n == 0) {
+        result = 1;
+    } else {
+        result = myPow(num, n-1);
+    }
+    return result;
+}
+
+void c031Tasks() {
+
+    /* 1.
+    * Попробуйте написать вложенный тернарный оператор.
+    * Например реализуйте следующее условие: если і < 10 то вернуть 10, если і > 100 то вернуть 100, иначе вернуть і + 1000.
+    */
+    int i = 1000;
+    i = (i < 10) ? 10 : (i > 100) ? 100 : 1000;
+    printf("%d\n", i);
+
+    /*
+    * Напишите рекурсивную функиию вычисления степени числа.
+    */
+    printf("pow: %d\n", myPow(3,2));
+}
+
