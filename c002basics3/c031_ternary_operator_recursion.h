@@ -19,6 +19,16 @@ void showText(int counter) {
     }
 }
 
+int factorial(int number) {
+    int result;
+    if (number == 0) {
+        result = 1;
+    } else {
+        result = number * factorial(number-1);
+    }
+    return result;
+}
+
 void c031_ternary_operator_recursion() {
     // считать с клавиатуры, способ 1
     int num = 1;
@@ -36,6 +46,7 @@ void c031_ternary_operator_recursion() {
     printf("\n");
 
     showText(3);
+    printf("factorial 3 >>> %d\n", factorial(3));
 
 
 }
