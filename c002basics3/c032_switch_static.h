@@ -11,5 +11,19 @@
 #include <stdlib.h>
 
 void c032_switch_static() {
-
+    int val = 3;
+    switch(val) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+            printf("777\n");
+            break;
+        case 6:
+            printf("666\n");
+            break;
+        default:
+            printf("default\n");
+            break;
+    }
 }
