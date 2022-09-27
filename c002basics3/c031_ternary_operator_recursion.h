@@ -11,6 +11,12 @@
 #include <stdlib.h>
 
 void c031_ternary_operator_recursion() {
+    // считать с клавиатуры, способ 1
+    int num;
+    scanf("%d", num); // считать в строку
+    printf("num = %d\n", num);
+
+    // считать с клавиатуры, способ 2
     char i[30];
     scanf("%s", i); // считать в строку
     char *p; // вспомагательный указатель для перевода в число
@@ -19,6 +25,4 @@ void c031_ternary_operator_recursion() {
     n = (n < 10) ? 10 : n * 2; // если значение i < 10 присвоить 10, иначе умножить на 2
 
     printf("result >>> %ld\n", n);
-
-
 }
