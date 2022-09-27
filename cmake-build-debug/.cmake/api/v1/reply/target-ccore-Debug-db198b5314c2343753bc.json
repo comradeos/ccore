@@ -106,7 +106,8 @@
 				5,
 				6,
 				7,
-				8
+				8,
+				9
 			]
 		}
 	],
@@ -156,6 +157,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "c002basics3/c031_ternary_operator_recursion.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "c002basics3/c031_switch_static.h",
 			"sourceGroupIndex" : 1
 		}
 	],
