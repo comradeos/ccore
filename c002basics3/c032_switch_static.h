@@ -10,6 +10,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+int getInt() {
+    int i = 0;
+    return i++;
+}
+
 void c032_switch_static() {
     int val = 3;
     switch(val) {
@@ -26,4 +32,9 @@ void c032_switch_static() {
             printf("default\n");
             break;
     }
+
+
+    printf("%d\n", getInt());
+    printf("%d\n", getInt());
+    printf("%d\n", getInt());
 }
