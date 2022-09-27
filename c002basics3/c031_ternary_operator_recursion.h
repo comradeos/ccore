@@ -81,13 +81,18 @@ void c031_ternary_operator_recursion() {
     c031Tasks();
 }
 
-
+/**
+ * Рекурсивная функиия вычисления степени числа
+ * @param num число
+ * @param n показатель степени
+ * @return результат
+ */
 int myPow(int num, int n) {
-    int result;
+    int result = num;
     if (n == 0) {
         result = 1;
     } else {
-        result = myPow(num, n-1);
+        result *= myPow(num, n-1);
     }
     return result;
 }
@@ -105,6 +110,6 @@ void c031Tasks() {
     /*
     * Напишите рекурсивную функиию вычисления степени числа.
     */
-    printf("pow: %d\n", myPow(3,2));
+    printf("pow: %d\n", myPow(2,3));
 }
 
