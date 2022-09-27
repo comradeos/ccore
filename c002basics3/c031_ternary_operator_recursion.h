@@ -111,5 +111,8 @@ void c031Tasks() {
     * Напишите рекурсивную функиию вычисления степени числа.
     */
     printf("pow: %d\n", myPow(2,3));
+    printf("pow: %d\n", myPow(3,4));
+    printf("pow: %d\n", myPow(6,3));
+    printf("pow: %d\n", myPow(12,10));
 }
 
