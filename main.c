@@ -4,6 +4,7 @@
 #include "c002basics3/c029_game_platformer.h"
 #include "c002basics3/c030_pointer_on_function.h"
 #include "tests/pass_array_to_function.h"
+#include "c002basics3/c031_ternary_operator_recursion.h"
 
 int main() {
 //    c026_pointer_to_pointer();
@@ -11,7 +12,8 @@ int main() {
 //    c028_tasks_24_25_26();
 //    c029_game_platformer();
 //    pass_array_to_function();
-    c030_pointer_on_function();
+//    c030_pointer_on_function();
+    c031_ternary_operator_recursion();
 
     return 0;
 }
