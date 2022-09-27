@@ -11,5 +11,12 @@
 #include <stdlib.h>
 
 void c031_ternary_operator_recursion() {
-    printf("c031_ternary_operator_recursion\n");
+    int i;
+    scanf("%d", &i);
+
+    i = (i<10) ? 10 : i*2; //
+
+    printf("result >>> %d\n", i);
+
+
 }
