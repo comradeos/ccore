@@ -19,15 +19,35 @@ void showText(int counter) {
     }
 }
 
-int factorial(int number) {
+/**
+ * Вычисление факториала (Рекурсивно)
+ * @param number число
+ * @return факториал числа
+ */
+int factorial_r(int number) {
     int result;
     if (number == 0) {
         result = 1;
     } else {
-        result = number * factorial(number-1);
+        result = number * factorial_r(number-1);
     }
     return result;
 }
+
+
+/**
+ * Вычисление факториала (Не рекурсивно)
+ * @param number число
+ * @return факториал числа
+ */
+int factorial_nr(int number) {
+    int result = 1;
+    for (int i = 1; i <= number; ++i) {
+        result *= i;
+    }
+    return result;
+}
+
 
 void c031_ternary_operator_recursion() {
     // считать с клавиатуры, способ 1
@@ -46,7 +66,8 @@ void c031_ternary_operator_recursion() {
     printf("\n");
 
     showText(3);
-    printf("factorial 3 >>> %d\n", factorial(3));
+    printf("factorial 3 >>> %d\n", factorial_r(3));
+    printf("factorial 3 >>> %d\n", factorial_nr(3));
 
 
 }
