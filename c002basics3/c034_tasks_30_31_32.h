@@ -69,5 +69,40 @@ void c034_tasks_30_31_32() {
 
 
 
+    /*
+    * При помощи генератора случайных чисел и оператора switch напишите программу,
+    * которая будет советовать вам, какой фильм сегодня посмотреть.
+    */
+    time_t second; // время в секундах
+    second = time(NULL);
+    // преобразуем время в секундах в структуру tm
+    struct tm *datetime;
+    datetime = localtime(&second);
+    srand(datetime[0].tm_mday); // для каждого дня месяца
+    // https://www.youtube.com/watch?v=HTU-1GMc0tc&list=PLBOPkQsFLCR2DWRY74L03FmbRtz_Yy73_&index=36
+
+    int n = (rand() % (5 - 1 + 1)) + 1;
+
+    switch (n) {
+        case 1:
+            printf("Rick and Morty\n");
+            break;
+        case 2:
+            printf("Adventure Time\n");
+            break;
+        case 3:
+            printf("Gravity Falls\n");
+            break;
+        case 4:
+            printf("Family Guy\n");
+            break;
+        case 5:
+            printf("South Park\n");
+            break;
+        default:
+            printf("I don't know\n");
+            break;
+    }
+
 
 }
