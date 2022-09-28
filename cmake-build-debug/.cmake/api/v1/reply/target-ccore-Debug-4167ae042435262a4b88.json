@@ -107,7 +107,8 @@
 				6,
 				7,
 				8,
-				9
+				9,
+				10
 			]
 		}
 	],
@@ -162,6 +163,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "c002basics3/c032_switch_static.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "c002basics3/c034_tasks_30_31_32.h",
 			"sourceGroupIndex" : 1
 		}
 	],
