@@ -1,9 +1,6 @@
 # ninja log v5
-0	642	6860903536663329	CMakeFiles/ccore.dir/main.c.obj	b2d32b64b51f867c
-643	748	6860903537663799	ccore.exe	8e67058aca950d13
-1	127	6860904556587121	build.ninja	159e475acfd47505
-1	67	6857060142458505	CMakeFiles/ccore.dir/tests/jetbrains.c.obj	f1cacadb199daa67
-5	79	6857079965549674	CMakeFiles/ccore.dir/c002basics3/c026_another_source.c.obj	2ee4cf6fdce7611f
-1	127	6860904556587121	build.ninja	159e475acfd47505
 1	634	6860904563176254	CMakeFiles/ccore.dir/main.c.obj	b2d32b64b51f867c
 634	739	6860904564172195	ccore.exe	8e67058aca950d13
+1	127	6860909030520816	build.ninja	159e475acfd47505
+1	67	6857060142458505	CMakeFiles/ccore.dir/tests/jetbrains.c.obj	f1cacadb199daa67
+5	79	6857079965549674	CMakeFiles/ccore.dir/c002basics3/c026_another_source.c.obj	2ee4cf6fdce7611f
