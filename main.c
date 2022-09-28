@@ -6,6 +6,7 @@
 #include "tests/pass_array_to_function.h"
 #include "c002basics3/c031_ternary_operator_recursion.h"
 #include "c002basics3/c032_switch_static.h"
+#include "c002basics3/c034_tasks_30_31_32.h"
 
 int main() {
 //    c026_pointer_to_pointer();
@@ -15,6 +16,7 @@ int main() {
 //    pass_array_to_function();
 //    c030_pointer_on_function();
 //    c031_ternary_operator_recursion();
-    c032_switch_static();
+//    c032_switch_static();
+    c034_tasks_30_31_32();
     return 0;
 }
