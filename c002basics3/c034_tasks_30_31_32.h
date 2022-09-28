@@ -31,4 +31,22 @@ void c034_tasks_30_31_32() {
     printf("%0.2f\n", myFunction(5.2, 5.4));
     myFunction = f2;
     printf("%0.2f\n", myFunction(5.2, 5.4));
+
+
+
+    /* 1.
+    * Попробуйте написать вложенный тернарный оператор.
+    * Например реализуйте следующее условие: если і < 10 то вернуть 10, если і > 100 то вернуть 100, иначе вернуть і + 1000.
+    */
+    char numString[255];
+    char *numStringPtr;
+    scanf("%s", numString);
+    long num;
+    num = strtol(numString, &numStringPtr, 10);
+    printf("i=%ld\n", num);
+
+
+
+
+
 }
