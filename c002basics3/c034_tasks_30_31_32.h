@@ -44,6 +44,8 @@ void c034_tasks_30_31_32() {
     scanf("%s", numString);
     long num;
     num = strtol(numString, &numStringPtr, 10);
+
+    num = (num < 10) ? 10 : ((num > 100) ? 100 : num + 1000);
     printf("i=%ld\n", num);
 
 
