@@ -40,10 +40,12 @@ void c034_tasks_30_31_32() {
     */
     char numString[255];
     char *numStringPtr;
+    printf("Input i=");
     scanf("%s", numString);
     long num;
     num = strtol(numString, &numStringPtr, 10);
     printf("i=%ld\n", num);
+
 
 
 
