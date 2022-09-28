@@ -19,6 +19,18 @@ double f2(double a, double b) {
     return a * b;
 }
 
+
+
+int myPower(int num, int n) {
+    int result = num;
+    if (n == 0) {
+        result = 1;
+    } else {
+        result *= myPow(num, n-1);
+    }
+    return result;
+}
+
 void c034_tasks_30_31_32() {
     /*
     * Создайте 2 функции, которые получают на вход 2 параметра вещественного типа,
@@ -49,6 +61,11 @@ void c034_tasks_30_31_32() {
     printf("i=%ld\n", num);
 
 
+
+    /*
+    * Напишите рекурсивную функиию вычисления степени числа.
+    */
+    printf("3^5=%ld\n", myPower(3,5));
 
 
 
