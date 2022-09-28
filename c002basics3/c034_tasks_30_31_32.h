@@ -78,6 +78,7 @@ void c034_tasks_30_31_32() {
     // преобразуем время в секундах в структуру tm
     struct tm *datetime;
     datetime = localtime(&second);
+    printf("datetime[0].tm_mday >>> %d\n", datetime[0].tm_mday); // текущее число
     srand(datetime[0].tm_mday); // для каждого дня месяца
     // https://www.youtube.com/watch?v=HTU-1GMc0tc&list=PLBOPkQsFLCR2DWRY74L03FmbRtz_Yy73_&index=36
 
