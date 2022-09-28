@@ -11,6 +11,18 @@
 #include <stdlib.h>
 #include <time.h>
 
-void c034_tasks_30_31_32() {
+double f1(double a, double b) {
+    return a + b;
+}
 
+double f2(double a, double b) {
+    return a * b;
+}
+
+void c034_tasks_30_31_32() {
+    double (* myFunction)(double, double);
+    myFunction = f1;
+    printf("%0.2f\n", myFunction(1.2, 3.4));
+    myFunction = f2;
+    printf("%0.2f\n", myFunction(1.2, 3.4));
 }
