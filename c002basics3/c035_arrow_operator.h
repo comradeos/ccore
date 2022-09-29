@@ -115,11 +115,16 @@ void c035_arrow_operator() {
 
 
 struct t3Person {
-    char name[255];
+    char * name;
     double height;
 };
 
-typedef struct t3Person t3PersonType;
+typedef struct t3Person t3PersonType, *t3PersonTypePtr;
+
+void initPerson(t3PersonTypePtr personPtr, char *name, double height) {
+    personPtr->name = name;
+    personPtr->height = height;
+}
 
 void c035Tasks() {
     // 1) создайте массив вещественных чисел, проинициализируйте его и отобразите на экране.
@@ -145,5 +150,23 @@ void c035Tasks() {
 
     // 3) Создайте структуру с двумя полями - имя человека и рост.
     t3PersonType person = {"Iaroslav Os", 1.82};
-    printf("Name: %s, Height: %0.2f", person.name, person.height);
+    printf("Name: %s, Height: %0.2f\n", person.name, person.height);
+    t3PersonTypePtr personPtr = &person;
+    personPtr->name = "Inna";
+    personPtr->height = 1.45;
+    printf("Name: %s, Height: %0.2f\n", person.name, person.height);
+
+    // 4) Создайте массив структур из задания 3, проинициаоизируйте его и отобразите на экране.
+    t3PersonType personsList[] = {
+            {"Natasha", 1.5},
+            {"Egor", 1.7},
+    };
+    int personsListSize = sizeof(personsList)/sizeof(personsList[0]);
+    for (int i = 0; i < personsListSize; ++i) {
+        printf("Name: %s, Height: %0.2f\n", personsList[i].name, personsList[i].height);
+    }
+
+    // 5) Создайте процедуру, которая будет инициализировать структуру из задания 3.
+    initPerson(personPtr, "Admin", 1.83);
+    printf("Name: %s, Height: %0.2f\n", person.name, person.height);
 }
