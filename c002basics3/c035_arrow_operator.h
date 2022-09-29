@@ -42,7 +42,6 @@ void c035_arrow_operator() {
     }
 
 
-
     struct myStruct obj1 = {1, 2, 'a'};
     printf("obj1.a=%d obj1.b=%d obj1.c=%c\n", obj1.a, obj1.b, obj1.c);
     struct myStruct *obj1Ptr;
@@ -53,7 +52,6 @@ void c035_arrow_operator() {
     printf("obj1.a=%d obj1.b=%d obj1.c=%c\n", obj1.a, obj1.b, obj1.c);
 
 
-
     myStructType obj2 = {7, 8, 'd'};
     printf("obj2.a=%d obj2.b=%d obj2.c=%c\n", obj2.a, obj2.b, obj2.c);
     myStructTypePtr obj2Ptr;
@@ -62,7 +60,6 @@ void c035_arrow_operator() {
     obj2Ptr->b = 16;
     obj2Ptr->c = 'n';
     printf("obj2.a=%d obj2.b=%d obj2.c=%c\n", obj2.a, obj2.b, obj2.c);
-
 
 
 }
