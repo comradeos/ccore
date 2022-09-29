@@ -57,6 +57,10 @@ void c035_arrow_operator() {
     obj2.b = 8;
     printf("obj2.a=%d obj2.b=%d\n", obj2.a, obj2.b);
     myStructTypePtr obj2Ptr;
+    obj2Ptr = &obj2;
+    obj2Ptr->a = 14;
+    obj2Ptr->b = 16;
+    printf("obj2.a=%d obj2.b=%d\n", obj2.a, obj2.b);
 
 
 }
