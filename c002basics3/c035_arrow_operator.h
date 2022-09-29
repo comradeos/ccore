@@ -22,4 +22,14 @@ void c035_arrow_operator() {
     myTypePtr iPrt = &i;
     *iPrt = 11;
     printf("%d\n", i);
+
+    int myArray[] = {1, 2, 3};
+    int len = sizeof(myArray)/sizeof(myArray[0]); // узнать размер массива
+    printf("len=%d\n", len);
+
+    for (int j=0; j<len; ++j) {
+        printf("%d", myArray[j]);
+        if (j == 2) printf("\n");
+        else printf(", ");
+    }
 }
