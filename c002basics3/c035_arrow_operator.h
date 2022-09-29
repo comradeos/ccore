@@ -46,7 +46,7 @@ void c035_arrow_operator() {
     printf("obj1.a=%d obj1.b=%d obj1.c=%c\n", obj1.a, obj1.b, obj1.c);
     struct myStruct *obj1Ptr;
     obj1Ptr = &obj1;
-    (*obj1Ptr).a = 2;
+    (*obj1Ptr).a = 2; // или obj1Ptr->a = 2;
     (*obj1Ptr).b = 4;
     (*obj1Ptr).c = 'b';
     printf("obj1.a=%d obj1.b=%d obj1.c=%c\n", obj1.a, obj1.b, obj1.c);
