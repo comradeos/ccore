@@ -12,6 +12,10 @@
 #include <time.h>
 
 typedef int myType, *myTypePtr;
+/*
+ * myType - собственный тип на основе int
+ * *myTypePtr - собственный тип, который является указателем (обратить внимание на звездочку)
+ */
 
 void c035_arrow_operator() {
     myType i = 7;
