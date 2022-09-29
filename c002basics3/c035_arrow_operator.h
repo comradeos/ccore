@@ -52,6 +52,8 @@ void c035_arrow_operator() {
     (*obj1Ptr).b = 4;
     printf("obj1.a=%d obj1.b=%d\n", obj1.a, obj1.b);
 
+
+
     myStructType obj2;
     obj2.a = 7;
     obj2.b = 8;
@@ -61,6 +63,7 @@ void c035_arrow_operator() {
     obj2Ptr->a = 14;
     obj2Ptr->b = 16;
     printf("obj2.a=%d obj2.b=%d\n", obj2.a, obj2.b);
+
 
 
 }
