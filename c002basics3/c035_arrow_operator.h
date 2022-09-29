@@ -75,4 +75,33 @@ void c035_arrow_operator() {
                structArray[j].a, structArray[j].b, structArray[j].c);
     }
 
+
+    myStructType structArray2x[3][2] = {
+
+    {
+            {1,1,'a'},
+            {1,2,'b'},
+        },
+
+    {
+            {2,1,'c'},
+            {2,2,'d'},
+        },
+
+    {
+            {3,1,'e'},
+            {3,2,'f'},
+        },
+
+    };
+
+    printf("\n");
+
+    for (int j = 0; j < 3; ++j) {
+        for (int k = 0; k < 2; ++k) {
+            printf("a=%d b=%d c=%c\n",
+                   structArray2x[j][k].a, structArray2x[j][k].b, structArray2x[j][k].c);
+        }
+    }
+
 }
