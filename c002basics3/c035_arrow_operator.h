@@ -74,4 +74,5 @@ void c035_arrow_operator() {
         printf("structArrayLen.a=%d structArrayLen.b=%d structArrayLen.c=%c\n",
                structArray[j].a, structArray[j].b, structArray[j].c);
     }
+
 }
