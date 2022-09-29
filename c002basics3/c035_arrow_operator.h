@@ -11,7 +11,9 @@
 #include <stdlib.h>
 #include <time.h>
 
+typedef int myType;
+
 void c035_arrow_operator() {
-    int i = 123;
+    myType i = 123;
     printf("%d\n", i);
 }
