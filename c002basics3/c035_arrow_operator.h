@@ -76,6 +76,7 @@ void c035_arrow_operator() {
     }
 
 
+    // инициализация двумерного массива
     myStructType structArray2x[3][2] = {
 
     {
@@ -97,6 +98,7 @@ void c035_arrow_operator() {
 
     printf("\n");
 
+    // вывод двумерного массива
     for (int j = 0; j < 3; ++j) {
         for (int k = 0; k < 2; ++k) {
             printf("a=%d b=%d c=%c\n",
