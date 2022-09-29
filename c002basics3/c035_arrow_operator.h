@@ -25,6 +25,8 @@ struct myStruct {
 
 typedef struct myStruct myStructType, *myStructTypePtr;
 
+void c035Tasks();
+
 void c035_arrow_operator() {
     myType i = 7;
     myTypePtr iPrt = &i;
@@ -106,4 +108,42 @@ void c035_arrow_operator() {
         }
     }
 
+    printf("--------------------------------------------------------\n");
+    c035Tasks();
+
+}
+
+
+struct t3Person {
+    char name[255];
+    double height;
+};
+
+typedef struct t3Person t3PersonType;
+
+void c035Tasks() {
+    // 1) создайте массив вещественных чисел, проинициализируйте его и отобразите на экране.
+    double t1FloatArray[] = {
+            1.2,
+            2.3,
+            3.4,
+    };
+    int t1FloatArrayLen = sizeof(t1FloatArray)/sizeof(t1FloatArray[0]);
+    for (int i = 0; i < t1FloatArrayLen; ++i) {
+        printf("%0.2f\n", t1FloatArray[i]);
+    }
+
+    // 2) создайте массив строк, проинициализируйте его и отобразите на экране.
+    char t2stringArray[3][255] = {
+            "string1",
+            "string2",
+            "string3",
+    };
+    for (int i = 0; i < 3; ++i) {
+        printf("%s\n", t2stringArray[i]);
+    }
+
+    // 3) Создайте структуру с двумя полями - имя человека и рост.
+    t3PersonType person = {"Iaroslav Os", 1.82};
+    printf("Name: %s, Height: %0.2f", person.name, person.height);
 }
