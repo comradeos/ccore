@@ -62,4 +62,16 @@ void c035_arrow_operator() {
     printf("obj2.a=%d obj2.b=%d obj2.c=%c\n", obj2.a, obj2.b, obj2.c);
 
 
+    myStructType structArray[] = {
+            {1,2,'a'},
+            {2,3,'b'},
+            {3,4,'c'},
+    };
+
+    int structArrayLen = sizeof(structArray)/sizeof(structArray[0]);
+
+    for (int j = 0; j < structArrayLen; ++j) {
+        printf("structArrayLen.a=%d structArrayLen.b=%d structArrayLen.c=%c\n",
+               structArray[j].a, structArray[j].b, structArray[j].c);
+    }
 }
