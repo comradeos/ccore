@@ -6,3 +6,11 @@
 #define CCORE_C035_ARROW_OPERATOR_H
 
 #endif //CCORE_C035_ARROW_OPERATOR_H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void c035_arrow_operator() {
+
+}
