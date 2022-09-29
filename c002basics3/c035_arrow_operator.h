@@ -20,6 +20,7 @@ typedef int myType, *myTypePtr;
 
 struct myStruct {
     int a, b;
+    char c;
 };
 
 typedef struct myStruct myStructType, *myStructTypePtr;
@@ -42,27 +43,25 @@ void c035_arrow_operator() {
 
 
 
-    struct myStruct obj1;
-    obj1.a = 1;
-    obj1.b = 2;
-    printf("obj1.a=%d obj1.b=%d\n", obj1.a, obj1.b);
+    struct myStruct obj1 = {1, 2, 'a'};
+    printf("obj1.a=%d obj1.b=%d obj1.c=%c\n", obj1.a, obj1.b, obj1.c);
     struct myStruct *obj1Ptr;
     obj1Ptr = &obj1;
     (*obj1Ptr).a = 2;
     (*obj1Ptr).b = 4;
-    printf("obj1.a=%d obj1.b=%d\n", obj1.a, obj1.b);
+    (*obj1Ptr).c = 'b';
+    printf("obj1.a=%d obj1.b=%d obj1.c=%c\n", obj1.a, obj1.b, obj1.c);
 
 
 
-    myStructType obj2;
-    obj2.a = 7;
-    obj2.b = 8;
-    printf("obj2.a=%d obj2.b=%d\n", obj2.a, obj2.b);
+    myStructType obj2 = {7, 8, 'd'};
+    printf("obj2.a=%d obj2.b=%d obj2.c=%c\n", obj2.a, obj2.b, obj2.c);
     myStructTypePtr obj2Ptr;
     obj2Ptr = &obj2;
     obj2Ptr->a = 14;
     obj2Ptr->b = 16;
-    printf("obj2.a=%d obj2.b=%d\n", obj2.a, obj2.b);
+    obj2Ptr->c = 'n';
+    printf("obj2.a=%d obj2.b=%d obj2.c=%c\n", obj2.a, obj2.b, obj2.c);
 
 
 
