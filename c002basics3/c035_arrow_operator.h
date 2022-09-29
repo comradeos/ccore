@@ -11,9 +11,11 @@
 #include <stdlib.h>
 #include <time.h>
 
-typedef int myType;
+typedef int myType, *myTypePtr;
 
 void c035_arrow_operator() {
-    myType i = 123;
+    myType i = 7;
+    myTypePtr iPrt = &i;
+    *iPrt = 11;
     printf("%d\n", i);
 }
