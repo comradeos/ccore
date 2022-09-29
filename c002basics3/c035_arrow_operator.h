@@ -45,8 +45,18 @@ void c035_arrow_operator() {
     struct myStruct obj1;
     obj1.a = 1;
     obj1.b = 2;
+    printf("obj1.a=%d obj1.b=%d\n", obj1.a, obj1.b);
+    struct myStruct *obj1Ptr;
+    obj1Ptr = &obj1;
+    (*obj1Ptr).a = 2;
+    (*obj1Ptr).b = 4;
+    printf("obj1.a=%d obj1.b=%d\n", obj1.a, obj1.b);
 
     myStructType obj2;
+    obj2.a = 7;
+    obj2.b = 8;
+    printf("obj2.a=%d obj2.b=%d\n", obj2.a, obj2.b);
+    myStructTypePtr obj2Ptr;
 
 
 }
