@@ -30,5 +30,8 @@ void c036_work_with_files() {
 
 
     f = fopen("001.txt", "r");
-
+    char string[1000]; // переменная для массива символов (строки)
+    fscanf(f,"%c", string);
+    printf("%s\n", string);
+    fclose(f);
 }
