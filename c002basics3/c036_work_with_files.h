@@ -11,6 +11,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+void c036Tasks();
+
 void c036_work_with_files() {
     FILE *f;
     // FILE - тип переменной которая хранит информацию о файле,
@@ -90,12 +92,33 @@ void c036_work_with_files() {
     int intVal;
     double doubleVal;
     f = fopen("002.txt", "r");
-    while (!feof(f)) {
-        fscanf(f, "%d", &intVal);
-        fscanf(f, "%lg", &doubleVal);
+    if (f == NULL) {
+        printf("Error, can't read file!\n");
+    } else {
+        while (!feof(f)) {
+            fscanf(f, "%d", &intVal);
+            fscanf(f, "%lg", &doubleVal);
+        }
+        fclose(f);
+        printf("%d %lg\n", intVal, doubleVal);
     }
-    fclose(f);
-    printf("%d %lg\n", intVal, doubleVal);
 
+
+    printf("------------------\n");
+
+
+
+}
+
+void c036Tasks() {
+    //1) Запишите в файл 10 любых строк текста.
+    // Проверьте правильность записи с помощью любого редактора.
+    FILE * c036TasksFile;
+    c036TasksFile = fopen("c036Tasks.txt", "w");
+
+
+
+    // 2) Прочитайте все строки файла из задания 1 и отобразите на экране. Измените файл с помощью любого редактора, добавив или удалив строки, и снова прочитайте его с помощью программы.
+    // 3) С помощью любого редактора создайте файл и запишите в него несколько чисел. Считайте все числа из файла, удвойте их значения и отобразите на экране.
 
 }
