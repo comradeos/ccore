@@ -33,10 +33,20 @@ void c036_work_with_files() {
     char string[1000]; // переменная для массива символов (строки)
     fscanf(f,"%s", string); // fscanf считывает слово (символі до пробела, переноса строки и т.д)
     printf("%s\n", string);
-
     fgets(string, 1000, f); // fscanf всю строку
     printf("%s\n", string);
+    fclose(f);
 
+
+
+
+
+    f = fopen("001.txt", "w");
+    fprintf(f, "%s\n", "this is a string #1");
+    fprintf(f, "%s\n", "this is a string #2");
+    fclose(f);
+
+    f = fopen("001.txt", "r");
 
     fclose(f);
 }
