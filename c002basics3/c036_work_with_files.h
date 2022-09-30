@@ -62,8 +62,26 @@ void c036_work_with_files() {
     // читать все слова по слову
     f = fopen("001.txt", "r");
     while (!feof(f)) {
-        fscanf(f, "%s", buffer);
+        fscanf(f, "%s\n", buffer);
         printf("%s\n", buffer);
+    }
+    fclose(f);
+
+
+    printf("------------------\n");
+
+
+    // работа с числами в файле
+    f = fopen("002.txt", "w");
+    fprintf(f, "%d\n", 100);
+    fprintf(f, "%g\n", 2.5);
+    fclose(f);
+
+    f = fopen("002.txt", "r");
+    while (!feof(f)) {
+        if (fgets(buffer, 1000, f)) {
+            printf("%s", buffer);
+        }
     }
     fclose(f);
 
