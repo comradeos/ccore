@@ -25,8 +25,10 @@ void c036_work_with_files() {
     fprintf(f, "%c\n", 'A');
     // fprintf - делает тоже что и printf только в указанный файл
     // в CLion поумолчанию фал будет находиться в папке cmake-build-debug\001.txt
-
     fprintf(f, "%s\n", "this is a string"); // записать строку
-
     fclose(f); // обязательно просле работы с файлом
+
+
+    f = fopen("001.txt", "r");
+
 }
