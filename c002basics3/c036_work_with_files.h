@@ -138,10 +138,10 @@ void c036Tasks() {
     // 3) С помощью любого редактора создайте файл и запишите в него несколько чисел.
     // Считайте все числа из файла, удвойте их значения и отобразите на экране.
     c036TasksFile = fopen("c036Task3Nums.txt", "r");
-    char buffer[1024];
+    int number;
     while (!feof(c036TasksFile)) {
-        fscanf(c036TasksFile,"%s\n", buffer);
-        printf("%s\n", buffer);
+        fscanf(c036TasksFile,"%d\n", &number);
+        printf("%d\n", number*2);
     }
     fclose(c036TasksFile);
 
