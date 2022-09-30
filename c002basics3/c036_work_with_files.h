@@ -85,4 +85,17 @@ void c036_work_with_files() {
     }
     fclose(f);
 
+
+    // прочитаем в переменные соответствующих типов
+    int intVal;
+    double doubleVal;
+    f = fopen("002.txt", "r");
+    while (!feof(f)) {
+        fscanf(f, "%d", &intVal);
+        fscanf(f, "%lg", &doubleVal);
+    }
+    fclose(f);
+    printf("%d %lg\n", intVal, doubleVal);
+
+
 }
