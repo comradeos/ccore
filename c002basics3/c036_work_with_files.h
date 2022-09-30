@@ -22,7 +22,7 @@ void c036_work_with_files() {
     // "w" - способ открытия файла,
     // w означает что файл будет создан для записи (или перезаписан, если такое файл уже существовал)
 
-    fprintf(f, "%c\n", 'A');
+    // fprintf(f, "%c\n", 'A');
     // fprintf - делает тоже что и printf только в указанный файл
     // в CLion поумолчанию фал будет находиться в папке cmake-build-debug\001.txt
     fprintf(f, "%s\n", "this is a string"); // записать строку
@@ -31,7 +31,12 @@ void c036_work_with_files() {
 
     f = fopen("001.txt", "r");
     char string[1000]; // переменная для массива символов (строки)
-    fscanf(f,"%c", string);
+    fscanf(f,"%s", string); // fscanf считывает слово (символі до пробела, переноса строки и т.д)
     printf("%s\n", string);
+
+    fgets(string, 1000, f); // fscanf всю строку
+    printf("%s\n", string);
+
+
     fclose(f);
 }
