@@ -37,6 +37,7 @@ void c036_work_with_files() {
     printf("%s\n", string);
     fclose(f);
 
+    printf("------------------\n");
 
 
 
@@ -46,7 +47,24 @@ void c036_work_with_files() {
     fprintf(f, "%s\n", "this is a string #2");
     fclose(f);
 
-    f = fopen("001.txt", "r");
+    char buffer[1000];
 
+    f = fopen("001.txt", "r");
+    while (!feof(f)) { // пока не достигнут конец файла
+        if (fgets(buffer, 1000, f)) { // выполнять printf только если строка считалась
+            printf("%s", buffer);
+        }
+    } // feof возвращает true если достигнут конец файла
     fclose(f);
+
+    printf("------------------\n");
+
+    // читать все слова по слову
+    f = fopen("001.txt", "r");
+    while (!feof(f)) {
+        fscanf(f, "%s", buffer);
+        printf("%s\n", buffer);
+    }
+    fclose(f);
+
 }
