@@ -7,7 +7,10 @@
 
 #endif //CCORE_C036_WORK_WITH_FILES_H
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 void c036_work_with_files() {
-
+    FILE *f; // FILE - тип переменной которая хранит информацию о файле
 }
