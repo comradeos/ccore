@@ -92,6 +92,21 @@ void c037_work_with_files_binary_mode() {
     printf("%d %d %s\n", newPoint.a, newPoint.b,  newPoint.str);
 
 
+
+    // создадим указатель и запишем в файл значение по его адресу
+    int *temp2Pointer = malloc(sizeof(*temp2Pointer));
+    *temp2Pointer = 2152;
+
+    f = fopen("c037File.txt", "w");
+        fwrite(temp2Pointer, 1, sizeof(temp2Pointer), f);
+    fclose(f);
+
+    int *tempBuffer = malloc(sizeof(*tempBuffer));
+    f = fopen("c037File.txt", "r");
+        fread(tempBuffer, 1, sizeof(tempBuffer), f);
+    fclose(f);
+    printf("%d \n", *tempBuffer);
+
     // c037Tasks();
 }
 void c037Tasks() {
