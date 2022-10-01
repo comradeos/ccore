@@ -115,11 +115,20 @@ void c037_work_with_files_binary_mode() {
     int *dynamicArray = malloc(sizeof(*dynamicArray) * size);
 
     for (int j = 0; j < size; ++j) {
-        dynamicArray[j] = 100 + i;
+        dynamicArray[j] = 100 + j;
     }
     f = fopen("c037File.txt", "w");
         fwrite(dynamicArray, size, sizeof(dynamicArray), f);
     fclose(f);
+
+    int *dynArrBuff = malloc(sizeof(*dynArrBuff) * size);
+    f = fopen("c037File.txt", "r");
+        fread(dynArrBuff, size, sizeof(dynArrBuff), f);
+    fclose(f);
+    for (int j = 0; j < size; ++j) {
+        printf("%d ", dynArrBuff[j]);
+    }
+    printf("\n");
 
     // c037Tasks();
 }
