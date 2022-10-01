@@ -236,6 +236,7 @@ void c037Tasks() {
     file = fopen("c037File.txt", "w");
         fwrite(outterObjPointer, 1, sizeof(outterObj),file);
     fclose(file);
+    printf("-----------------------------------------------\n");
 
     TOutter newOutterObj;
     POutter newOutterObjPointer = &newOutterObj;
