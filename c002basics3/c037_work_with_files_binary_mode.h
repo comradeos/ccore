@@ -50,6 +50,9 @@ void c037_work_with_files_binary_mode() {
     }
     printf("\n");
 
+
+
+
     // считать файл от начала и до конца,
     // если количство элементов неизвестно
     f = fopen("c037File.txt", "r");
