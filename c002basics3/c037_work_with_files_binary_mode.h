@@ -233,7 +233,15 @@ void c037Tasks() {
 
     TOutter outterObj = { 777};
     POutter outterObjPointer = &outterObj;
+    file = fopen("c037File.txt", "w");
+        fwrite(outterObjPointer, 1, sizeof(outterObj),file);
+    fclose(file);
 
+    TOutter newOutterObj;
+    POutter newOutterObjPointer = &newOutterObj;
+    file = fopen("c037File.txt", "r");
+        fread(newOutterObjPointer, 1, sizeof(newOutterObj),file);
+    fclose(file);
 
 
 }
