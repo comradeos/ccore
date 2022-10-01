@@ -39,7 +39,7 @@ void c037_work_with_files_binary_mode() {
     fclose(f);
 
     char strBuffer[1024];
-    f = fopen("c037File.txt", "r");
+    f = fopen("c037File.txt", "r");+
     fread(&strBuffer, 1, sizeof(strBuffer), f);
     fclose(f);
 
