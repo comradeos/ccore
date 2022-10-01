@@ -24,6 +24,10 @@ void c037_work_with_files_binary_mode() {
     fclose(f);
 
 
+    int buffer;
+    f = fopen("c037File.txt", "r");
+    fread(&buffer, 1, sizeof(buffer), f);
+    fclose(f);
 
 
 
