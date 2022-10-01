@@ -149,9 +149,36 @@ void c037Tasks() {
     fclose(file);
     printf("%d %d %d", buffA, buffB, buffC);
 
+    // --------------------------------------------------------------
+
+    int a1, b1, c1;
+    a1 = 7; b1 = 10; c1 = 9;
+    file = fopen("c037File.txt", "w");
+        fwrite(&a1, 1, sizeof(a1),file);
+        fwrite(&b1, 1, sizeof(b1),file);
+        fwrite(&c1, 1, sizeof(c1),file);
+    fclose(file);
+
+    int buffA1, buffB1, buffC1;
+    file = fopen("c037File.txt", "r");
+        fread(&buffA1, 1, sizeof(buffA1), file);
+        fread(&buffB1, 1, sizeof(buffB1), file);
+        fread(&buffC1, 1, sizeof(buffC1), file);
+    fclose(file);
+    printf("%d %d %d", buffA1, buffB1, buffC1);
+
+    // --------------------------------------------------------------
+
 
 
     // 2) выполните пункт 1, но вместо целого типа используйте структуру.
+    struct SMyObject {
+        int num;
+        char * string;
+    };
+    typedef struct SMyObject TMyObject, *PMyObject;
+    TMyObject obj = {73, "Hello, from TMyObject"};
+
     // 3) запишите в файл и прочитайте несколько переменных разных типов подряд.
     // 4) попробуйте записать в файл и прочить из файла структуру, одним и полей которой будет другая структура.
 
