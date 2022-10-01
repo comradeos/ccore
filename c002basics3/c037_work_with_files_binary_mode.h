@@ -9,7 +9,20 @@
 
 void c037Tasks();
 void c037_work_with_files_binary_mode() {
-    c037Tasks();
+    FILE * f;
+
+    int i = 7;
+
+    f = fopen("c037File.txt", "w");
+    fwrite(&i, 1, sizeof(i), f);
+    // Функция
+
+    fclose(f);
+
+
+
+
+    // c037Tasks();
 }
 void c037Tasks() {
     printf("c037Tasks\n");
