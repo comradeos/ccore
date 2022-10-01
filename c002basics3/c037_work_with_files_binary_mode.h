@@ -173,7 +173,6 @@ void c037Tasks() {
     // --------------------------------------------------------------
 
 
-
     // 2) выполните пункт 1, но вместо целого типа используйте структуру.
     struct SMyObject {
         int num;
@@ -190,11 +189,16 @@ void c037Tasks() {
 
     TMyObject obj2;
     PMyObject obj2Pointer = &obj2;
-    file = fopen("c037File.txt", "w");
+    file = fopen("c037File.txt", "r");
         fread(obj2Pointer, 1, sizeof(obj2),file);
     fclose(file);
     printf("%d %s\n", obj2.num, obj2.string);
     printf("-----------------------------------------------\n");
+
+
+
+
+
     // 3) запишите в файл и прочитайте несколько переменных разных типов подряд.
 
 
