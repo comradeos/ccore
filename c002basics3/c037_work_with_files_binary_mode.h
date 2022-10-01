@@ -73,11 +73,13 @@ void c037_work_with_files_binary_mode() {
         int a,b;
     };
 
-    typedef struct SPoint37 TPoint37;
+    typedef struct SPoint37 TPoint37, *PPoint37;
 
-    TPoint37 myPoint = {7,9};
+    TPoint37 point = {7,9};
+    PPoint37 pointPtr = &point;
+
     f = fopen("c037File.txt", "w");
-        fprintf()
+        fwrite(pointPtr, 1, sizeof(point), f);
     fclose(f);
 
 
