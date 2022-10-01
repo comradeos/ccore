@@ -71,11 +71,12 @@ void c037_work_with_files_binary_mode() {
     // проделаем тоже самое но со структурой
     struct SPoint37 {
         int a,b;
+        char * str;
     };
 
     typedef struct SPoint37 TPoint37, *PPoint37;
 
-    TPoint37 point = {7,9};
+    TPoint37 point = {7,9, "hello"};
     PPoint37 pointPtr = &point;
 
     f = fopen("c037File.txt", "w");
@@ -88,7 +89,7 @@ void c037_work_with_files_binary_mode() {
     f = fopen("c037File.txt", "r");
         fread(newPointPtr, 1, sizeof(newPoint), f);
     fclose(f);
-    printf("%d %d\n", newPoint.a, newPoint.b);
+    printf("%d %d %s\n", newPoint.a, newPoint.b,  newPoint.str);
 
 
     // c037Tasks();
