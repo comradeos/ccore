@@ -141,6 +141,14 @@ void c037Tasks() {
         fprintf(file, "%d %d %d", a, b, c);
     fclose(file);
 
+    int buffA, buffB, buffC;
+    file = fopen("c037File.txt", "r");
+        fscanf(file, "%d", &buffA);
+        fscanf(file, "%d", &buffB);
+        fscanf(file, "%d", &buffC);
+    fclose(file);
+    printf("%d %d %d", buffA, buffB, buffC);
+
 
 
     // 2) выполните пункт 1, но вместо целого типа используйте структуру.
