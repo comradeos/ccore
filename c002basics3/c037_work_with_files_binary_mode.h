@@ -221,5 +221,19 @@ void c037Tasks() {
     printf("%d %0.2f %c\n", numBuff, decBuff, myCharBuff);
 
     // 4) попробуйте записать в файл и прочить из файла структуру, одним и полей которой будет другая структура.
+    struct SInner {
+        int innerNumber;
+    };
+    typedef struct SInner TInner, *PInner;
+
+    struct SOutter {
+        TInner inner;
+    };
+    typedef struct SOutter TOutter, *POutter;
+
+    TOutter outterObj = { 777};
+    POutter outterObjPointer = &outterObj;
+
+
 
 }
