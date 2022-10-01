@@ -202,21 +202,23 @@ void c037Tasks() {
     // 3) запишите в файл и прочитайте несколько переменных разных типов подряд.
     int num = 7381;
     double dec = 241.2;
-    char *word = "word";
+    char myChar = 'A';
     file = fopen("c037File.txt", "w");
         fwrite(&num, 1, sizeof(num),file);
         fwrite(&dec, 1, sizeof(dec),file);
+        fwrite(&myChar, 1, sizeof(myChar),file);
     fclose(file);
 
     int numBuff;
     double decBuff;
-    char *wordBuff;
+    char myCharBuff;
     file = fopen("c037File.txt", "r");
         fread(&numBuff, 1, sizeof(numBuff),file);
         fread(&decBuff, 1, sizeof(decBuff),file);
+        fread(&myCharBuff, 1, sizeof(myCharBuff),file);
     fclose(file);
 
-    printf("%d %0.2f\n", numBuff, decBuff);
+    printf("%d %0.2f %c\n", numBuff, decBuff, myCharBuff);
 
     // 4) попробуйте записать в файл и прочить из файла структуру, одним и полей которой будет другая структура.
 
