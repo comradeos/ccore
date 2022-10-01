@@ -40,7 +40,7 @@ void c037_work_with_files_binary_mode() {
     fclose(f);
 
     int buf[10];
-    f = fopen("c037File.txt", "r");+
+    f = fopen("c037File.txt", "r");
         fread(buf, 1, sizeof(buf), f);
     fclose(f);
 
@@ -49,6 +49,18 @@ void c037_work_with_files_binary_mode() {
         printf("%d ", buf[k]);
     }
     printf("\n");
+
+    // считать файл от начала и до конца,
+    // если количство элементов неизвестно
+    f = fopen("c037File.txt", "r");
+    int temp;
+    while (!feof(f)) {
+        if (fread(&temp, 1, sizeof(temp), f)) {
+            printf("%d ", temp);
+        }
+    }
+    printf("\n");
+    fclose(f);
 
     // c037Tasks();
 }
