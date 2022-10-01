@@ -31,6 +31,8 @@ void c037_work_with_files_binary_mode() {
     printf("%d\n", buffer);
 
 
+
+
     // Запишем массив
     int array[10] = {1,2,3,4,5,6,7,8,9,0};
     f = fopen("c037File.txt", "w");
@@ -42,6 +44,11 @@ void c037_work_with_files_binary_mode() {
         fread(buf, 1, sizeof(buf), f);
     fclose(f);
 
+    int length = sizeof(buf)/sizeof(int);
+    for (int k = 0; k < length; ++k) {
+        printf("%d ", buf[k]);
+    }
+    printf("%d ", buf[k]);
 
     // c037Tasks();
 }
