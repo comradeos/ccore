@@ -48,7 +48,7 @@ void c037_work_with_files_binary_mode() {
     for (int k = 0; k < length; ++k) {
         printf("%d ", buf[k]);
     }
-    printf("%d ", buf[k]);
+    printf("\n");
 
     // c037Tasks();
 }
