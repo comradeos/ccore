@@ -130,13 +130,16 @@ void c037_work_with_files_binary_mode() {
     }
     printf("\n");
 
-    // c037Tasks();
+    c037Tasks();
 }
 void c037Tasks() {
     // 1) запишите в файл несколько переменных целого типа, а затем прочитайте и отобразите на экране.
     FILE * file;
-    file = fopen("c037File.txt", "r");
-
+    int a, b, c;
+    a = 7; b = 10; c = 9;
+    file = fopen("c037File.txt", "w");
+        fprintf(file, "%d %d %d", a, b, c);
+    fclose(file);
 
 
 
