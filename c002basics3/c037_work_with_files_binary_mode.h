@@ -243,6 +243,6 @@ void c037Tasks() {
     file = fopen("c037File.txt", "r");
         fread(newOutterObjPointer, 1, sizeof(newOutterObj),file);
     fclose(file);
-
+    printf("%d\n", newOutterObj.inner);
 
 }
