@@ -83,6 +83,13 @@ void c037_work_with_files_binary_mode() {
     fclose(f);
 
 
+    TPoint37 newPoint;
+    PPoint37 newPointPtr = &newPoint;
+    f = fopen("c037File.txt", "r");
+        fread(newPointPtr, 1, sizeof(newPoint), f);
+    fclose(f);
+    printf("%d %d\n", newPoint.a, newPoint.b);
+
 
     // c037Tasks();
 }
