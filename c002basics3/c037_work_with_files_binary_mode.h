@@ -147,7 +147,8 @@ void c037Tasks() {
         fscanf(file, "%d", &buffB);
         fscanf(file, "%d", &buffC);
     fclose(file);
-    printf("%d %d %d", buffA, buffB, buffC);
+    printf("%d %d %d\n", buffA, buffB, buffC);
+    printf("-----------------------------------------------\n");
 
     // --------------------------------------------------------------
 
@@ -165,7 +166,9 @@ void c037Tasks() {
         fread(&buffB1, 1, sizeof(buffB1), file);
         fread(&buffC1, 1, sizeof(buffC1), file);
     fclose(file);
-    printf("%d %d %d", buffA1, buffB1, buffC1);
+    printf("%d %d %d\n", buffA1, buffB1, buffC1);
+    printf("-----------------------------------------------\n");
+
 
     // --------------------------------------------------------------
 
@@ -177,9 +180,26 @@ void c037Tasks() {
         char * string;
     };
     typedef struct SMyObject TMyObject, *PMyObject;
-    TMyObject obj = {73, "Hello, from TMyObject"};
 
+    TMyObject obj = {73, "Hello, from TMyObject"};
+    PMyObject objPointer = &obj;
+    file = fopen("c037File.txt", "w");
+        fwrite(objPointer, 1, sizeof(obj),file);
+    fclose(file);
+
+
+    TMyObject obj2;
+    PMyObject obj2Pointer = &obj2;
+    file = fopen("c037File.txt", "w");
+        fread(obj2Pointer, 1, sizeof(obj2),file);
+    fclose(file);
+    printf("%d %s\n", obj2.num, obj2.string);
+    printf("-----------------------------------------------\n");
     // 3) запишите в файл и прочитайте несколько переменных разных типов подряд.
+
+
+
+
     // 4) попробуйте записать в файл и прочить из файла структуру, одним и полей которой будет другая структура.
 
 }
