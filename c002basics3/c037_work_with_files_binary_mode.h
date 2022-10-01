@@ -29,6 +29,7 @@ void c037_work_with_files_binary_mode() {
     fread(&buffer, 1, sizeof(buffer), f);
     fclose(f);
 
+    printf("%d\n", buffer);
 
 
     // c037Tasks();
