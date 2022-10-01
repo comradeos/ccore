@@ -15,35 +15,32 @@ void c037_work_with_files_binary_mode() {
 
     // Записываем число в бинарном режиме
     f = fopen("c037File.txt", "w");
-    fwrite(&i, 1, sizeof(i), f);
-    // Функция fwriteзаписывает информация в бинарном режиме,
-    // первый параметр - адрес области памяти где лежат данные для записи в файл,
-    // второй параметр - количество элементов,
-    // третий параметр - размер каждого элемента,
-    // последний параметр - идинтификатор файла
+        fwrite(&i, 1, sizeof(i), f);
+        // Функция fwriteзаписывает информация в бинарном режиме,
+        // первый параметр - адрес области памяти где лежат данные для записи в файл,
+        // второй параметр - количество элементов,
+        // третий параметр - размер каждого элемента,
+        // последний параметр - идинтификатор файла
     fclose(f);
-
 
     int buffer;
     f = fopen("c037File.txt", "r");
-    fread(&buffer, 1, sizeof(buffer), f);
+        fread(&buffer, 1, sizeof(buffer), f);
     fclose(f);
 
     printf("%d\n", buffer);
 
 
     // Запишем массив
-    char * staticArray = "Some words...";
+    int array[10] = {1,2,3,4,5,6,7,8,9,0};
     f = fopen("c037File.txt", "w");
-    fwrite(&staticArray, 1, sizeof(&staticArray), f);
+        fwrite(array, 1, sizeof(array), f);
     fclose(f);
 
-    char strBuffer[1024];
+    int buf[10];
     f = fopen("c037File.txt", "r");+
-    fread(&strBuffer, 1, sizeof(strBuffer), f);
+        fread(buf, 1, sizeof(buf), f);
     fclose(f);
-
-    printf("%s\n", strBuffer);
 
 
     // c037Tasks();
