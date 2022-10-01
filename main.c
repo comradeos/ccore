@@ -21,6 +21,8 @@ int main() {
 //    c032_switch_static();
 //    c034_tasks_30_31_32();
 //    c035_arrow_operator();
-    c036_work_with_files();
+//    c036_work_with_files();
+
+
     return 0;
 }
