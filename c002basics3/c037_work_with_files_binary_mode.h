@@ -65,6 +65,23 @@ void c037_work_with_files_binary_mode() {
     printf("\n");
     fclose(f);
 
+
+
+
+    // проделаем тоже самое но со структурой
+    struct SPoint37 {
+        int a,b;
+    };
+
+    typedef struct SPoint37 TPoint37;
+
+    TPoint37 myPoint = {7,9};
+    f = fopen("c037File.txt", "w");
+        fprintf()
+    fclose(f);
+
+
+
     // c037Tasks();
 }
 void c037Tasks() {
