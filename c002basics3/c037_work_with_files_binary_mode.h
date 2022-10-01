@@ -107,6 +107,20 @@ void c037_work_with_files_binary_mode() {
     fclose(f);
     printf("%d \n", *tempBuffer);
 
+
+
+
+    // создадим динамический массив и заполним его
+    int size = 10;
+    int *dynamicArray = malloc(sizeof(*dynamicArray) * size);
+
+    for (int j = 0; j < size; ++j) {
+        dynamicArray[j] = 100 + i;
+    }
+    f = fopen("c037File.txt", "w");
+        fwrite(dynamicArray, size, sizeof(dynamicArray), f);
+    fclose(f);
+
     // c037Tasks();
 }
 void c037Tasks() {
