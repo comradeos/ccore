@@ -46,10 +46,19 @@ void c038_tasks_35_36_37() {
     manPointer->name = "Inna G"; // альтернативно TMan *p = &man; (*p).name = "Inna G";
     manPointer->height = 1.53; // альтернативно  TMan *p = &man; (*p).height = 1.53;
     printf("%s %0.2f\n", man.name, man.height);
+    printf("----------------------\n");
+
 
     // 4) Создайте массив структур из задания 3, проинициаоизируйте его и отобразите на экране.
-
-
+    TMan manArray[3] = {
+            {"Me", 1.8 },
+            {"You", 1.5 },
+            {"They", 0 },
+    };
+    len = sizeof(manArray)/sizeof(manArray[0]);
+    for (int i = 0; i < len; ++i) {
+        printf("%s %0.2f\n", manArray[i].name, manArray[i].height);
+    }
 
     // 36
     // 1) Запишите в файл 10 любых строк текста.
