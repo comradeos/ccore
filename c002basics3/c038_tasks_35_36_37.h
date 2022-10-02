@@ -87,11 +87,11 @@ void c038_tasks_35_36_37() {
     // 36
     // 1) Запишите в файл 10 любых строк текста.
     FILE * f;
-    f = fopen("c038File.txt", "w");
-    for (int i = 0; i < 10; ++i) {
-        fprintf(f, "str #%i\n", i);
-    }
-    fclose(f);
+//    f = fopen("c038File.txt", "w");
+//    for (int i = 0; i < 10; ++i) {
+//        fprintf(f, "str #%i\n", i);
+//    }
+//    fclose(f);
 
 
 
@@ -99,7 +99,7 @@ void c038_tasks_35_36_37() {
     f = fopen("c038File.txt", "r");
     char string[1024];
     while (!feof(f)) {
-        if (fgets(string, 1024, f)) {
+        if (fgets(string, 1024, f) != NULL) {
             printf("%s", string);
         }
     }
