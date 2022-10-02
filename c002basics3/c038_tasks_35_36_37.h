@@ -163,9 +163,20 @@ void c038_tasks_35_36_37() {
         }
     }
     fclose(f);
-
+    printf("----------------------\n");
 
 
     // 3) запишите в файл и прочитайте несколько переменных разных типов подряд.
+    int intVal = 7;
+    double doubleVal = 7.13;
+    char * charWord = "hello";
+    f = fopen("c038_2File.txt", "w");
+        fwrite(&intVal, 1, sizeof(intVal), f);
+        fwrite(&doubleVal, 1, sizeof(doubleVal), f);
+        fwrite(charWord, 1, sizeof(charWord), f);
+    fclose(f);
+
+
+
     // 4) попробуйте записать в файл и прочить из файла структуру, одним и полей которой будет другая структура.
 }
