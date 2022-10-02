@@ -143,6 +143,29 @@ void c038_tasks_35_36_37() {
 
 
     // 2) выполните пункт 1, но вместо целого типа используйте структуру.
+    typedef struct SInts {
+        int a, b;
+    } TInts, *PInts;
+    TInts arr[] = {
+            {1, 2},
+            {2, 4},
+            {3, 5},
+    };
+    f = fopen("c038_2File.txt", "w");
+        fwrite(arr, 1, sizeof(arr), f);
+    fclose(f);
+
+    f = fopen("c038_2File.txt", "r");
+    TInts buffer;
+    while (!feof(f)) {
+        if (fread(&buffer, 1, sizeof(buffer), f) > 0) {
+            printf("[%d, %d]\n", buffer.a, buffer.b);
+        }
+    }
+    fclose(f);
+
+
+
     // 3) запишите в файл и прочитайте несколько переменных разных типов подряд.
     // 4) попробуйте записать в файл и прочить из файла структуру, одним и полей которой будет другая структура.
 }
