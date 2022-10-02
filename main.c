@@ -23,7 +23,7 @@ int main() {
 //    c034_tasks_30_31_32();
 //    c035_arrow_operator();
 //    c036_work_with_files();
-    c037_work_with_files_binary_mode();
+//    c037_work_with_files_binary_mode();
 
     return 0;
 }
