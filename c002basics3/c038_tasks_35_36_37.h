@@ -213,6 +213,6 @@ void c038_tasks_35_36_37() {
         fread(&parentBuffer, 1, sizeof(parentBuffer), f);
     fclose(f);
     printf("%s %s\n", parentBuffer.lastName, parentBuffer.child.name);
-
+    // --------
 
 }
