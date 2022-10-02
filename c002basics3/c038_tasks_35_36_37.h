@@ -113,19 +113,32 @@ void c038_tasks_35_36_37() {
     f = fopen("c038File.txt", "r");
     float value;
     while (!feof(f)) {
-            if (fscanf(f, "%f", &value) > 0) {
-                printf("%0.2f\n", value * 2);
-            }
-
+        if (fscanf(f, "%f", &value) > 0) {
+            printf("%0.2f\n", value * 2);
+        }
     }
     fclose(f);
-
-
-
+    printf("----------------------\n");
 
 
     // 37
     // 1) запишите в файл несколько переменных целого типа, а затем прочитайте и отобразите на экране.
+    int numArray[5] = { 123, 212, 323, 422, 51 };
+    len = sizeof(numArray)/sizeof(numArray[0]);
+
+    f = fopen("c038_2File.txt", "w");
+        fwrite(numArray, 1, sizeof(numArray), f);
+    fclose(f);
+
+    f = fopen("c038_2File.txt", "r");
+    int num;
+    while (!feof(f)) {
+        if (fread(&num, 1, sizeof(num), f)) {
+            printf("%d\n", num);
+        }
+    }
+    fclose(f);
+
     // 2) выполните пункт 1, но вместо целого типа используйте структуру.
     // 3) запишите в файл и прочитайте несколько переменных разных типов подряд.
     // 4) попробуйте записать в файл и прочить из файла структуру, одним и полей которой будет другая структура.
