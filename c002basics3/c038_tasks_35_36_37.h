@@ -11,6 +11,21 @@
 #include <stdlib.h>
 #include <time.h>
 
+
+
+// 3) Создайте структуру с двумя полями - имя человека и рост.
+typedef struct SMan {
+    char * name;
+    double height;
+} TMan, *PMan;
+
+
+// 5) Создайте процедуру, которая будет инициализировать структуру из задания 3.
+void initMan(PMan pointer, char * name, double height) {
+    pointer->name = name;
+    pointer->height = height;
+}
+
 void c038_tasks_35_36_37() {
     // 35
     // 1) создайте массив вещественных чисел, проинициализируйте его и отобразите на экране.
@@ -36,10 +51,6 @@ void c038_tasks_35_36_37() {
 
 
     // 3) Создайте структуру с двумя полями - имя человека и рост.
-    typedef struct SMan {
-        char * name;
-        double height;
-    } TMan, *PMan;
     TMan man = { "Iaroslav Os", 1.83 };
     printf("%s %0.2f\n", man.name, man.height);
     PMan manPointer = &man;
@@ -59,6 +70,18 @@ void c038_tasks_35_36_37() {
     for (int i = 0; i < len; ++i) {
         printf("%s %0.2f\n", manArray[i].name, manArray[i].height);
     }
+    printf("----------------------\n");
+
+
+    // 5) Создайте процедуру, которая будет инициализировать структуру из задания 3.
+
+
+
+
+
+
+
+
 
     // 36
     // 1) Запишите в файл 10 любых строк текста.
