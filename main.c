@@ -10,6 +10,7 @@
 #include "c002basics3/c035_arrow_operator.h"
 #include "c002basics3/c036_work_with_files.h"
 #include "c002basics3/c037_work_with_files_binary_mode.h"
+#include "c002basics3/c038_tasks_35_36_37.h"
 
 int main() {
 //    c026_pointer_to_pointer();
@@ -24,6 +25,6 @@ int main() {
 //    c035_arrow_operator();
 //    c036_work_with_files();
 //    c037_work_with_files_binary_mode();
-
+    c038_tasks_35_36_37();
     return 0;
 }
