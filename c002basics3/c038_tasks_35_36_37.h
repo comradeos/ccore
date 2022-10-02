@@ -42,6 +42,10 @@ void c038_tasks_35_36_37() {
     } TMan, *PMan;
     TMan man = { "Iaroslav Os", 1.83 };
     printf("%s %0.2f\n", man.name, man.height);
+    PMan manPointer = &man;
+    manPointer->name = "Inna G"; // альтернативно TMan *p = &man; (*p).name = "Inna G";
+    manPointer->height = 1.53; // альтернативно  TMan *p = &man; (*p).height = 1.53;
+    printf("%s %0.2f\n", man.name, man.height);
 
     // 4) Создайте массив структур из задания 3, проинициаоизируйте его и отобразите на экране.
 
