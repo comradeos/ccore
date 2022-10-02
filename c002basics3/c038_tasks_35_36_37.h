@@ -169,12 +169,23 @@ void c038_tasks_35_36_37() {
     // 3) запишите в файл и прочитайте несколько переменных разных типов подряд.
     int intVal = 7;
     double doubleVal = 7.13;
-    char * charWord = "hello";
+    char charWord[20] = "hello";
     f = fopen("c038_2File.txt", "w");
         fwrite(&intVal, 1, sizeof(intVal), f);
         fwrite(&doubleVal, 1, sizeof(doubleVal), f);
         fwrite(charWord, 1, sizeof(charWord), f);
     fclose(f);
+
+    int newIntVal;
+    double newDoubleVal;
+    char newCharWord[20];
+    f = fopen("c038_2File.txt", "r");
+        fread(&newIntVal, 1, sizeof(newIntVal), f);
+        fread(&newDoubleVal, 1, sizeof(newDoubleVal), f);
+        fread(newCharWord, 1, sizeof(newCharWord), f);
+    fclose(f);
+
+    printf("%d, %0.2f, %s", newIntVal, newDoubleVal, newCharWord);
 
 
 
