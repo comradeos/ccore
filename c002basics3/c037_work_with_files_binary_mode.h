@@ -244,5 +244,5 @@ void c037Tasks() {
         fread(newOutterObjPointer, 1, sizeof(newOutterObj),file);
     fclose(file);
     printf("%d\n", newOutterObj.inner);
-
+    // ----
 }
