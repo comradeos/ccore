@@ -186,7 +186,7 @@ void c038_tasks_35_36_37() {
     fclose(f);
 
     printf("%d, %0.2f, %s", newIntVal, newDoubleVal, newCharWord);
-
+    printf("\n----------------------\n");
 
 
     // 4) попробуйте записать в файл и прочить из файла структуру, одним и полей которой будет другая структура.
@@ -195,21 +195,24 @@ void c038_tasks_35_36_37() {
     } TChild, *PChild;
 
     typedef struct SParent {
+        char * lastName;
         TChild child;
     } TParent, *PParent;
 
     TParent parent = {
-            {"name1"}
+            "Family",
+            {"ChildName"},
     };
+
     f = fopen("c038_2File.txt", "w");
         fwrite(&parent, 1, sizeof(parent), f);
     fclose(f);
 
     TParent parentBuffer;
     f = fopen("c038_2File.txt", "r");
-        fwrite(&parentBuffer, 1, sizeof(parentBuffer), f);
+        fread(&parentBuffer, 1, sizeof(parentBuffer), f);
     fclose(f);
-    printf("%s\n", parentBuffer.child.name);
+    printf("%s %s\n", parentBuffer.lastName, parentBuffer.child.name);
 
 
 }
