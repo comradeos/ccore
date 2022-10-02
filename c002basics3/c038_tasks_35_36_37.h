@@ -190,4 +190,26 @@ void c038_tasks_35_36_37() {
 
 
     // 4) попробуйте записать в файл и прочить из файла структуру, одним и полей которой будет другая структура.
+    typedef struct SChild {
+        char * name;
+    } TChild, *PChild;
+
+    typedef struct SParent {
+        TChild child;
+    } TParent, *PParent;
+
+    TParent parent = {
+            {"name1"}
+    };
+    f = fopen("c038_2File.txt", "w");
+        fwrite(&parent, 1, sizeof(parent), f);
+    fclose(f);
+
+    TParent parentBuffer;
+    f = fopen("c038_2File.txt", "r");
+        fwrite(&parentBuffer, 1, sizeof(parentBuffer), f);
+    fclose(f);
+    printf("%s\n", parentBuffer.child.name);
+
+
 }
