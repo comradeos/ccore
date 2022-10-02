@@ -74,9 +74,13 @@ void c038_tasks_35_36_37() {
 
 
     // 5) Создайте процедуру, которая будет инициализировать структуру из задания 3.
-
-
-
+    initMan(&manArray[0], "Hello", 1);
+    initMan(&manArray[1], "Once", 2);
+    initMan(&manArray[2], "Again", 3);
+    for (int i = 0; i < len; ++i) {
+        printf("%s %0.2f\n", manArray[i].name, manArray[i].height);
+    }
+    printf("----------------------\n");
 
 
 
