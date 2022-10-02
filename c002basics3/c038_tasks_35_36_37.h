@@ -32,8 +32,16 @@ void c038_tasks_35_36_37() {
     for (int i = 0; i < len; ++i) {
         printf("%s\n", strArray[i]);
     }
+    printf("----------------------\n");
+
 
     // 3) Создайте структуру с двумя полями - имя человека и рост.
+    typedef struct SMan {
+        char * name;
+        double height;
+    } TMan, *PMan;
+    TMan man = { "Iaroslav Os", 1.83 };
+    printf("%s %0.2f\n", man.name, man.height);
 
     // 4) Создайте массив структур из задания 3, проинициаоизируйте его и отобразите на экране.
 
