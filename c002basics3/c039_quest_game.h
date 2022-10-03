@@ -25,7 +25,7 @@ struct {
  * @param fileName имя файла.
  */
 void loc_LoadFromFile(char *fileName) {
-    memset(&loc, ' ', sizeof(loc));
+    memset(&loc.map, ' ', sizeof(loc)); // заполнить все матрицу map символом пробела
     for (int i = 0; i < height; ++i) {
         loc.map[i][width] = '\0';
     }
@@ -42,6 +42,7 @@ void loc_LoadFromFile(char *fileName) {
         line++;
     }
     fclose(f);
+    loc.map[height-1][width-1] = '\0';
 }
 
 
