@@ -29,12 +29,23 @@ void loc_LoadFromFile(char *fileName) {
     for (int i = 0; i < height; ++i) {
         loc.map[i][width] = '\0';
     }
-    FILE *f = foper('');
+    FILE *f = fopen(fileName, "r");
+    char c[80];
+    int line = 0;
+    while (!feof(f)) {
+        fgets(c, width, f);
+        int cnt = strlen(c);
+        if (c[cnt-1] == '\n') {
+            cnt--;
+        }
+        strncpy(loc.map[line], c, cnt);
+        line++;
+    }
+    fclose(f);
 }
 
 
 void c039_quest_game() {
-    CreateDirectoryA("c039_quest_game", NULL); // создать папку
 
 
 
