@@ -26,16 +26,16 @@ struct {
  */
 void loc_LoadFromFile(char *fileName) {
     memset(&loc.map, ' ', sizeof(loc)); // заполнить все матрицу map символом пробела
-    for (int i = 0; i < height; ++i) {
+    for (int i = 0; i < height; ++i) { // заполнить весь последний столбец символом конца строки
         loc.map[i][width] = '\0';
     }
-    FILE *f = fopen(fileName, "r");
-    char c[80];
-    int line = 0;
-    while (!feof(f)) {
-        fgets(c, width, f);
-        int cnt = strlen(c);
-        if (c[cnt-1] == '\n') {
+    FILE *f = fopen(fileName, "r"); // открываем файл на чтение
+    char c[80]; // переменная для хранения текущей строки заполнения локации
+    int line = 0; // начинаем с нулевой строки
+    while (!feof(f)) { // до конца файла
+        fgets(c, width, f); // читаем каждую строку
+        int cnt = strlen(c); // после чтения узнаем ее длину без символа конца строки
+        if (c[cnt-1] == '\n') { // если в конце стоит символ перевода строки, то уменьшаем длину строки на 1, так как он нам не нужен
             cnt--;
         }
         strncpy(loc.map[line], c, cnt);
