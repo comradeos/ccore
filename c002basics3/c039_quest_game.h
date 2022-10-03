@@ -20,6 +20,19 @@ struct {
     char map[height][width+1];
 } loc; // имя переменной структурного типа
 
+/**
+ * Процедура загрузки в локацию информации из файла.
+ * @param fileName имя файла.
+ */
+void loc_LoadFromFile(char *fileName) {
+    memset(&loc, ' ', sizeof(loc));
+    for (int i = 0; i < height; ++i) {
+        loc.map[i][width] = '\0';
+    }
+    FILE *f = foper('');
+}
+
+
 void c039_quest_game() {
     CreateDirectoryA("c039_quest_game", NULL); // создать папку
 
