@@ -50,10 +50,24 @@ void loc_LoadFromFile(char *fileName) {
 char gmap[height][width+1]; // карта
 
 
+
+/**
+ * Установить курсор в позицию 0, 0.
+ */
+void SetCurPos() {
+    COORD coord;
+    coord.X = 0;
+    coord.Y = 0;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+}
+
+
+
 /**
  * Отображение карты на экране.
  */
 void map_Show() {
+    SetCurPos();
     for (int i = 0; i < height; ++i) {
         printf("%s", gmap[i]);
     }
@@ -82,10 +96,35 @@ void player_Init(int x, int y) {
     player.pos.y = y;
 }
 
+/**
+ * Поместить игрока на карту.
+ */
+void player_PutOnMap() {
+    gmap[player.pos.y][player.pos.x] = 'A';
+}
+
+
+/**
+ * Перемещение персонажа.
+ */
+void player_Control() {
+    if (GetKeyState('W') < 0) player.pos.y--;
+    if (GetKeyState('S') < 0) player.pos.y++;
+    if (GetKeyState('A') < 0) player.pos.x--;
+    if (GetKeyState('D') < 0) player.pos.x++;
+}
+
+
 void c039_quest_game() {
+    player_Init(5, 5);
     loc_LoadFromFile("map_0_0.txt");
-    loc_PutOnMap();
-    map_Show();
+    do {
+        player_Control();
+        loc_PutOnMap();
+        player_PutOnMap();
+        map_Show();
+        Sleep(50);
+    } while (GetKeyState(VK_ESCAPE) >= 0);
 
 
 }
