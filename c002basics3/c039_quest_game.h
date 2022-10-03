@@ -15,6 +15,7 @@
 
 
 
+
 void c039_quest_game() {
     CreateDirectoryA("c039_quest_game", NULL); // создать папку
     printf("c039_quest_game\n");
