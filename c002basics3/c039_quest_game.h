@@ -66,8 +66,25 @@ void loc_PutOnMap() {
     memcpy(gmap, loc.map, sizeof(gmap));
 }
 
+
+struct { // структура игрока
+    POINT pos;
+} player;
+
+
+/**
+ * Инициаоизация игрока.
+ * @param x координата.
+ * @param y координата.
+ */
+void player_Init(int x, int y) {
+    player.pos.x = x;
+    player.pos.y = y;
+}
+
 void c039_quest_game() {
     loc_LoadFromFile("map_0_0.txt");
+    loc_PutOnMap();
     map_Show();
 
 
