@@ -48,8 +48,10 @@ void loc_LoadFromFile(char *fileName) {
 
 
 void c039_quest_game() {
-
-
+    loc_LoadFromFile("map_0_0.txt");
+    for (int i = 0; i < height; ++i) {
+        printf("%s", loc.map[i]);
+    }
 
 
 }
