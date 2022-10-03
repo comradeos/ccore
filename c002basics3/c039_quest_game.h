@@ -123,7 +123,7 @@ void c039_quest_game() {
         loc_PutOnMap();
         player_PutOnMap();
         map_Show();
-        Sleep(50);
+        // Sleep(50);
     } while (GetKeyState(VK_ESCAPE) >= 0);
 
 
