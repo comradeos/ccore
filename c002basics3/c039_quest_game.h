@@ -126,5 +126,5 @@ void c039_quest_game() {
         // Sleep(50);
     } while (GetKeyState(VK_ESCAPE) >= 0);
 
-
+// https://youtu.be/jucHXihq1Xs?t=308
 }
