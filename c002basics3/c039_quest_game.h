@@ -13,10 +13,17 @@
 #include <windows.h>
 
 
+#define width 80 // ширина окна
+#define height 25  // высота окна
 
-
+struct {
+    char map[height][width+1];
+} loc; // имя переменной структурного типа
 
 void c039_quest_game() {
     CreateDirectoryA("c039_quest_game", NULL); // создать папку
-    printf("c039_quest_game\n");
+
+
+
+
 }
