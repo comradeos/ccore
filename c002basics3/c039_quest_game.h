@@ -53,5 +53,4 @@ void c039_quest_game() {
         printf("%s", loc.map[i]);
     }
 
-
 }
