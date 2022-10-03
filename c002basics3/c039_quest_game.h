@@ -47,10 +47,28 @@ void loc_LoadFromFile(char *fileName) {
 }
 
 
+char gmap[height][width+1]; // карта
+
+
+/**
+ * Отображение карты на экране.
+ */
+void map_Show() {
+    for (int i = 0; i < height; ++i) {
+        printf("%s", gmap[i]);
+    }
+}
+
+/**
+ * Скопировать локацию в карту.
+ */
+void loc_PutOnMap() {
+    memcpy(gmap, loc.map, sizeof(gmap));
+}
+
 void c039_quest_game() {
     loc_LoadFromFile("map_0_0.txt");
-    for (int i = 0; i < height; ++i) {
-        printf("%s", loc.map[i]);
-    }
+    map_Show();
+
 
 }
