@@ -28,6 +28,6 @@ int main() {
 //    c037_work_with_files_binary_mode();
 //    c038_tasks_35_36_37();
 //    c039_quest_game();
-    printf("2232312\n");
+    printf("12\n");
     return 0;
 }
