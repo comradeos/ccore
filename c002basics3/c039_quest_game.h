@@ -99,10 +99,14 @@ void player_PutOnMap() {
  * Перемещение персонажа.
  */
 void player_Control() {
+    POINT old = player.pos;
     if (GetKeyState('W') < 0) player.pos.y--;
     if (GetKeyState('S') < 0) player.pos.y++;
     if (GetKeyState('A') < 0) player.pos.x--;
     if (GetKeyState('D') < 0) player.pos.x++;
+    if (gmap[player.pos.y][player.pos.x] != ' ') {
+        player.pos = old;
+    }
 }
 
 
