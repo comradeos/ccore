@@ -131,6 +131,7 @@ void c039_quest_game() {
         map_Show();
         // Sleep(50);
     } while (GetKeyState(VK_ESCAPE) >= 0);
+    player_Save();
 
 // https://youtu.be/jucHXihq1Xs?t=308
 }
