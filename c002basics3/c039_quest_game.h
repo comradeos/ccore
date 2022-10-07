@@ -74,6 +74,7 @@ void loc_PutOnMap() {
 
 struct { // структура игрока
     POINT pos;
+    POINT locPos;
     char name[20];
 } player;
 
@@ -83,9 +84,11 @@ struct { // структура игрока
  * @param x координата.
  * @param y координата.
  */
-void player_Init(int x, int y, char *name) {
+void player_Init(int xLoc, int yLoc, int x, int y, char *name) {
     player.pos.x = x;
     player.pos.y = y;
+    player.locPos.x = xLoc;
+    player.locPos.y = yLoc;
     sprintf(player.name, "%s", name);
 }
 
