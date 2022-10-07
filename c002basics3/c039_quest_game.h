@@ -115,8 +115,9 @@ void player_Control() {
  * Сохраняет данные игрока в файл.
  */
 void player_Save() {
-    FILE
-
+    FILE *f = fopen(player.name, "wb");
+        fwrite(&player, 1, sizeof(player), f);
+    fclose(f);
 }
 
 
