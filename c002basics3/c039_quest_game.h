@@ -24,6 +24,8 @@ void loc_LoadFromFile(char *fileName) {
     FILE *f = fopen(fileName, "r"); // открываем файл на чтение
     char c[80]; // переменная для хранения текущей строки заполнения локации
     int line = 0; // начинаем с нулевой строки
+    loc.sz.x = 0;
+    loc.sz.y = 0;
     while (!feof(f)) { // до конца файла
         fgets(c, width, f); // читаем каждую строку
         int cnt = strlen(c); // после чтения узнаем ее длину без символа конца строки
@@ -34,6 +36,7 @@ void loc_LoadFromFile(char *fileName) {
         line++; // переходим на следующую строку
         if (cnt > loc.sz.x) loc.sz.x = cnt;
     }
+    loc.sz.y = line;
     fclose(f); // закрываем файл
     loc.map[height-1][width-1] = '\0'; // последний символ последней строки ставим символ конца строки,
     // что бы каретка не переходила на слудеющую строку после отрисовки уровня
@@ -102,6 +105,18 @@ void player_PutOnMap() {
 }
 
 
+
+/**
+ * процедура загрузки новой локации в зависимости от новой переменной.
+ */
+void player_LoadLocation() {
+    char c[100];
+    sprintf(c, "map_%ld_%ld.txt", player.locPos.x, player.locPos.y);
+    loc_LoadFromFile(c);
+}
+
+
+
 /**
  * Перемещение персонажа.
  */
@@ -113,6 +128,11 @@ void player_Control() {
     if (GetKeyState('D') < 0) player.pos.x++;
     if (gmap[player.pos.y][player.pos.x] != ' ') {
         player.pos = old;
+    }
+    if (player.pos.x > loc.sz.x-2) {
+        player.locPos.x++;
+        player_LoadLocation();
+        player.pos.x = 1;
     }
 }
 
@@ -139,14 +159,6 @@ void player_Load(char *name) {
     fclose(f);
 }
 
-/**
- * процедура загрузки новой локации в зависимости от новой переменной.
- */
-void player_LoadLocation() {
-    char c[100];
-    sprintf(c, "map_%ld_%ld.txt", player.locPos.x, player.locPos.y);
-    loc_LoadFromFile(c);
-}
 
 void c039_quest_game() {
 
