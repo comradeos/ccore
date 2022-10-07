@@ -74,6 +74,7 @@ void loc_PutOnMap() {
 
 struct { // структура игрока
     POINT pos;
+    char name[20];
 } player;
 
 
@@ -82,9 +83,10 @@ struct { // структура игрока
  * @param x координата.
  * @param y координата.
  */
-void player_Init(int x, int y) {
+void player_Init(int x, int y, char *name) {
     player.pos.x = x;
     player.pos.y = y;
+    sprintf(player.name, "%s", name);
 }
 
 /**
@@ -109,9 +111,17 @@ void player_Control() {
     }
 }
 
+/**
+ * Сохраняет данные игрока в файл.
+ */
+void player_Save() {
+    FILE
+
+}
+
 
 void c039_quest_game() {
-    player_Init(5, 5);
+    player_Init(5, 5, "Iaroslav");
     loc_LoadFromFile("map_0_0.txt");
     do {
         player_Control();
