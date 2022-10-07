@@ -120,6 +120,19 @@ void player_Save() {
     fclose(f);
 }
 
+/**
+ * Загружает данные игрока из файла.
+ */
+void player_Load(char *name) {
+    FILE *f = fopen(name, "rb");
+    if (f == NULL) {
+        player_Init(5,5, name);
+    } else {
+        fread(&player, 1, sizeof(player), f);
+    }
+    fclose(f);
+}
+
 
 void c039_quest_game() {
     player_Init(5, 5, "Iaroslav");
