@@ -126,6 +126,7 @@ void player_Save() {
 void player_Load(char *name) {
     FILE *f = fopen(name, "rb");
     if (f == NULL) {
+        // если файл не найден - создать игрока на позиции 5, 5
         player_Init(5,5, name);
     } else {
         fread(&player, 1, sizeof(player), f);
@@ -135,8 +136,10 @@ void player_Load(char *name) {
 
 
 void c039_quest_game() {
-    player_Init(5, 5, "Iaroslav");
+
+    player_Load("Iaroslav");
     loc_LoadFromFile("map_0_0.txt");
+
     do {
         player_Control();
         loc_PutOnMap();
@@ -144,7 +147,9 @@ void c039_quest_game() {
         map_Show();
         // Sleep(50);
     } while (GetKeyState(VK_ESCAPE) >= 0);
+
     player_Save();
 
 // https://youtu.be/jucHXihq1Xs?t=308
+
 }
