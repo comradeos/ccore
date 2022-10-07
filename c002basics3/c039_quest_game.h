@@ -9,6 +9,7 @@
 
 struct {
     char map[height][width+1];
+    POINT sz;
 } loc; // имя переменной структурного типа
 
 /**
@@ -31,6 +32,7 @@ void loc_LoadFromFile(char *fileName) {
         }
         strncpy(loc.map[line], c, cnt); // после чего копируем в  текущую сроки нашей локации
         line++; // переходим на следующую строку
+        if (cnt > loc.sz.x) loc.sz.x = cnt;
     }
     fclose(f); // закрываем файл
     loc.map[height-1][width-1] = '\0'; // последний символ последней строки ставим символ конца строки,
@@ -130,18 +132,26 @@ void player_Load(char *name) {
     FILE *f = fopen(name, "rb");
     if (f == NULL) {
         // если файл не найден - создать игрока на позиции 5, 5
-        player_Init(5,5, name);
+        player_Init(0,0, 5,5, name);
     } else {
         fread(&player, 1, sizeof(player), f);
     }
     fclose(f);
 }
 
+/**
+ * процедура загрузки новой локации в зависимости от новой переменной.
+ */
+void player_LoadLocation() {
+    char c[100];
+    sprintf(c, "map_%ld_%ld.txt", player.locPos.x, player.locPos.y);
+    loc_LoadFromFile(c);
+}
 
 void c039_quest_game() {
 
     player_Load("Iaroslav");
-    loc_LoadFromFile("map_0_0.txt");
+    player_LoadLocation();
 
     do {
         player_Control();
