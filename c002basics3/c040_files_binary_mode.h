@@ -15,4 +15,6 @@ void c040_files_binary_mode() {
     f = fopen("c040_file_1", "w"); // открываем файл в режиме записи
         fprintf(f,"%s", c); // записываем строку
     fclose(f); // закрываем файл
+
+
 }
