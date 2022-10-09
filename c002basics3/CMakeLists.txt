@@ -3,4 +3,4 @@ project(c002basics3 C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(c002basics3 main.c)
+add_executable(c002basics3 main.c c040_files_binary_mode.h)
