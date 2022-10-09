@@ -12,6 +12,10 @@
 void c040_files_binary_mode() {
 
     FILE *f; // объект файла
+
+    _fmode == _O_BINARY;
+    _fmode == _O_TEXT;
+
     printf("%s\n", _fmode == _O_TEXT ? "TEXT" : "BINARY");
 
     char c[3] = "AB"; // слово из 2х символов
@@ -31,9 +35,9 @@ void c040_files_binary_mode() {
     // выведим коды символов
 
     for (int i = 0; i < 10; ++i) {
-        printf("%d\n", buf[i]);
+        printf("%d ", buf[i]);
     }
-
+    printf("\n");
 
     // запишем в бинарном режиме
     f = fopen("c040_file_1", "w");
@@ -47,7 +51,7 @@ void c040_files_binary_mode() {
     fclose(f); // закрываем файл
 
     for (int i = 0; i < 10; ++i) {
-        printf("%d\n", buf[i]);
+        printf("%d ", buf[i]);
     }
-
+    printf("\n");
 }
