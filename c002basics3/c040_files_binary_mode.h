@@ -9,6 +9,8 @@
 
 #include <fcntl.h> // полезные макросы для работы с файлами
 
+void c040Tasks();
+
 void c040_files_binary_mode() {
 
     FILE *f; // объект файла
@@ -54,4 +56,35 @@ void c040_files_binary_mode() {
         printf("%d ", buf[i]);
     }
     printf("\n");
+
+    c040Tasks();
 }
+
+void c040Tasks() {
+    // создайте массив целых чисел из 5 элементов и запишите в файл,
+    // открытый в текстовом режимме. После чего прочитайте и отобразите на экране.
+    // Замените средний элемент на значение 26 и запустите программу.
+    // Откройте файл в бинарном режиме и запустите еще раз.
+
+    int arr[5] = { 1, 2, 3, 4, 5 };
+    FILE *myFile;
+    myFile = fopen("c040_file_2", "wt");
+    for (int i = 0; i < 5; ++i) {
+        fprintf(myFile, "%d\n", arr[i]);
+    }
+    fclose(myFile);
+
+    int numBuf;
+    myFile = fopen("c040_file_2", "rt");
+    while (!feof(myFile)) {
+        fscanf(myFile, "%d", &numBuf);
+        printf("%d ", numBuf);
+    }
+    printf("\n");
+    fclose(myFile);
+
+
+
+}
+
+
