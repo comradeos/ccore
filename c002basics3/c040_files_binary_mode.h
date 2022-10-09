@@ -30,4 +30,17 @@ void c040_files_binary_mode() {
         printf("%d\n", buf[i]);
     }
 
+
+    // прочитаем файл в бинарнов режиме
+    f = fopen("c040_file_1", "rb"); // открываем файл в бинарном режиме чтения
+        fread(buf, sizeof(buf), 1, f);
+    fclose(f); // закрываем файл
+
+    printf("%s\n", buf);
+    // выведим коды символов
+
+    for (int i = 0; i < 10; ++i) {
+        printf("%d\n", buf[i]);
+    }
+
 }
