@@ -7,9 +7,13 @@
 
 #endif //C002BASICS3_C040_FILES_BINARY_MODE_H
 
+#include <fcntl.h> // полезные макросы для работы с файлами
 
 void c040_files_binary_mode() {
+
     FILE *f; // объект файла
+    printf("%s\n", _fmode == _O_TEXT ? "TEXT" : "BINARY");
+
     char c[3] = "AB"; // слово из 2х символов
     c[1] = 10; // символ перевода строки
 
@@ -31,13 +35,16 @@ void c040_files_binary_mode() {
     }
 
 
-    // прочитаем файл в бинарнов режиме
-    f = fopen("c040_file_1", "rb"); // открываем файл в бинарном режиме чтения
-        fread(buf, sizeof(buf), 1, f);
+    // запишем в бинарном режиме
+    f = fopen("c040_file_1", "w");
+        fprintf(f,"%s", c); // записываем строку
     fclose(f); // закрываем файл
 
-    printf("%s\n", buf);
-    // выведим коды символов
+
+    // прочитаем файл в бинарнов режиме
+    f = fopen("c040_file_1", "rb");
+        fread(buf, sizeof(buf), 1, f);
+    fclose(f); // закрываем файл
 
     for (int i = 0; i < 10; ++i) {
         printf("%d\n", buf[i]);
