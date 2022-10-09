@@ -16,5 +16,17 @@ void c040_files_binary_mode() {
         fprintf(f,"%s", c); // записываем строку
     fclose(f); // закрываем файл
 
+    // прочитаем файл
+    char buf[10] = "";
+    f = fopen("c040_file_1", "r"); // открываем файл в режиме чтения
+        fread(buf, 1, sizeof(buf), f);
+    fclose(f); // закрываем файл
+
+    printf("%s\n", buf);
+    // выведим коды символов
+
+    for (int i = 0; i < 10; ++i) {
+        printf("%d\n", buf[i]);
+    }
 
 }
