@@ -17,9 +17,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd76830d-2ee9-4caa-a3c6-abb071bdf25a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/c041_files_read_write_position.h" beforeDir="false" afterPath="$PROJECT_DIR$/c041_files_read_write_position.h" afterDir="false" />
-    </list>
+    <list default="true" id="dd76830d-2ee9-4caa-a3c6-abb071bdf25a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,7 +93,7 @@
       <workItem from="1665552255939" duration="3573000" />
       <workItem from="1665638699260" duration="1187000" />
       <workItem from="1665727314717" duration="1186000" />
-      <workItem from="1665813473926" duration="2426000" />
+      <workItem from="1665813473926" duration="3170000" />
     </task>
     <servers />
   </component>
