@@ -11,7 +11,9 @@ void c041_files_read_write_position() {
 
     FILE *f;
     f = fopen("c041_file_1.txt", "w");
-        fprintf(f, "hello file\n");
+        printf("%d\n", ftell(f));
+        fprintf(f, "ABC123");
+        printf("%d\n", ftell(f));
     fclose(f);
 
 
