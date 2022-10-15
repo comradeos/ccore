@@ -13,6 +13,14 @@ void c041_files_read_write_position() {
     f = fopen("c041_file_1.txt", "w");
         printf("%ld\n", ftell(f)); // ftell(f) возвращает позицию курсора в байтах
         fprintf(f, "ABC123");
+
+        // переместимся на 3й байт и запишем 2 других символа
+        fseek(f, 2, SEEK_SET); // fseek(файл, позиция курсора, начало отсчета позиции курсора)
+        fprintf(f, "++");
+
+
+
+
         printf("%ld\n", ftell(f));
     fclose(f);
 
