@@ -10,7 +10,7 @@
 void c041_files_read_write_position() {
 
     FILE *f;
-    f = fopen("c041_file_1.txt", "w");
+    f = fopen("c041_file_1.txt", "w+"); // + - и запись и чтение
         printf("%ld\n", ftell(f)); // ftell(f) возвращает позицию курсора в байтах
         fprintf(f, "ABC123");
 
@@ -19,7 +19,11 @@ void c041_files_read_write_position() {
         fprintf(f, "++");
 
 
-
+        char c[100];
+        fseek(f, 0, SEEK_SET);
+        if (fgets(c, 100, f) != NULL) {
+            printf("%s\n", c);
+        }
 
         printf("%ld\n", ftell(f));
     fclose(f);
