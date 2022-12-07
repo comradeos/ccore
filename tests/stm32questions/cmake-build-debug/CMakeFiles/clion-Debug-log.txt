@@ -1,0 +1,1 @@
+CMakeLists.txt not found in C:\Software\OpenServer\domains\ccore\tests\stm32questions Select CMakeLists.txt
