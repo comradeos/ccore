@@ -13,12 +13,16 @@
 #define HIGH 300
 #define STEP 20
 
-void chapter1() {
-    printf("chapter1: \n");
-
+void farenheightCelsiusTable() {
     printf("Farenheight | Celsius\n");
 
     for (int i = LOW; i <= HIGH; i = i+STEP) {
         printf("%11d | %7.1f\n", i, (i - 32.0) * (5.0/9.0));
     }
+}
+
+void chapter1() {
+    printf("chapter1: \n");
+//    farenheightCelsiusTable();
+    
 }
