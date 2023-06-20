@@ -113,7 +113,7 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "cmake-build-debug/chapter01.h",
+			"path" : "chapter0.h",
 			"sourceGroupIndex" : 1
 		}
 	],
