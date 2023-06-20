@@ -18,7 +18,7 @@ void chapter1() {
 
     printf("Farenheight | Celsius\n");
 
-    for (int i=LOW; i<=HIGH; i=i+STEP) {
+    for (int i = LOW; i <= HIGH; i = i+STEP) {
         printf("%11d | %7.1f\n", i, (i - 32.0) * (5.0/9.0));
     }
 }
