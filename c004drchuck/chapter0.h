@@ -15,10 +15,12 @@ void chapter0() {
 
     // malloc() and free()
 
-    char inputBuffer[1024];
+    char inputBuffer[1024]; // size of input buffer
+    char tmp[8];
 
     scanf("%s", inputBuffer);
     printf("%s\n", inputBuffer);
 
-
+    long long int number = strtoll(inputBuffer, (char **) tmp, 10);
+    printf("number is: %lld", number);
 }
