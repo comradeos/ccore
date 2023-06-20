@@ -24,5 +24,14 @@ void farenheightCelsiusTable() {
 void chapter1() {
     printf("chapter1: \n");
 //    farenheightCelsiusTable();
-    
+
+    int c;
+    c = getchar();
+    while (c != EOF) {
+        putchar(c);
+        c = getchar();
+    }
+
+    // https://youtu.be/j-_s8f5K30I?t=3341
+
 }
