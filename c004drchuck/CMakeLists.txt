@@ -3,4 +3,4 @@ project(c004drchuck C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(c004drchuck main.c)
+add_executable(c004drchuck main.c cmake-build-debug/chapter01.h)
