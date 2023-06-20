@@ -13,14 +13,12 @@
 void chapter0() {
     printf("chapter0: \n");
 
-    // malloc / free
-    char buffer[10];
-    char * tmp;
+    // malloc() and free()
 
-    printf("Enter number of elements: ");
-    scanf("%s", buffer);
+    char inputBuffer[1024];
 
-    long int number = strtol(buffer, &tmp, 10);
+    scanf("%s", inputBuffer);
+    printf("%s\n", inputBuffer);
 
-    printf("Number is %ld", number);
+
 }
