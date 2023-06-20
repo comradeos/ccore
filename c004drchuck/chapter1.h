@@ -27,7 +27,7 @@ void chapter1() {
 
     int c;
     c = getchar();
-    while (c != EOF) {
+    while (c != EOF) { // https://linuxhint.com/eof-in-c-programming/#:~:text=The%20EOF%20marker%20is%20the,of%2Dfile%20character%20or%20EOF.
         putchar(c);
         c = getchar();
     }
