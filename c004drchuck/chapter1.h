@@ -34,6 +34,11 @@ void readAndPrintLine() {
 void chapter1() {
     printf("chapter1: \n");
 //    farenheightCelsiusTable();
-    readAndPrintLine();
+//    readAndPrintLine();
+
+    char str[] = "";
+    gets(str);
+
+    printf("---- %s ----", str);
 
 }
