@@ -8,6 +8,7 @@
 #endif //C004DRCHUCK_CHAPTER1_H
 
 #include "stdio.h"
+#include "string.h"
 
 #define LOW 0
 #define HIGH 300
@@ -36,9 +37,14 @@ void chapter1() {
 //    farenheightCelsiusTable();
 //    readAndPrintLine();
 
-    char str[] = "";
-    gets(str);
+    char string[2];
+    long counter = 0;
+    gets(string);
 
-    printf("---- %s ----", str);
+    for (int i = 0; i < strlen(string); i++) {
+        printf("%c - ", string[i]);
+        ++counter;
+    }
+    printf("In string \"%s\" %ld chars", string, counter);
 
 }
