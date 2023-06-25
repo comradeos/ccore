@@ -40,7 +40,7 @@ void chapter2() {
 
 //    printDataTypes();
 //    constants();
-//    anotherFunc();
+//    anotherFunc(); 
 
     char tmpStr[16];
     strcpy(tmpStr, "abc");
