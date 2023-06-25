@@ -32,10 +32,23 @@ void readAndPrintLine() {
     // https://youtu.be/j-_s8f5K30I?t=3341
 }
 
+void readString() {
+    char string[1024];
+    long counter = 0;
+    gets(string);
+
+    for (int i = 0; i < strlen(string); i++) {
+        printf("%c - ", string[i]);
+        ++counter;
+    }
+    printf("In string \"%s\" %ld chars", string, counter);
+}
+
 void chapter1() {
     printf("chapter1: \n");
 //    farenheightCelsiusTable();
 //    readAndPrintLine();
+//    readString();
 
 
 }
