@@ -17,10 +17,10 @@ void printDataTypes() {
     short int myShortInt = 32767;
     printf("myShortInt %d\n", myShortInt);
 
-    long int myLongInt = 32767;
+    long int myLongInt = 2147483647;
     printf("myLongInt %ld\n", myLongInt);
 
-    long long int myLongLongInt = 32767;
+    long long int myLongLongInt = 9223372036854775807;
     printf("myLongLongInt %lld\n", myLongLongInt);
 }
 
