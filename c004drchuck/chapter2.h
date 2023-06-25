@@ -14,6 +14,14 @@ void printDataTypes() {
     double myDouble = 923.2231;
     printf("myDouble %.4f\n", myDouble);
 
+    short int myShortInt = 32767;
+    printf("myShortInt %d\n", myShortInt);
+
+    long int myLongInt = 32767;
+    printf("myLongInt %ld\n", myLongInt);
+
+    long long int myLongLongInt = 32767;
+    printf("myLongLongInt %lld\n", myLongLongInt);
 }
 
 void chapter2() {
