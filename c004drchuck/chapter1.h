@@ -37,14 +37,5 @@ void chapter1() {
 //    farenheightCelsiusTable();
 //    readAndPrintLine();
 
-    char string[2];
-    long counter = 0;
-    gets(string);
-
-    for (int i = 0; i < strlen(string); i++) {
-        printf("%c - ", string[i]);
-        ++counter;
-    }
-    printf("In string \"%s\" %ld chars", string, counter);
 
 }
