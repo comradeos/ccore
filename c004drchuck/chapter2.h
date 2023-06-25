@@ -55,5 +55,7 @@ void chapter2() {
     strcpy(tmpStr, "aaa");
     printf("%s\n", tmpStr);
 
+    float eps = (float) 1.0e-5;
+    printf("eps %.5f\n", eps);
 
 }
