@@ -1,5 +1,6 @@
 #include "stdio.h"
 #include "string.h"
+#include "stdlib.h"
 
 void printDataTypes() {
     char myChar = 'a'; // bits
@@ -37,7 +38,22 @@ void chapter2() {
     printf("chapter2: \n");
     // https://youtu.be/j-_s8f5K30I?t=7164
 
-    printDataTypes();
+//    printDataTypes();
 //    constants();
-    anotherFunc();
+//    anotherFunc();
+
+    char tmpStr[16];
+    strcpy(tmpStr, "abc");
+    printf("%s\n", tmpStr);
+
+    strcpy(tmpStr, "hello world!");
+    printf("%s\n", tmpStr);
+
+    strcpy(tmpStr, "pink floyd!");
+    printf("%s\n", tmpStr);
+
+    strcpy(tmpStr, "aaa");
+    printf("%s\n", tmpStr);
+
+
 }
