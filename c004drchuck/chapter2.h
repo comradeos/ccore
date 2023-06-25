@@ -26,5 +26,7 @@ void printDataTypes() {
 
 void chapter2() {
     printf("chapter2: \n");
+    // https://youtu.be/j-_s8f5K30I?t=7164
+
     printDataTypes();
 }
