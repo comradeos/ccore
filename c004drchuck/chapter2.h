@@ -40,7 +40,7 @@ void chapter2() {
 
 //    printDataTypes();
 //    constants();
-//    anotherFunc(); 
+//    anotherFunc();
 
     char tmpStr[16];
     strcpy(tmpStr, "abc");
@@ -57,5 +57,7 @@ void chapter2() {
 
     float eps = (float) 1.0e-5;
     printf("eps %.5f\n", eps);
+
+    // https://youtu.be/j-_s8f5K30I?t=8512
 
 }
