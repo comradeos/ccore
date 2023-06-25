@@ -1,8 +1,16 @@
-//
-// Created by comradeos on 25/06/2023.
-//
+#include "stdio.h"
+#include "string.h"
 
-#ifndef C004DRCHUCK_CHAPTER2_H
-#define C004DRCHUCK_CHAPTER2_H
+void printDataTypes() {
+    char myChar = 'a';
+    printf("myChar %c\n", myChar);
 
-#endif //C004DRCHUCK_CHAPTER2_H
+    int myInt = 7;
+    float myFloat = 2.49;
+    double myDouble = 923.2;
+
+}
+
+void chapter2() {
+    printf("chapter2: \n");
+}
