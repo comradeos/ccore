@@ -2,19 +2,19 @@
 #include "string.h"
 
 void printDataTypes() {
-    char myChar = 'a';
+    char myChar = 'a'; // bits
     printf("myChar %c\n", myChar);
 
-    int myInt = 7;
+    int myInt = 7; // 16 bits
     printf("myInt %d\n", myInt);
 
-    float myFloat = (float)2.49;
+    float myFloat = (float)2.49; // 32 bits
     printf("myFloat %.2f\n", myFloat);
 
-    double myDouble = 923.2231;
+    double myDouble = 923.2231; // 64 bits
     printf("myDouble %.4f\n", myDouble);
 
-    short int myShortInt = 32767;
+    short int myShortInt = 32767; // 16 bits
     printf("myShortInt %d\n", myShortInt);
 
     long int myLongInt = 2147483647;
