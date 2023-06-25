@@ -24,9 +24,20 @@ void printDataTypes() {
     printf("myLongLongInt %lld\n", myLongLongInt);
 }
 
+void constants() {
+    #define MY_CONST 123
+    printf("MY_CONST: %d\n", MY_CONST);
+}
+
+void anotherFunc() {
+    printf("anotherFunc -> MY_CONST: %d\n", MY_CONST);
+}
+
 void chapter2() {
     printf("chapter2: \n");
     // https://youtu.be/j-_s8f5K30I?t=7164
 
     printDataTypes();
+//    constants();
+    anotherFunc();
 }
