@@ -4,7 +4,8 @@
 
 int main() {
     char arr[] = "abc";
+    char * p_arr = arr;
 
-    printf("%s\n", arr);
+    printf("%s\n", *p_arr);
     return 0;
 }
