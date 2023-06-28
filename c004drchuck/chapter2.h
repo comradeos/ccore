@@ -59,4 +59,5 @@ void chapter2() {
     printf("eps %.5f\n", eps);
 
     // https://youtu.be/j-_s8f5K30I?t=8512
+    
 }
