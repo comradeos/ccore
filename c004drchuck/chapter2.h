@@ -60,5 +60,5 @@ void chapter2() {
 
     // https://youtu.be/j-_s8f5K30I?t=8512
 
-    // 12345
+    // 123456
 }
