@@ -1,7 +1,8 @@
 #include "stdio.h"
 
-typedef struct {
+typedef struct MyStruct {
     int number;
+    struct MyStruct * myStruct;
 } MyStruct_t;
 
 
