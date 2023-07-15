@@ -1,37 +1,52 @@
 #include "stdio.h"
 
+typedef struct SubMenuItem {
+    char * name;
+} SubMenuItem_t ;
+
 typedef struct MenuItem {
     char * name;
-    struct MenuItem * menuItem;
+    int subMenuSize;
+    SubMenuItem_t subMenuItems[10];
 } MenuItem_t ;
 
 MenuItem_t menu[10];
-int menu_size = 0;
+int size = 0;
 
-void addMenuItem(char * name) {
-    menu[menu_size].name = name;
-    ++menu_size;
+void addMenu(char * name) {
+    MenuItem_t item;
+    item.name = name;
+    menu[size] = item;
+    ++size;
 }
 
-void addSubMenuItem(int index, char * name) {
-    MenuItem_t sm;
-    sm.name = name;
-    menu[index].menuItem = &sm;
+void addSubMenu(int index, char * name) {
+    SubMenuItem_t subItem;
+    subItem.name = name;
+    menu[index].subMenuItems[menu[index].subMenuSize] = subItem;
+    ++menu[index].subMenuSize;
 }
 
 void printMenu() {
-    for (int i=0; i<=menu_size; ++i) {
-        printf("%s\n", menu[i].name);
-        if (menu[i].menuItem != NULL) {
-            printf("-> %s\n", menu[i].menuItem->name);
+    for (int i=0; i<size; ++i) {
+        printf("- %s\n", menu[i].name);
+        if (menu[i].subMenuSize > 0) {
+            for (int j=0; j<menu[i].subMenuSize; ++j) {
+                printf("--- %s\n", menu[i].subMenuItems[j]);
+            }
         }
     }
 }
 
 int main() {
-    addMenuItem("item1");
-    addSubMenuItem(0, "subItem1");
-    addMenuItem("item2");
-
+    addMenu("Courses");
+    addSubMenu(0, "New");
+    addSubMenu(0, "All");
+    addMenu("Practice");
+    addMenu("Program");
+    addSubMenu(1, "Build");
+    addSubMenu(1, "Deploy");
+    addSubMenu(1, "Update");
     printMenu();
+    return 0;
 }

@@ -1,1 +1,1 @@
-    ms.myStruct->number = 222;
+    addSubMenu(0, "subItem2");
