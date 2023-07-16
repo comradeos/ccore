@@ -17,3 +17,5 @@ int main() {
     printf("hello\n");
     printf("hello, %d\n", ms.myStruct->number);
 }
+
+// 1
