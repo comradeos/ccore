@@ -18,4 +18,4 @@ int main() {
     printf("hello, %d\n", ms.myStruct->number);
 }
 
-// 12345
+// 123456
