@@ -70,7 +70,7 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="HelloCLion" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HelloCLion" TARGET_NAME="HelloCLion" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HelloCLion" RUN_TARGET_NAME="HelloCLion">
+    <configuration name="HelloCLion" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HelloCLion" TARGET_NAME="HelloCLion" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HelloCLion" RUN_TARGET_NAME="HelloCLion">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
