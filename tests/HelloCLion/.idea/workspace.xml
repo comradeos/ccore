@@ -22,6 +22,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9acf314e-7fee-4c42-94d9-4420e38c0f0b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +44,10 @@
     <option name="majorVersion" value="2022" />
     <option name="minorVersion" value="3" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: -1
+}</component>
   <component name="ProjectId" id="2IK1nA4p3dmuG1I3NKLf90W7wU3" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -103,6 +108,8 @@
       <workItem from="1684336871609" duration="91000" />
       <workItem from="1684336991227" duration="311000" />
       <workItem from="1684337311195" duration="509000" />
+      <workItem from="1692028242679" duration="15000" />
+      <workItem from="1692274991494" duration="7000" />
     </task>
     <servers />
   </component>
