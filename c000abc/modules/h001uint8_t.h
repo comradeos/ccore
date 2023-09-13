@@ -12,6 +12,4 @@ void h001uint8_t() {
     int8_t num4 = 128; // -128 -> overflow
 
     printf("%d\n", num3);
-    printf("%d\n", num3);
-    printf("%d\n", num3);
 }
