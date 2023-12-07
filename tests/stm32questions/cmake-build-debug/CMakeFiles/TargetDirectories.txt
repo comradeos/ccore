@@ -1,3 +1,0 @@
-C:/Software/OpenServer/domains/ccore/tests/stm32questions/cmake-build-debug/CMakeFiles/stm32questions.dir
-C:/Software/OpenServer/domains/ccore/tests/stm32questions/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Software/OpenServer/domains/ccore/tests/stm32questions/cmake-build-debug/CMakeFiles/rebuild_cache.dir

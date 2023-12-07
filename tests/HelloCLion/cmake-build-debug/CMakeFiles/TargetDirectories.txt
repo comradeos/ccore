@@ -1,3 +1,0 @@
-/Users/comradeos/Workspace/ccore/tests/HelloCLion/cmake-build-debug/CMakeFiles/HelloCLion.dir
-/Users/comradeos/Workspace/ccore/tests/HelloCLion/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/comradeos/Workspace/ccore/tests/HelloCLion/cmake-build-debug/CMakeFiles/rebuild_cache.dir
