@@ -1,0 +1,57 @@
+
+mx_nbr_to_hex.c
+create a function that converts unsigned long number into a hexadecimal string.
+synopsis:
+char *mx_nbr_to_hex(unsigned long nbr);
+example:
+mx_nbr_to_hex(52) returns "34"
+mx_nbr_to_hex(1000) returns "3e8"
+
+
+
+mx_foreach.c
+create a function that applies the function f for each element of the array given size 
+synopsis:
+void mx_foreach(int *arr, int size, void (*f)(int));
+exaple:
+voiid mx_printint(int n);
+arr = {1, 2, 3, 4, 5};
+mx_foreach(arr, 5, mx_printint); // prints "12345"
+
+
+
+
+mx_print_name.c
+create a program that prints to the standard output:
+-its name and argument count
+-both followed by a newline
+
+
+
+mx_strdup.C
+create a function that has the same behavior as the standard library function strdup
+synopsis:
+char *mx_strdup(const char *str);
+example provide
+
+
+
+
+mx_strnew.c
+create a function that:
+-allocates memory for a string of a specific size and adds one additional byte for the null-terminator
+- initializes each character with '\0'
+return
+-returns a string of a specific size and terminated by '\0'
+-returns NULL if creation fails
+synopsis
+char *mx_strnew(const int size);
+exaple:
+mx_strnew(10); returns string of size 10 with all characters initialized to '\0'
+mx_strnew(-1); returns NULL 
+
+
+mx_printerr.C
+create a function that outputs a string to the standart error stream stderr
+synopsis:
+void mx_printerr(const char *s);
