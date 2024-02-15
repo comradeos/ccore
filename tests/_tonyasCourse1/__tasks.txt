@@ -51,7 +51,7 @@ mx_strnew(10); returns string of size 10 with all characters initialized to '\0'
 mx_strnew(-1); returns NULL 
 
 
-mx_printerr.C
+mx_printerr.c
 create a function that outputs a string to the standart error stream stderr
 synopsis:
 void mx_printerr(const char *s);
