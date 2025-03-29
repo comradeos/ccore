@@ -10,6 +10,4 @@ int main()
 
 gcc -o EnvTest -Wall EnvTest.c && EnvTest
 
-
-
 */
