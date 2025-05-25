@@ -6,6 +6,7 @@
 int main()
 {
     printf("Hello, advanced C\n");
-    function_pointers();
+    // function_pointers();
+    function_pointers_2();
     return 0;
 }

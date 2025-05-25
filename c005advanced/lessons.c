@@ -25,3 +25,21 @@ void function_pointers()
     int numbers[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     print_if(numbers, seven);
 }
+
+void my_func_arg(int num)
+{
+    printf("this is my_func_arg with num = %d\n", num);
+}
+
+void outer_function(int num, void (*f)(int))
+{
+    num += 10;
+    printf("outer_function: num = %d\n", num);
+    f(num);
+}
+
+void function_pointers_2()
+{
+    void (*f)(int) = my_func_arg;
+    outer_function(1, f);
+}

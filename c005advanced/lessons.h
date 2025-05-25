@@ -6,5 +6,6 @@
 #define LESSONS_H
 
 void function_pointers();
+void function_pointers_2();
 
 #endif //LESSONS_H
