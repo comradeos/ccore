@@ -43,3 +43,9 @@ void function_pointers_2()
     void (*f)(int) = my_func_arg;
     outer_function(1, f);
 }
+
+void bit_flags()
+{
+    // https://www.youtube.com/watch?v=OWG1cHQpJNE&list=PL71Y0EmrppR0KyZvQWj63040UEzKQU7n8&index=2
+    // https://youtu.be/OWG1cHQpJNE?si=mKQMzaYy8Hoob9vJ&t=221
+}
