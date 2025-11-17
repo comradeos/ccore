@@ -27,7 +27,6 @@ int main() {
 //    c036_work_with_files();
 //    c037_work_with_files_binary_mode();
 //    c038_tasks_35_36_37();
-
     c039_quest_game();
     return 0;
 }
