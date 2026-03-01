@@ -1,0 +1,13 @@
+Linux:
+gcc -fPIC -c userlib.c -o userlib.o
+gcc -shared -o libuserlib.so userlib.o
+
+gcc [main.c](http://_vscodecontentref_/1) -L. -luserlib -Wl,-rpath,'$ORIGIN' -o app
+
+macOS:
+gcc -fPIC -c userlib.c -o userlib.o
+gcc -dynamiclib -o libuserlib.dylib userlib.o
+gcc -Wall -Wextra -std=c17 -O0 -g main.c -L. -luserlib -Wl,-rpath,@executable_path -o main && ./main
+-L. — искать библиотеку в текущей папке
+-luserlib — это libuserlib.dylib
+-Wl,-rpath,@executable_path — чтобы при запуске бинарник нашёл .dylib рядом с собой на macOS
