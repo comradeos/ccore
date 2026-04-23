@@ -34,6 +34,7 @@ int main()
         printf("%c: %d\n", i + '0', digits[i]);
     }
 
+    printf("other: %d\n", other);
 
     return  0;
 }
