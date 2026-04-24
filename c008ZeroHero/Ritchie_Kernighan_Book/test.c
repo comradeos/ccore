@@ -1,4 +1,4 @@
-// gcc -Wall -o ./test ./test.c && ./test
+// gcc -Wall -o ./app ./test.c && ./app
 
 #include <stdio.h>
 
