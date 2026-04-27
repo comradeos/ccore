@@ -4,6 +4,7 @@
 
 int main()
 {
+    /*
     int num = 3;
 
     printf("---------------\n");
@@ -25,6 +26,11 @@ int main()
 
         printf("[%d -> %c] ", c, c);
     }
+    */
+
+    int a = 1; 
+
+    printf("%d %d\n", a, a++);
 
     return 0;
 }
