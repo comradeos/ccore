@@ -1,5 +1,5 @@
 #!/bin/bash
 
-gcc -Wall "$1" -o app && ./app
+clear && gcc -Wall "$1" -o app && ./app
 
 
