@@ -27,10 +27,29 @@ int main()
         printf("[%d -> %c] ", c, c);
     }
     */
+    
 
+    /*
     int a = 1; 
 
     printf("%d %d\n", a, a++);
+    */
+    
+
+    /*
+    int a = 0;
+
+    printf("input a: ");
+
+    int b = scanf("%d", &a);
+
+    printf("a ->>> %d\n", a);
+    printf("b ->>> %d\n", b);
+    */
+
+
+
+
 
     return 0;
 }
