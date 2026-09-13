@@ -2,5 +2,3 @@
 #include "c002basics3/c035_arrow_operator.h"
 #include "c002basics3/c036_work_with_files.h"
 #include "c002basics3/c037_work_with_files_binary_mode.h"
-#include "c002basics3/c038_tasks_35_36_37.h"
-#include "c002basics3/c039_quest_game.h"
